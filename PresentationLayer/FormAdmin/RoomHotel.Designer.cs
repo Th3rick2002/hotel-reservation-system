@@ -47,8 +47,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1144, 602);
             Controls.Add(dgvHabitaciones);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "RoomHotel";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "RoomHotel";
             ((System.ComponentModel.ISupportInitialize)dgvHabitaciones).EndInit();
             ResumeLayout(false);

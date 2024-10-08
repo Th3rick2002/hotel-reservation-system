@@ -46,8 +46,12 @@
             nameLabel = new Label();
             dgvUsuarios = new DataGridView();
             button3 = new Button();
+            pcMinimizar = new PictureBox();
+            pbSalir = new PictureBox();
             formGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbSalir).BeginInit();
             SuspendLayout();
             // 
             // formGroupBox
@@ -68,9 +72,9 @@
             formGroupBox.Controls.Add(lastNameLabel);
             formGroupBox.Controls.Add(nameLabel);
             formGroupBox.Location = new Point(35, 68);
-            formGroupBox.Margin = new Padding(2, 2, 2, 2);
+            formGroupBox.Margin = new Padding(2);
             formGroupBox.Name = "formGroupBox";
-            formGroupBox.Padding = new Padding(2, 2, 2, 2);
+            formGroupBox.Padding = new Padding(2);
             formGroupBox.Size = new Size(617, 557);
             formGroupBox.TabIndex = 2;
             formGroupBox.TabStop = false;
@@ -80,7 +84,7 @@
             // 
             button2.FlatStyle = FlatStyle.Flat;
             button2.Location = new Point(367, 404);
-            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
             button2.Size = new Size(103, 32);
             button2.TabIndex = 14;
@@ -91,7 +95,7 @@
             // 
             button1.FlatStyle = FlatStyle.Flat;
             button1.Location = new Point(228, 404);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(103, 32);
             button1.TabIndex = 13;
@@ -101,7 +105,7 @@
             // passwordTextBox
             // 
             passwordTextBox.Location = new Point(198, 85);
-            passwordTextBox.Margin = new Padding(2, 2, 2, 2);
+            passwordTextBox.Margin = new Padding(2);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.Size = new Size(357, 27);
             passwordTextBox.TabIndex = 12;
@@ -109,7 +113,7 @@
             // userTextBox
             // 
             userTextBox.Location = new Point(198, 35);
-            userTextBox.Margin = new Padding(2, 2, 2, 2);
+            userTextBox.Margin = new Padding(2);
             userTextBox.Name = "userTextBox";
             userTextBox.Size = new Size(357, 27);
             userTextBox.TabIndex = 11;
@@ -140,7 +144,7 @@
             // numerPhoneTexBox
             // 
             numerPhoneTexBox.Location = new Point(198, 315);
-            numerPhoneTexBox.Margin = new Padding(2, 2, 2, 2);
+            numerPhoneTexBox.Margin = new Padding(2);
             numerPhoneTexBox.Name = "numerPhoneTexBox";
             numerPhoneTexBox.Size = new Size(357, 27);
             numerPhoneTexBox.TabIndex = 8;
@@ -149,7 +153,7 @@
             // emailTextBox
             // 
             emailTextBox.Location = new Point(198, 257);
-            emailTextBox.Margin = new Padding(2, 2, 2, 2);
+            emailTextBox.Margin = new Padding(2);
             emailTextBox.Name = "emailTextBox";
             emailTextBox.Size = new Size(357, 27);
             emailTextBox.TabIndex = 7;
@@ -158,7 +162,7 @@
             // lastNameTextBox
             // 
             lastNameTextBox.Location = new Point(198, 194);
-            lastNameTextBox.Margin = new Padding(2, 2, 2, 2);
+            lastNameTextBox.Margin = new Padding(2);
             lastNameTextBox.Name = "lastNameTextBox";
             lastNameTextBox.Size = new Size(357, 27);
             lastNameTextBox.TabIndex = 6;
@@ -167,7 +171,7 @@
             // nameTextBox
             // 
             nameTextBox.Location = new Point(198, 142);
-            nameTextBox.Margin = new Padding(2, 2, 2, 2);
+            nameTextBox.Margin = new Padding(2);
             nameTextBox.Name = "nameTextBox";
             nameTextBox.Size = new Size(357, 27);
             nameTextBox.TabIndex = 5;
@@ -177,7 +181,7 @@
             // 
             saveButton.FlatStyle = FlatStyle.Flat;
             saveButton.Location = new Point(73, 404);
-            saveButton.Margin = new Padding(2, 2, 2, 2);
+            saveButton.Margin = new Padding(2);
             saveButton.Name = "saveButton";
             saveButton.Size = new Size(103, 32);
             saveButton.TabIndex = 4;
@@ -232,7 +236,7 @@
             // 
             dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsuarios.Location = new Point(668, 78);
-            dgvUsuarios.Margin = new Padding(2, 2, 2, 2);
+            dgvUsuarios.Margin = new Padding(2);
             dgvUsuarios.Name = "dgvUsuarios";
             dgvUsuarios.RowHeadersWidth = 62;
             dgvUsuarios.Size = new Size(763, 547);
@@ -242,27 +246,60 @@
             // 
             button3.FlatStyle = FlatStyle.Flat;
             button3.Location = new Point(35, 10);
-            button3.Margin = new Padding(2, 2, 2, 2);
+            button3.Margin = new Padding(2);
             button3.Name = "button3";
             button3.Size = new Size(103, 32);
             button3.TabIndex = 15;
             button3.Text = "Guardar";
             button3.UseVisualStyleBackColor = true;
             // 
+            // pcMinimizar
+            // 
+            pcMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pcMinimizar.BackColor = Color.White;
+            pcMinimizar.Cursor = Cursors.Hand;
+            pcMinimizar.Image = Properties.Resources.negative_sign_icon_icons_com_70439;
+            pcMinimizar.Location = new Point(1353, 12);
+            pcMinimizar.Name = "pcMinimizar";
+            pcMinimizar.Size = new Size(36, 33);
+            pcMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
+            pcMinimizar.TabIndex = 17;
+            pcMinimizar.TabStop = false;
+            pcMinimizar.Click += pcMinimizar_Click;
+            // 
+            // pbSalir
+            // 
+            pbSalir.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pbSalir.BackColor = Color.White;
+            pbSalir.Cursor = Cursors.Hand;
+            pbSalir.Image = Properties.Resources.close_remove_delete_icon_148989;
+            pbSalir.Location = new Point(1395, 12);
+            pbSalir.Name = "pbSalir";
+            pbSalir.Size = new Size(36, 33);
+            pbSalir.SizeMode = PictureBoxSizeMode.Zoom;
+            pbSalir.TabIndex = 16;
+            pbSalir.TabStop = false;
+            pbSalir.Click += pbSalir_Click;
+            // 
             // Users
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1457, 655);
+            Controls.Add(pcMinimizar);
+            Controls.Add(pbSalir);
             Controls.Add(button3);
             Controls.Add(dgvUsuarios);
             Controls.Add(formGroupBox);
-            Margin = new Padding(2, 2, 2, 2);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "Users";
             Text = "Lista de Usuarios";
             formGroupBox.ResumeLayout(false);
             formGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbSalir).EndInit();
             ResumeLayout(false);
         }
 
@@ -286,5 +323,7 @@
         private Button button1;
         private DataGridView dgvUsuarios;
         private Button button3;
+        private PictureBox pcMinimizar;
+        private PictureBox pbSalir;
     }
 }

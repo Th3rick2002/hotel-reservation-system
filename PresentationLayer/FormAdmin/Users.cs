@@ -34,5 +34,15 @@ namespace PresentationLayer.FormAdmin
 
             dgvUsuarios.Columns["rol"].Visible = true;
         }
+
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pcMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

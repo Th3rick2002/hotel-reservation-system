@@ -27,5 +27,15 @@ namespace PresentationLayer.FormAdmin
             dgvReservas.DataSource = _reservasservice.GetReservas();
 
         }
+
+        private void pbSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void pcMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

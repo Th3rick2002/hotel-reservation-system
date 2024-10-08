@@ -9,6 +9,6 @@ namespace CommonLayer.Entities
     public class Rol
     {
         public int IdRol { get; set; }
-        public int rol { get; set; }
+        public string rol { get; set; }
     }
 }
