@@ -1727,9 +1727,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
+      "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
       "projectName": "BusisnessLayer",
-      "projectPath": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
+      "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
       "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\BusisnessLayer\\obj\\",
       "projectStyle": "PackageReference",
@@ -1748,11 +1748,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
-              "projectPath": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
+            "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+              "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
             },
-            "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj": {
-              "projectPath": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj"
+            "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj": {
+              "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj"
             }
           }
         }

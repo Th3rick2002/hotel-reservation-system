@@ -8,11 +8,11 @@ namespace CommonLayer.Entities
 {
     public class Reservas
     {
-        public int IdReserva { get; set; }
+        public int idReserva { get; set; }
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin {  get; set; }
-        public int idHabitacion { get; set; }
-        public int idUsuario { get; set; }
+        public int IdHabitacion { get; set; }
+        public int IdUsuario { get; set; }
         public bool Estado {  get; set; }
     }
 }

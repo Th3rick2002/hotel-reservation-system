@@ -19,6 +19,8 @@ namespace PresentationLayer.FormAdmin
             InitializeComponent();
             _usuariosServices = new UsuariosServices();
             LoadData();
+            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
         }
 
         public void LoadData()

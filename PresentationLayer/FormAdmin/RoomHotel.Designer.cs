@@ -28,18 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
+            dgvHabitaciones = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvHabitaciones).BeginInit();
             SuspendLayout();
+            // 
+            // dgvHabitaciones
+            // 
+            dgvHabitaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHabitaciones.Location = new Point(527, 115);
+            dgvHabitaciones.Name = "dgvHabitaciones";
+            dgvHabitaciones.RowHeadersWidth = 51;
+            dgvHabitaciones.Size = new Size(523, 306);
+            dgvHabitaciones.TabIndex = 0;
             // 
             // RoomHotel
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1430, 752);
+            ClientSize = new Size(1144, 602);
+            Controls.Add(dgvHabitaciones);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "RoomHotel";
             Text = "RoomHotel";
+            ((System.ComponentModel.ISupportInitialize)dgvHabitaciones).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
+
+        private DataGridView dgvHabitaciones;
     }
 }
