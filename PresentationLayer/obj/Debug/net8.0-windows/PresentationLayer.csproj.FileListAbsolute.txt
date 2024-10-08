@@ -132,3 +132,5 @@ C:\Users\fuent\Downloads\hotel-reservation-system\PresentationLayer\obj\Debug\ne
 C:\Users\fuent\Downloads\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\ref\PresentationLayer.dll
 C:\Users\fuent\Downloads\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.Properties.Resources.resources
 C:\Users\fuent\Downloads\hotel-reservation-system\PresentationLayer\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\fuent\source\repos\hotel-reservation-system\PresentationLayer\bin\Debug\net8.0-windows\FontAwesome.Sharp.dll
+C:\Users\fuent\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.Properties.Resources.resources

@@ -18,9 +18,14 @@ namespace BusisnessLayer.Services
             _habitacionesrepositories = new HabitacionesRepositories();
         }
 
-        public DataTable GetReservas()
+        public DataTable GetHabitacion()
         {
             return _habitacionesrepositories.GetAllHabitaciones();
+        }
+
+        public void AddHabitaciones(Habitacion habitacion)
+        {
+            _habitacionesrepositories.AddHabitaciones(habitacion);
         }
 
         public void UpdateHabitaciones(Habitacion habitacion)

@@ -28,36 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             titleLabel = new Label();
             formGroupBox = new GroupBox();
-            numerPhoneTexBox = new TextBox();
-            emailTextBox = new TextBox();
-            lastNameTextBox = new TextBox();
-            nameTextBox = new TextBox();
-            saveButton = new Button();
-            numberPhoneLabel = new Label();
-            emailLabel = new Label();
-            lastNameLabel = new Label();
-            nameLabel = new Label();
             passwordTextBox = new TextBox();
             userTextBox = new TextBox();
             passwordLabel = new Label();
             userLabel = new Label();
+            numerPhoneTexBox = new TextBox();
+            emailTextBox = new TextBox();
+            lastNameTextBox = new TextBox();
+            nameTextBox = new TextBox();
+            numberPhoneLabel = new Label();
+            emailLabel = new Label();
+            lastNameLabel = new Label();
+            nameLabel = new Label();
+            pcMinimizar = new PictureBox();
+            pbSalir = new PictureBox();
+            toolTip1 = new ToolTip(components);
+            btnGuardar = new FontAwesome.Sharp.IconButton();
             formGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbSalir).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
             // 
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Impact", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            titleLabel.Location = new Point(257, 22);
+            titleLabel.Location = new Point(303, 33);
+            titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(444, 68);
+            titleLabel.Size = new Size(373, 59);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Registra tus datos";
             // 
             // formGroupBox
             // 
+            formGroupBox.Controls.Add(btnGuardar);
             formGroupBox.Controls.Add(passwordTextBox);
             formGroupBox.Controls.Add(userTextBox);
             formGroupBox.Controls.Add(passwordLabel);
@@ -66,147 +74,207 @@
             formGroupBox.Controls.Add(emailTextBox);
             formGroupBox.Controls.Add(lastNameTextBox);
             formGroupBox.Controls.Add(nameTextBox);
-            formGroupBox.Controls.Add(saveButton);
             formGroupBox.Controls.Add(numberPhoneLabel);
             formGroupBox.Controls.Add(emailLabel);
             formGroupBox.Controls.Add(lastNameLabel);
             formGroupBox.Controls.Add(nameLabel);
-            formGroupBox.Location = new Point(49, 134);
+            formGroupBox.Location = new Point(92, 121);
+            formGroupBox.Margin = new Padding(2);
             formGroupBox.Name = "formGroupBox";
-            formGroupBox.Size = new Size(878, 696);
+            formGroupBox.Padding = new Padding(2);
+            formGroupBox.Size = new Size(790, 694);
             formGroupBox.TabIndex = 1;
             formGroupBox.TabStop = false;
             formGroupBox.Text = "Formulario";
             // 
-            // numerPhoneTexBox
-            // 
-            numerPhoneTexBox.Location = new Point(339, 519);
-            numerPhoneTexBox.Name = "numerPhoneTexBox";
-            numerPhoneTexBox.Size = new Size(483, 31);
-            numerPhoneTexBox.TabIndex = 8;
-            numerPhoneTexBox.Text = "Ej. 76764532";
-            // 
-            // emailTextBox
-            // 
-            emailTextBox.Location = new Point(339, 423);
-            emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(483, 31);
-            emailTextBox.TabIndex = 7;
-            emailTextBox.Text = "Ej. juanAguirre@correo.com";
-            // 
-            // lastNameTextBox
-            // 
-            lastNameTextBox.Location = new Point(339, 330);
-            lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(483, 31);
-            lastNameTextBox.TabIndex = 6;
-            lastNameTextBox.Text = "Ej. Aguirre Romero";
-            // 
-            // nameTextBox
-            // 
-            nameTextBox.Location = new Point(339, 226);
-            nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(483, 31);
-            nameTextBox.TabIndex = 5;
-            nameTextBox.Text = "Ej. Juan Armando";
-            // 
-            // saveButton
-            // 
-            saveButton.FlatStyle = FlatStyle.Flat;
-            saveButton.Location = new Point(339, 608);
-            saveButton.Name = "saveButton";
-            saveButton.Size = new Size(167, 52);
-            saveButton.TabIndex = 4;
-            saveButton.Text = "Guardar";
-            saveButton.UseVisualStyleBackColor = true;
-            // 
-            // numberPhoneLabel
-            // 
-            numberPhoneLabel.AutoSize = true;
-            numberPhoneLabel.Font = new Font("Britannic Bold", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numberPhoneLabel.Location = new Point(18, 513);
-            numberPhoneLabel.Name = "numberPhoneLabel";
-            numberPhoneLabel.Size = new Size(307, 36);
-            numberPhoneLabel.TabIndex = 3;
-            numberPhoneLabel.Text = "Numero de Telefono:";
-            // 
-            // emailLabel
-            // 
-            emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Britannic Bold", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailLabel.Location = new Point(41, 423);
-            emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(300, 36);
-            emailLabel.TabIndex = 2;
-            emailLabel.Text = "Correo Electronico: ";
-            // 
-            // lastNameLabel
-            // 
-            lastNameLabel.AutoSize = true;
-            lastNameLabel.Font = new Font("Britannic Bold", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lastNameLabel.Location = new Point(190, 324);
-            lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(135, 36);
-            lastNameLabel.TabIndex = 1;
-            lastNameLabel.Text = "Apellido:";
-            // 
-            // nameLabel
-            // 
-            nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Britannic Bold", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nameLabel.Location = new Point(190, 220);
-            nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(143, 36);
-            nameLabel.TabIndex = 0;
-            nameLabel.Text = "Nombre: ";
-            // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(339, 134);
+            passwordTextBox.Location = new Point(305, 178);
+            passwordTextBox.Margin = new Padding(2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(483, 31);
+            passwordTextBox.Size = new Size(435, 26);
             passwordTextBox.TabIndex = 12;
             // 
             // userTextBox
             // 
-            userTextBox.Location = new Point(339, 30);
+            userTextBox.Location = new Point(305, 113);
+            userTextBox.Margin = new Padding(2);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(483, 31);
+            userTextBox.Size = new Size(435, 26);
             userTextBox.TabIndex = 11;
             userTextBox.Text = "Ej. Aramndo093";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Font = new Font("Britannic Bold", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordLabel.Location = new Point(129, 129);
+            passwordLabel.Font = new Font("Britannic Bold", 12F);
+            passwordLabel.Location = new Point(115, 173);
+            passwordLabel.Margin = new Padding(2, 0, 2, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(195, 36);
+            passwordLabel.Size = new Size(124, 22);
             passwordLabel.TabIndex = 10;
             passwordLabel.Text = "Contraseña: ";
             // 
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Font = new Font("Britannic Bold", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            userLabel.Location = new Point(181, 24);
+            userLabel.Font = new Font("Britannic Bold", 12F);
+            userLabel.Location = new Point(161, 108);
+            userLabel.Margin = new Padding(2, 0, 2, 0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(133, 36);
+            userLabel.Size = new Size(86, 22);
             userLabel.TabIndex = 9;
             userLabel.Text = "Usuario:";
             // 
-            // FormCliente
+            // numerPhoneTexBox
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            numerPhoneTexBox.Location = new Point(305, 505);
+            numerPhoneTexBox.Margin = new Padding(2);
+            numerPhoneTexBox.Name = "numerPhoneTexBox";
+            numerPhoneTexBox.Size = new Size(435, 26);
+            numerPhoneTexBox.TabIndex = 8;
+            numerPhoneTexBox.Text = "Ej. 76764532";
+            // 
+            // emailTextBox
+            // 
+            emailTextBox.Location = new Point(308, 410);
+            emailTextBox.Margin = new Padding(2);
+            emailTextBox.Name = "emailTextBox";
+            emailTextBox.Size = new Size(435, 26);
+            emailTextBox.TabIndex = 7;
+            emailTextBox.Text = "Ej. juanAguirre@correo.com";
+            // 
+            // lastNameTextBox
+            // 
+            lastNameTextBox.Location = new Point(305, 328);
+            lastNameTextBox.Margin = new Padding(2);
+            lastNameTextBox.Name = "lastNameTextBox";
+            lastNameTextBox.Size = new Size(435, 26);
+            lastNameTextBox.TabIndex = 6;
+            lastNameTextBox.Text = "Ej. Aguirre Romero";
+            // 
+            // nameTextBox
+            // 
+            nameTextBox.Location = new Point(305, 244);
+            nameTextBox.Margin = new Padding(2);
+            nameTextBox.Name = "nameTextBox";
+            nameTextBox.Size = new Size(435, 26);
+            nameTextBox.TabIndex = 5;
+            nameTextBox.Text = "Ej. Juan Armando";
+            // 
+            // numberPhoneLabel
+            // 
+            numberPhoneLabel.AutoSize = true;
+            numberPhoneLabel.Font = new Font("Britannic Bold", 12F);
+            numberPhoneLabel.Location = new Point(50, 506);
+            numberPhoneLabel.Margin = new Padding(2, 0, 2, 0);
+            numberPhoneLabel.Name = "numberPhoneLabel";
+            numberPhoneLabel.Size = new Size(192, 22);
+            numberPhoneLabel.TabIndex = 3;
+            numberPhoneLabel.Text = "Numero de Telefono:";
+            // 
+            // emailLabel
+            // 
+            emailLabel.AutoSize = true;
+            emailLabel.Font = new Font("Britannic Bold", 12F);
+            emailLabel.Location = new Point(52, 411);
+            emailLabel.Margin = new Padding(2, 0, 2, 0);
+            emailLabel.Name = "emailLabel";
+            emailLabel.Size = new Size(190, 22);
+            emailLabel.TabIndex = 2;
+            emailLabel.Text = "Correo Electronico: ";
+            // 
+            // lastNameLabel
+            // 
+            lastNameLabel.AutoSize = true;
+            lastNameLabel.Font = new Font("Britannic Bold", 12F);
+            lastNameLabel.Location = new Point(161, 323);
+            lastNameLabel.Margin = new Padding(2, 0, 2, 0);
+            lastNameLabel.Name = "lastNameLabel";
+            lastNameLabel.Size = new Size(86, 22);
+            lastNameLabel.TabIndex = 1;
+            lastNameLabel.Text = "Apellido:";
+            // 
+            // nameLabel
+            // 
+            nameLabel.AutoSize = true;
+            nameLabel.Font = new Font("Britannic Bold", 12F);
+            nameLabel.Location = new Point(163, 244);
+            nameLabel.Margin = new Padding(2, 0, 2, 0);
+            nameLabel.Name = "nameLabel";
+            nameLabel.Size = new Size(91, 22);
+            nameLabel.TabIndex = 0;
+            nameLabel.Text = "Nombre: ";
+            // 
+            // pcMinimizar
+            // 
+            pcMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pcMinimizar.BackColor = Color.Transparent;
+            pcMinimizar.Cursor = Cursors.Hand;
+            pcMinimizar.Image = Properties.Resources.negative_sign_icon_icons_com_70439;
+            pcMinimizar.Location = new Point(884, 12);
+            pcMinimizar.Name = "pcMinimizar";
+            pcMinimizar.Size = new Size(36, 33);
+            pcMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
+            pcMinimizar.TabIndex = 21;
+            pcMinimizar.TabStop = false;
+            pcMinimizar.Click += pcMinimizar_Click;
+            pcMinimizar.MouseHover += pcMinimizar_MouseHover;
+            // 
+            // pbSalir
+            // 
+            pbSalir.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            pbSalir.BackColor = Color.Transparent;
+            pbSalir.Cursor = Cursors.Hand;
+            pbSalir.Image = Properties.Resources.close_remove_delete_icon_148989;
+            pbSalir.Location = new Point(926, 12);
+            pbSalir.Name = "pbSalir";
+            pbSalir.Size = new Size(36, 33);
+            pbSalir.SizeMode = PictureBoxSizeMode.Zoom;
+            pbSalir.TabIndex = 20;
+            pbSalir.TabStop = false;
+            pbSalir.Click += pbSalir_Click;
+            pbSalir.MouseHover += pbSalir_MouseHover;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.ForestGreen;
+            btnGuardar.Cursor = Cursors.Hand;
+            btnGuardar.FlatAppearance.BorderColor = Color.Black;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            btnGuardar.IconColor = Color.White;
+            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnGuardar.IconSize = 22;
+            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.Location = new Point(270, 618);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(260, 35);
+            btnGuardar.TabIndex = 24;
+            btnGuardar.Text = "Crear cuenta";
+            btnGuardar.UseVisualStyleBackColor = false;
+            // 
+            // Formuser
+            // 
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(971, 893);
+            ClientSize = new Size(997, 843);
+            Controls.Add(pcMinimizar);
+            Controls.Add(pbSalir);
             Controls.Add(formGroupBox);
             Controls.Add(titleLabel);
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-            Name = "FormCliente";
+            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
+            Name = "Formuser";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Huesped";
             formGroupBox.ResumeLayout(false);
             formGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pcMinimizar).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbSalir).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,7 +283,6 @@
 
         private Label titleLabel;
         private GroupBox formGroupBox;
-        private Button saveButton;
         private Label numberPhoneLabel;
         private Label emailLabel;
         private Label lastNameLabel;
@@ -228,5 +295,9 @@
         private TextBox userTextBox;
         private Label passwordLabel;
         private Label userLabel;
+        private PictureBox pcMinimizar;
+        private PictureBox pbSalir;
+        private ToolTip toolTip1;
+        private FontAwesome.Sharp.IconButton btnGuardar;
     }
 }

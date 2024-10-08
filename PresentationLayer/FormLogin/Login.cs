@@ -21,49 +21,6 @@ namespace PresentationLayer.FormLogin
             InitializeComponent();
         }
 
-        private void logInButton_Click(object sender, EventArgs e)
-        {
-            DataTable usuariosTable = new UsuariosServices().GetUsuarios();
-
-            DataRow ousuarioRow = usuariosTable.AsEnumerable().FirstOrDefault(u =>
-                u.Field<string>("Nombre") == txtUsuario.Text &&
-                u.Field<string>("Clave") == txtClave.Text);
-
-            if (ousuarioRow != null)
-            {
-                Usuario ousuario = new Usuario()
-                {
-                    IdUsuario = ousuarioRow.Field<int>("IdUsuario"),
-                    Nombre = ousuarioRow.Field<string>("Nombre"),
-                    Clave = ousuarioRow.Field<string>("Clave"),
-                    oRol = new Rol
-                    {
-                        IdRol = ousuarioRow.Field<int>("IdRol"),
-                        rol = ousuarioRow.Field<string>("rol")
-                    }
-                };
-
-                if (ousuario.oRol.rol == "ADMINISTRADOR")
-                {
-                    this.Hide();
-                    FormAdministration formAdmin = new FormAdministration(ousuario);
-
-                    formAdmin.FormClosed += (s, args) => this.Hide();
-                    formAdmin.Show();
-                    formAdmin.FormClosing += frm_closing;
-
-                }
-
-                else
-                {
-                    MessageBox.Show("Rol no reconocido.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
-            }
-            else
-            {
-                MessageBox.Show("No se encontró el usuario.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-        }
 
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
@@ -97,15 +54,15 @@ namespace PresentationLayer.FormLogin
             DataTable usuariosTable = new UsuariosServices().GetUsuarios();
 
             DataRow ousuarioRow = usuariosTable.AsEnumerable().FirstOrDefault(u =>
-                u.Field<string>("Nombre") == txtUsuario.Text &&
+                u.Field<string>("Usuario") == txtUsuario.Text &&
                 u.Field<string>("Clave") == txtClave.Text);
 
             if (ousuarioRow != null)
             {
-                Usuario ousuario = new Usuario()
+                Usuarios ousuario = new Usuarios()
                 {
                     IdUsuario = ousuarioRow.Field<int>("IdUsuario"),
-                    Nombre = ousuarioRow.Field<string>("Nombre"),
+                    Nombre = ousuarioRow.Field<string>("Usuario"),
                     Clave = ousuarioRow.Field<string>("Clave"),
                     oRol = new Rol
                     {

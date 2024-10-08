@@ -18,7 +18,12 @@ namespace BusisnessLayer.Services
             return _usuariosrepositories.GetAllUsuarios();
         }
 
-        public void UpdateUsuarios(Usuario usuarios)
+        public void AddUsuarios(Usuarios usuarios)
+        {
+            _usuariosrepositories.AddUsuarios(usuarios);
+        }
+
+        public void UpdateUsuarios(Usuarios usuarios)
         {
             _usuariosrepositories.EditUsuarios(usuarios);
         }

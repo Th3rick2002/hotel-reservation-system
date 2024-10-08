@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repositories
 
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"SELECT Tipo, PrecioNoche, Caracteristicas FROM Habitacion";
+                string query = @"SELECT IdHabitacion,Tipo, PrecioNoche, Caracteristicas FROM Habitacion";
 
                 using (var sqlcommand = new SqlCommand(query, connection))
                 {

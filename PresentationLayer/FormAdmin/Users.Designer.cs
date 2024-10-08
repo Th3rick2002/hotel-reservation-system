@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             formGroupBox = new GroupBox();
             button2 = new Button();
             button1 = new Button();
@@ -45,9 +46,9 @@
             lastNameLabel = new Label();
             nameLabel = new Label();
             dgvUsuarios = new DataGridView();
-            button3 = new Button();
             pcMinimizar = new PictureBox();
             pbSalir = new PictureBox();
+            toolTip1 = new ToolTip(components);
             formGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
@@ -242,17 +243,6 @@
             dgvUsuarios.Size = new Size(763, 547);
             dgvUsuarios.TabIndex = 3;
             // 
-            // button3
-            // 
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(35, 10);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(103, 32);
-            button3.TabIndex = 15;
-            button3.Text = "Guardar";
-            button3.UseVisualStyleBackColor = true;
-            // 
             // pcMinimizar
             // 
             pcMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
@@ -266,6 +256,7 @@
             pcMinimizar.TabIndex = 17;
             pcMinimizar.TabStop = false;
             pcMinimizar.Click += pcMinimizar_Click;
+            pcMinimizar.MouseHover += pcMinimizar_MouseHover;
             // 
             // pbSalir
             // 
@@ -280,6 +271,7 @@
             pbSalir.TabIndex = 16;
             pbSalir.TabStop = false;
             pbSalir.Click += pbSalir_Click;
+            pbSalir.MouseHover += pbSalir_MouseHover;
             // 
             // Users
             // 
@@ -288,7 +280,6 @@
             ClientSize = new Size(1457, 655);
             Controls.Add(pcMinimizar);
             Controls.Add(pbSalir);
-            Controls.Add(button3);
             Controls.Add(dgvUsuarios);
             Controls.Add(formGroupBox);
             FormBorderStyle = FormBorderStyle.None;
@@ -322,8 +313,8 @@
         private Button button2;
         private Button button1;
         private DataGridView dgvUsuarios;
-        private Button button3;
         private PictureBox pcMinimizar;
         private PictureBox pbSalir;
+        private ToolTip toolTip1;
     }
 }

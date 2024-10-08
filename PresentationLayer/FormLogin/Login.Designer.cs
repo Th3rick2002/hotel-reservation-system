@@ -143,12 +143,12 @@ namespace PresentationLayer.FormLogin
             btnCrearCuenta.IconColor = Color.White;
             btnCrearCuenta.IconFont = IconFont.Auto;
             btnCrearCuenta.IconSize = 38;
-            btnCrearCuenta.Location = new Point(246, 253);
+            btnCrearCuenta.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCrearCuenta.Location = new Point(211, 253);
             btnCrearCuenta.Name = "btnCrearCuenta";
-            btnCrearCuenta.Size = new Size(160, 46);
+            btnCrearCuenta.Size = new Size(220, 46);
             btnCrearCuenta.TabIndex = 8;
             btnCrearCuenta.Text = "Crear cuenta";
-            btnCrearCuenta.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCrearCuenta.UseVisualStyleBackColor = false;
             btnCrearCuenta.Click += btnCrearCuenta_Click;
             // 
@@ -163,12 +163,12 @@ namespace PresentationLayer.FormLogin
             btnLogin.IconColor = Color.White;
             btnLogin.IconFont = IconFont.Auto;
             btnLogin.IconSize = 38;
-            btnLogin.Location = new Point(246, 201);
+            btnLogin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnLogin.Location = new Point(211, 201);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(160, 46);
+            btnLogin.Size = new Size(220, 46);
             btnLogin.TabIndex = 7;
             btnLogin.Text = "Login";
-            btnLogin.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
             // 

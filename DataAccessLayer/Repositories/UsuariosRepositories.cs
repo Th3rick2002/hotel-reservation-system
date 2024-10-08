@@ -26,7 +26,7 @@ namespace DataAccessLayer.Repositories
 
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"SELECT u.IdUsuario, r.IdRol, r.rol, u.Nombre, u.Apellido, u.Clave, u.Email, u.Telefono,  u.FechaRegistro FROM Usuario u
+                string query = @"SELECT u.IdUsuario, u.Usuario, r.IdRol, r.rol,  CONCAT(u.Nombre, ' ' , u.Apellido) AS NombreCompleto , u.Clave, u.Email, u.Telefono,  u.FechaRegistro FROM Usuario u
                                 INNER JOIN Rol r ON r.IdRol = u.IdRol";
 
                 using (var sqlcommand = new SqlCommand(query, connection))
@@ -43,15 +43,16 @@ namespace DataAccessLayer.Repositories
             return usuariosTable;
         }
 
-        public void AddUsuarios(Usuario usuarios)
+        public void AddUsuarios(Usuarios usuarios)
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO Usuario(IdRol,Nombre, Apellido, Email, Telefono)
-                                VALUES(@IdRol, @Nombre, @Apellido, @Email, @Telefono)";
+                string query = @"INSERT INTO Usuario(IdRol, Usuario, Nombre, Apellido, Email, Telefono)
+                                VALUES(@IdRol, @Usuario, @Nombre, @Apellido, @Email, @Telefono)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdRol", usuarios.oRol.IdRol);
+                command.Parameters.AddWithValue("@Usuario", usuarios.Usuario);
                 command.Parameters.AddWithValue("@Nombre", usuarios.Nombre);
                 command.Parameters.AddWithValue("@Apellido", usuarios.Apellido);
                 command.Parameters.AddWithValue("@Email", usuarios.Email);
@@ -60,11 +61,12 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        public void EditUsuarios(Usuario usuarios)
+        public void EditUsuarios(Usuarios usuarios)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = @"UPDATE Usuario SET " +
+                                "Usuario = @Usuario" +
                                 "Nombre = @Nombre" +
                                 "Apellido = @Apellido" +
                                 "Email = @Email" +
@@ -73,6 +75,7 @@ namespace DataAccessLayer.Repositories
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@Nombre", usuarios.Nombre);
+                command.Parameters.AddWithValue("@Usuario", usuarios.Usuario);
                 command.Parameters.AddWithValue("@Apellido", usuarios.Apellido);
                 command.Parameters.AddWithValue("@Email", usuarios.Email);
                 command.Parameters.AddWithValue("@Telefono", usuarios.Telefono);

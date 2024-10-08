@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             formReservationGroupBox = new GroupBox();
+            lblTotal = new Label();
+            label1 = new Label();
             button2 = new Button();
             btnEditarReserva = new Button();
             roomNumberLabel = new Label();
@@ -40,10 +43,10 @@
             roomNumbercomboBox = new ComboBox();
             endDateTimePicker = new DateTimePicker();
             dateInitDateTimePicker = new DateTimePicker();
-            button3 = new Button();
             dgvReservas = new DataGridView();
             pcMinimizar = new PictureBox();
             pbSalir = new PictureBox();
+            toolTip1 = new ToolTip(components);
             formReservationGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvReservas).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
@@ -52,6 +55,8 @@
             // 
             // formReservationGroupBox
             // 
+            formReservationGroupBox.Controls.Add(lblTotal);
+            formReservationGroupBox.Controls.Add(label1);
             formReservationGroupBox.Controls.Add(button2);
             formReservationGroupBox.Controls.Add(btnEditarReserva);
             formReservationGroupBox.Controls.Add(roomNumberLabel);
@@ -71,6 +76,28 @@
             formReservationGroupBox.TabIndex = 2;
             formReservationGroupBox.TabStop = false;
             formReservationGroupBox.Text = "Formulario";
+            // 
+            // lblTotal
+            // 
+            lblTotal.AutoSize = true;
+            lblTotal.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblTotal.Location = new Point(331, 323);
+            lblTotal.Margin = new Padding(2, 0, 2, 0);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(78, 22);
+            lblTotal.TabIndex = 15;
+            lblTotal.Text = "lblTotal";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(190, 323);
+            label1.Margin = new Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(137, 22);
+            label1.TabIndex = 14;
+            label1.Text = "Total a pagar:";
             // 
             // button2
             // 
@@ -96,7 +123,7 @@
             // 
             roomNumberLabel.AutoSize = true;
             roomNumberLabel.Font = new Font("Arial Rounded MT Bold", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            roomNumberLabel.Location = new Point(25, 279);
+            roomNumberLabel.Location = new Point(25, 259);
             roomNumberLabel.Margin = new Padding(2, 0, 2, 0);
             roomNumberLabel.Name = "roomNumberLabel";
             roomNumberLabel.Size = new Size(219, 22);
@@ -157,11 +184,12 @@
             // roomNumbercomboBox
             // 
             roomNumbercomboBox.FormattingEnabled = true;
-            roomNumbercomboBox.Location = new Point(259, 278);
+            roomNumbercomboBox.Location = new Point(259, 258);
             roomNumbercomboBox.Margin = new Padding(2);
             roomNumbercomboBox.Name = "roomNumbercomboBox";
             roomNumbercomboBox.Size = new Size(241, 28);
             roomNumbercomboBox.TabIndex = 5;
+            roomNumbercomboBox.SelectedIndexChanged += roomNumbercomboBox_SelectedIndexChanged;
             // 
             // endDateTimePicker
             // 
@@ -170,6 +198,7 @@
             endDateTimePicker.Name = "endDateTimePicker";
             endDateTimePicker.Size = new Size(241, 27);
             endDateTimePicker.TabIndex = 3;
+            endDateTimePicker.ValueChanged += endDateTimePicker_ValueChanged;
             // 
             // dateInitDateTimePicker
             // 
@@ -178,16 +207,7 @@
             dateInitDateTimePicker.Name = "dateInitDateTimePicker";
             dateInitDateTimePicker.Size = new Size(241, 27);
             dateInitDateTimePicker.TabIndex = 2;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(37, 28);
-            button3.Margin = new Padding(2);
-            button3.Name = "button3";
-            button3.Size = new Size(143, 41);
-            button3.TabIndex = 14;
-            button3.Text = "Retroceder";
-            button3.UseVisualStyleBackColor = true;
+            dateInitDateTimePicker.ValueChanged += dateInitDateTimePicker_ValueChanged;
             // 
             // dgvReservas
             // 
@@ -212,6 +232,7 @@
             pcMinimizar.TabIndex = 17;
             pcMinimizar.TabStop = false;
             pcMinimizar.Click += pcMinimizar_Click;
+            pcMinimizar.MouseHover += pcMinimizar_MouseHover;
             // 
             // pbSalir
             // 
@@ -226,6 +247,7 @@
             pbSalir.TabIndex = 16;
             pbSalir.TabStop = false;
             pbSalir.Click += pbSalir_Click;
+            pbSalir.MouseHover += pbSalir_MouseHover;
             // 
             // ReservationHotel
             // 
@@ -235,7 +257,6 @@
             Controls.Add(pcMinimizar);
             Controls.Add(pbSalir);
             Controls.Add(dgvReservas);
-            Controls.Add(button3);
             Controls.Add(formReservationGroupBox);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
@@ -264,9 +285,11 @@
         private ComboBox roomNumbercomboBox;
         private DateTimePicker endDateTimePicker;
         private DateTimePicker dateInitDateTimePicker;
-        private Button button3;
         private DataGridView dgvReservas;
         private PictureBox pcMinimizar;
         private PictureBox pbSalir;
+        private Label lblTotal;
+        private Label label1;
+        private ToolTip toolTip1;
     }
 }
