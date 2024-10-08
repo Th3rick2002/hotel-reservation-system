@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             formGroupBox = new GroupBox();
+            button2 = new Button();
+            button1 = new Button();
             passwordTextBox = new TextBox();
             userTextBox = new TextBox();
             passwordLabel = new Label();
@@ -42,12 +44,10 @@
             emailLabel = new Label();
             lastNameLabel = new Label();
             nameLabel = new Label();
-            button1 = new Button();
-            button2 = new Button();
-            dataGridView1 = new DataGridView();
+            dgvUsuarios = new DataGridView();
             button3 = new Button();
             formGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).BeginInit();
             SuspendLayout();
             // 
             // formGroupBox
@@ -67,26 +67,51 @@
             formGroupBox.Controls.Add(emailLabel);
             formGroupBox.Controls.Add(lastNameLabel);
             formGroupBox.Controls.Add(nameLabel);
-            formGroupBox.Location = new Point(44, 85);
+            formGroupBox.Location = new Point(35, 68);
+            formGroupBox.Margin = new Padding(2, 2, 2, 2);
             formGroupBox.Name = "formGroupBox";
-            formGroupBox.Size = new Size(771, 696);
+            formGroupBox.Padding = new Padding(2, 2, 2, 2);
+            formGroupBox.Size = new Size(617, 557);
             formGroupBox.TabIndex = 2;
             formGroupBox.TabStop = false;
             formGroupBox.Text = "Formulario";
-            
+            // 
+            // button2
+            // 
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Location = new Point(367, 404);
+            button2.Margin = new Padding(2, 2, 2, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(103, 32);
+            button2.TabIndex = 14;
+            button2.Text = "Guardar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new Point(228, 404);
+            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(103, 32);
+            button1.TabIndex = 13;
+            button1.Text = "Guardar";
+            button1.UseVisualStyleBackColor = true;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(248, 106);
+            passwordTextBox.Location = new Point(198, 85);
+            passwordTextBox.Margin = new Padding(2, 2, 2, 2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(445, 31);
+            passwordTextBox.Size = new Size(357, 27);
             passwordTextBox.TabIndex = 12;
             // 
             // userTextBox
             // 
-            userTextBox.Location = new Point(248, 44);
+            userTextBox.Location = new Point(198, 35);
+            userTextBox.Margin = new Padding(2, 2, 2, 2);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(445, 31);
+            userTextBox.Size = new Size(357, 27);
             userTextBox.TabIndex = 11;
             userTextBox.Text = "Ej. Aramndo093";
             // 
@@ -94,9 +119,10 @@
             // 
             passwordLabel.AutoSize = true;
             passwordLabel.Font = new Font("Britannic Bold", 11F);
-            passwordLabel.Location = new Point(85, 106);
+            passwordLabel.Location = new Point(68, 85);
+            passwordLabel.Margin = new Padding(2, 0, 2, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(135, 25);
+            passwordLabel.Size = new Size(116, 21);
             passwordLabel.TabIndex = 10;
             passwordLabel.Text = "Contraseña: ";
             // 
@@ -104,50 +130,56 @@
             // 
             userLabel.AutoSize = true;
             userLabel.Font = new Font("Britannic Bold", 11F);
-            userLabel.Location = new Point(120, 47);
+            userLabel.Location = new Point(96, 38);
+            userLabel.Margin = new Padding(2, 0, 2, 0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(92, 25);
+            userLabel.Size = new Size(80, 21);
             userLabel.TabIndex = 9;
             userLabel.Text = "Usuario:";
             // 
             // numerPhoneTexBox
             // 
-            numerPhoneTexBox.Location = new Point(248, 394);
+            numerPhoneTexBox.Location = new Point(198, 315);
+            numerPhoneTexBox.Margin = new Padding(2, 2, 2, 2);
             numerPhoneTexBox.Name = "numerPhoneTexBox";
-            numerPhoneTexBox.Size = new Size(445, 31);
+            numerPhoneTexBox.Size = new Size(357, 27);
             numerPhoneTexBox.TabIndex = 8;
             numerPhoneTexBox.Text = "Ej. 76764532";
             // 
             // emailTextBox
             // 
-            emailTextBox.Location = new Point(248, 321);
+            emailTextBox.Location = new Point(198, 257);
+            emailTextBox.Margin = new Padding(2, 2, 2, 2);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(445, 31);
+            emailTextBox.Size = new Size(357, 27);
             emailTextBox.TabIndex = 7;
             emailTextBox.Text = "Ej. juanAguirre@correo.com";
             // 
             // lastNameTextBox
             // 
-            lastNameTextBox.Location = new Point(248, 242);
+            lastNameTextBox.Location = new Point(198, 194);
+            lastNameTextBox.Margin = new Padding(2, 2, 2, 2);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(445, 31);
+            lastNameTextBox.Size = new Size(357, 27);
             lastNameTextBox.TabIndex = 6;
             lastNameTextBox.Text = "Ej. Aguirre Romero";
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(248, 178);
+            nameTextBox.Location = new Point(198, 142);
+            nameTextBox.Margin = new Padding(2, 2, 2, 2);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(445, 31);
+            nameTextBox.Size = new Size(357, 27);
             nameTextBox.TabIndex = 5;
             nameTextBox.Text = "Ej. Juan Armando";
             // 
             // saveButton
             // 
             saveButton.FlatStyle = FlatStyle.Flat;
-            saveButton.Location = new Point(91, 505);
+            saveButton.Location = new Point(73, 404);
+            saveButton.Margin = new Padding(2, 2, 2, 2);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(129, 40);
+            saveButton.Size = new Size(103, 32);
             saveButton.TabIndex = 4;
             saveButton.Text = "Guardar";
             saveButton.UseVisualStyleBackColor = true;
@@ -156,9 +188,10 @@
             // 
             numberPhoneLabel.AutoSize = true;
             numberPhoneLabel.Font = new Font("Britannic Bold", 11F);
-            numberPhoneLabel.Location = new Point(8, 394);
+            numberPhoneLabel.Location = new Point(6, 315);
+            numberPhoneLabel.Margin = new Padding(2, 0, 2, 0);
             numberPhoneLabel.Name = "numberPhoneLabel";
-            numberPhoneLabel.Size = new Size(212, 25);
+            numberPhoneLabel.Size = new Size(181, 21);
             numberPhoneLabel.TabIndex = 3;
             numberPhoneLabel.Text = "Numero de Telefono:";
             // 
@@ -166,9 +199,10 @@
             // 
             emailLabel.AutoSize = true;
             emailLabel.Font = new Font("Britannic Bold", 11F);
-            emailLabel.Location = new Point(15, 324);
+            emailLabel.Location = new Point(12, 259);
+            emailLabel.Margin = new Padding(2, 0, 2, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(200, 25);
+            emailLabel.Size = new Size(169, 21);
             emailLabel.TabIndex = 2;
             emailLabel.Text = "Correo Electronico:";
             // 
@@ -176,9 +210,10 @@
             // 
             lastNameLabel.AutoSize = true;
             lastNameLabel.Font = new Font("Britannic Bold", 11F);
-            lastNameLabel.Location = new Point(120, 248);
+            lastNameLabel.Location = new Point(96, 198);
+            lastNameLabel.Margin = new Padding(2, 0, 2, 0);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(95, 25);
+            lastNameLabel.Size = new Size(79, 21);
             lastNameLabel.TabIndex = 1;
             lastNameLabel.Text = "Apellido:";
             // 
@@ -186,64 +221,48 @@
             // 
             nameLabel.AutoSize = true;
             nameLabel.Font = new Font("Britannic Bold", 11F);
-            nameLabel.Location = new Point(120, 178);
+            nameLabel.Location = new Point(96, 142);
+            nameLabel.Margin = new Padding(2, 0, 2, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(100, 25);
+            nameLabel.Size = new Size(85, 21);
             nameLabel.TabIndex = 0;
             nameLabel.Text = "Nombre: ";
             // 
-            // button1
+            // dgvUsuarios
             // 
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(285, 505);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 40);
-            button1.TabIndex = 13;
-            button1.Text = "Guardar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(459, 505);
-            button2.Name = "button2";
-            button2.Size = new Size(129, 40);
-            button2.TabIndex = 14;
-            button2.Text = "Guardar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(835, 97);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(954, 684);
-            dataGridView1.TabIndex = 3;
+            dgvUsuarios.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvUsuarios.Location = new Point(668, 78);
+            dgvUsuarios.Margin = new Padding(2, 2, 2, 2);
+            dgvUsuarios.Name = "dgvUsuarios";
+            dgvUsuarios.RowHeadersWidth = 62;
+            dgvUsuarios.Size = new Size(763, 547);
+            dgvUsuarios.TabIndex = 3;
             // 
             // button3
             // 
             button3.FlatStyle = FlatStyle.Flat;
-            button3.Location = new Point(44, 12);
+            button3.Location = new Point(35, 10);
+            button3.Margin = new Padding(2, 2, 2, 2);
             button3.Name = "button3";
-            button3.Size = new Size(129, 40);
+            button3.Size = new Size(103, 32);
             button3.TabIndex = 15;
             button3.Text = "Guardar";
             button3.UseVisualStyleBackColor = true;
             // 
             // Users
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1821, 819);
+            ClientSize = new Size(1457, 655);
             Controls.Add(button3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvUsuarios);
             Controls.Add(formGroupBox);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Users";
             Text = "Lista de Usuarios";
             formGroupBox.ResumeLayout(false);
             formGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvUsuarios).EndInit();
             ResumeLayout(false);
         }
 
@@ -265,7 +284,7 @@
         private Label nameLabel;
         private Button button2;
         private Button button1;
-        private DataGridView dataGridView1;
+        private DataGridView dgvUsuarios;
         private Button button3;
     }
 }
