@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj": {}
+    "C:\\Users\\Erick MArtinez\\Desktop\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj": {
+    "C:\\Users\\Erick MArtinez\\Desktop\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Erick MArtinez\\Desktop\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj",
         "projectName": "PresentationLayer",
-        "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj",
+        "projectPath": "C:\\Users\\Erick MArtinez\\Desktop\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj",
         "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\obj\\",
+        "outputPath": "C:\\Users\\Erick MArtinez\\Desktop\\HotelReservationSystem\\PresentationLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
