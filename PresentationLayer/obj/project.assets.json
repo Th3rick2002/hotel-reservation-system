@@ -8,19 +8,19 @@
     "net8.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Erick MArtinez\\.nuget\\packages\\": {}
+    "C:\\Users\\fuent\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\PresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\PresentationLayer\\obj\\",
+      "projectPath": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fuent\\Source\\Repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

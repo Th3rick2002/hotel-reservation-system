@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\BusisnessLayer\\BusisnessLayer.csproj": {}
+    "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\BusisnessLayer\\BusisnessLayer.csproj": {
+    "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\BusisnessLayer\\BusisnessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
         "projectName": "BusisnessLayer",
-        "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\BusisnessLayer\\BusisnessLayer.csproj",
-        "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\HotelReservationSystem\\BusisnessLayer\\obj\\",
+        "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
+        "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
