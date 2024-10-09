@@ -123,7 +123,6 @@
             priceRoomLabel.Size = new Size(214, 25);
             priceRoomLabel.TabIndex = 2;
             priceRoomLabel.Text = "Precion Por Noche:";
-            priceRoomLabel.Click += label2_Click;
             // 
             // saveRoomButton
             // 
