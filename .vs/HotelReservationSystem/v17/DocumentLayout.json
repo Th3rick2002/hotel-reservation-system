@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formlogin\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formlogin\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formadmin\\reservationhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formadmin\\reservationhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formlogin\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formlogin\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formadmin\\reservationhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formadmin\\reservationhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formuser\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formuser\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formuser\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formuser\\formuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\melissa\\source\\repos\\hotel-reservation-system\\presentationlayer\\formadmin\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formadmin\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,53 +50,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormLogin\\Login.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\FormLogin\\Login.cs",
-              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormLogin\\Login.cs*",
-              "RelativeToolTip": "PresentationLayer\\FormLogin\\Login.cs*",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAtwBUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:16:29.791Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormLogin\\Login.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\FormLogin\\Login.cs",
-              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormLogin\\Login.cs [Design]*",
-              "RelativeToolTip": "PresentationLayer\\FormLogin\\Login.cs [Design]*",
+              "Title": "ReservationHotel.cs",
+              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\ReservationHotel.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\FormAdmin\\ReservationHotel.cs",
+              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\ReservationHotel.cs",
+              "RelativeToolTip": "PresentationLayer\\FormAdmin\\ReservationHotel.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAIA9wAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T14:16:05.08Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-09T15:21:09.197Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Formuser.cs",
-              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormUser\\Formuser.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\FormUser\\Formuser.cs",
-              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormUser\\Formuser.cs",
-              "RelativeToolTip": "PresentationLayer\\FormUser\\Formuser.cs",
-              "ViewState": "AQIAADAAAAAAAAAAAAAMwAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "ReservationHotel.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\ReservationHotel.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\FormAdmin\\ReservationHotel.cs",
+              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\ReservationHotel.cs [Design]",
+              "RelativeToolTip": "PresentationLayer\\FormAdmin\\ReservationHotel.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T00:30:59.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-09T15:20:00.754Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Formuser.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormUser\\Formuser.cs",
-              "RelativeDocumentMoniker": "PresentationLayer\\FormUser\\Formuser.cs",
-              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormUser\\Formuser.cs [Design]",
-              "RelativeToolTip": "PresentationLayer\\FormUser\\Formuser.cs [Design]",
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\Users.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\FormAdmin\\Users.cs",
+              "ToolTip": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\Users.cs",
+              "RelativeToolTip": "PresentationLayer\\FormAdmin\\Users.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAIAwwCAAAABDAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-09T00:52:25.371Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-10-09T15:16:24.608Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace PresentationLayer.FormAdmin
 {
-    public partial class ReservationHotel : Form
+    public partial class roomHotel : Form
     {
         private HabitacionesServices _habitacionesServices;
         private ReservasService _reservasservice;
 
-        public ReservationHotel()
+        public roomHotel()
         {
             InitializeComponent();
             _reservasservice = new ReservasService();
@@ -26,9 +26,9 @@ namespace PresentationLayer.FormAdmin
 
         private void LoadReservas()
         {
-            dgvReservas.DataSource = _reservasservice.GetReservas();
+            listReservationDataGridView.DataSource = _reservasservice.GetReservas();
 
-            dgvReservas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listReservationDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             roomNumbercomboBox.DataSource = _habitacionesServices.GetHabitacion();
 
@@ -54,23 +54,14 @@ namespace PresentationLayer.FormAdmin
 
                 decimal costoTotal = tarifaBase * diasReservados;
 
-                lblTotal.Text = costoTotal.ToString("C");
+                priceResultLabel.Text = costoTotal.ToString("C");
             }
             else
             {
-                lblTotal.Text = string.Empty;
+                priceResultLabel.Text = string.Empty;
             }
         }
 
-        private void pbSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void pcMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private void dateInitDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
@@ -87,15 +78,5 @@ namespace PresentationLayer.FormAdmin
             CalcularPrecioTotal();
         }
 
-        private void pbSalir_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pbSalir, "Cerrar ventana");
-        }
-
-        private void pcMinimizar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pcMinimizar, "Minimizar ventana");
-
-        }
     }
 }

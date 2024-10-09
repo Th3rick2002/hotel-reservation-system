@@ -45,7 +45,7 @@ namespace PresentationLayer.FormAdmin
 
         private void reservationButton_Click(object sender, EventArgs e)
         {
-            ReservationHotel reservationHotel = new ReservationHotel();
+            roomHotel reservationHotel = new roomHotel();
             this.Hide();
             reservationHotel.Show();
             reservationHotel.FormClosed += (s, args) => this.Show();
