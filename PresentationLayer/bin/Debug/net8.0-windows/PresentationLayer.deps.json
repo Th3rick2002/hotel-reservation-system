@@ -363,18 +363,12 @@
           "DataAccessLayer": "1.0.0"
         },
         "runtime": {
-          "BusisnessLayer.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "BusisnessLayer.dll": {}
         }
       },
       "CommonLayer/1.0.0": {
         "runtime": {
-          "CommonLayer.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "CommonLayer.dll": {}
         }
       },
       "DataAccessLayer/1.0.0": {
@@ -383,10 +377,7 @@
           "Microsoft.Data.SqlClient": "5.2.2"
         },
         "runtime": {
-          "DataAccessLayer.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "DataAccessLayer.dll": {}
         }
       }
     }
