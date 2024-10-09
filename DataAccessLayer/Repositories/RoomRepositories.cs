@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class HabitacionesRepositories
+    public class RoomRepositories
     {
         private SqlDataAccess _dbConnection;
 
-        public HabitacionesRepositories()
+        public RoomRepositories()
         {
             _dbConnection = new SqlDataAccess();
         }
@@ -41,35 +41,41 @@ namespace DataAccessLayer.Repositories
             return habitacionesTable;
         }
 
-        public void AddHabitaciones(Habitacion habitacion)
+        public void AddHabitaciones(Room habitacion)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = @"INSERT INTO Usuario(IdHabitacion,Tipo, PrecioNoche, Caracteristicas)
-                                VALUES(@IdHabitacion, @Tipo, @PrecioNoche, @Caracteristicas)";
+                                VALUES(@IdRoom, @Type, @PriceNight, @Characteristic)";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdHabitacion", habitacion.IdHabitacion);
-                command.Parameters.AddWithValue("@Tipo", habitacion.Tipo);
-                command.Parameters.AddWithValue("@PrecioNoche", habitacion.PrecioNoche);
-                command.Parameters.AddWithValue("@Caracteristicas", habitacion.Caracteristicas);
+                command.Parameters.AddWithValue("@IdRoom", habitacion.IdRoom);
+                command.Parameters.AddWithValue("@Type", habitacion.Type);
+                command.Parameters.AddWithValue("@PriceNight", habitacion.PriceNight);
+                command.Parameters.AddWithValue("@Characteristic", habitacion.Characteristic);
+
+                connection.Open();
+                command.ExecuteNonQuery();
             }
         }
 
-        public void EditHabitaciones(Habitacion habitacion)
+        public void EditHabitaciones(Room habitacion)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = @"UPDATE Habitacion SET " +
-                                "Tipo = @Tipo" +
-                                "PrecioNoche = @PrecioNoche" +
-                                "Caracteristicas = @Caracteristicas " +
+                                "Tipo = @Type" +
+                                "PrecioNoche = @PriceNight" +
+                                "Caracteristicas = @Characteristic " +
                                 "WHERE IdHabitacion = @IdHabitacion";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Tipo", habitacion.Tipo);
-                command.Parameters.AddWithValue("@PrecioNoche", habitacion.PrecioNoche);
-                command.Parameters.AddWithValue("@Caracteristicas", habitacion.Caracteristicas);
+                command.Parameters.AddWithValue("@Type", habitacion.Type);
+                command.Parameters.AddWithValue("@PriceNight", habitacion.PriceNight);
+                command.Parameters.AddWithValue("@Characteristic", habitacion.Characteristic);
+
+                connection.Open();
+                command.ExecuteNonQuery();
             }
         }
 

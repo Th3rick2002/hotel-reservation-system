@@ -11,11 +11,11 @@ using CommonLayer.Entities;
 
 namespace DataAccessLayer.Repositories
 {
-    public class UsuariosRepositories
+    public class UsersRepositories
     {
         private SqlDataAccess _dbConnection;
 
-        public UsuariosRepositories()
+        public UsersRepositories()
         {
             _dbConnection = new SqlDataAccess();
         }
@@ -43,54 +43,63 @@ namespace DataAccessLayer.Repositories
             return usuariosTable;
         }
 
-        public void AddUsuarios(Usuarios usuarios)
+        public void AddUsuarios(Users usuarios)
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO Usuario(IdRol, Usuario, Nombre, Apellido, Email, Telefono)
-                                VALUES(@IdRol, @Usuario, @Nombre, @Apellido, @Email, @Telefono)";
+                string query = @"INSERT INTO Usuario(IdRol, Usuario, Clave, Nombre, Apellido, Email, Telefono)
+                                VALUES(@IdRol, @User, @Password, @Name, @LastName, @Email, @Telephone)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdRol", usuarios.oRol.IdRol);
-                command.Parameters.AddWithValue("@Usuario", usuarios.Usuario);
-                command.Parameters.AddWithValue("@Nombre", usuarios.Nombre);
-                command.Parameters.AddWithValue("@Apellido", usuarios.Apellido);
+                command.Parameters.AddWithValue("@User", usuarios.User);
+                command.Parameters.AddWithValue("@Password", usuarios.Password);
+                command.Parameters.AddWithValue("@Name", usuarios.Name);
+                command.Parameters.AddWithValue("@LastName", usuarios.LastName);
                 command.Parameters.AddWithValue("@Email", usuarios.Email);
-                command.Parameters.AddWithValue("@Telefono", usuarios.Telefono);
+                command.Parameters.AddWithValue("@Telephone", usuarios.Telephone);
+
+                connection.Open();
+                command.ExecuteNonQuery();
 
             }
         }
 
-        public void EditUsuarios(Usuarios usuarios)
+        public void EditUsuarios(Users usuarios)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = @"UPDATE Usuario SET " +
-                                "Usuario = @Usuario" +
-                                "Nombre = @Nombre" +
-                                "Apellido = @Apellido" +
+                                "Usuario = @User" +
+                                "Clave = @Password" +
+                                "Nombre = @Name" +
+                                "Apellido = @LastName" +
                                 "Email = @Email" +
-                                "Telefono = @Telefono " +
+                                "Telefono = @Telephone " +
                                 "WHERE IdUsuario = @IdUsuario";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Nombre", usuarios.Nombre);
-                command.Parameters.AddWithValue("@Usuario", usuarios.Usuario);
-                command.Parameters.AddWithValue("@Apellido", usuarios.Apellido);
+                command.Parameters.AddWithValue("@Name", usuarios.Name);
+                command.Parameters.AddWithValue("@Password", usuarios.Password);
+                command.Parameters.AddWithValue("@User", usuarios.User);
+                command.Parameters.AddWithValue("@LastName", usuarios.LastName);
                 command.Parameters.AddWithValue("@Email", usuarios.Email);
-                command.Parameters.AddWithValue("@Telefono", usuarios.Telefono);
+                command.Parameters.AddWithValue("@Telephone", usuarios.Telephone);
+
+                connection.Open();
+                command.ExecuteNonQuery();
 
             }
         }
 
-        public void DeleteUsuario(int IdUsuario)
+        public void DeleteUsuario(int IdUser)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = "DELETE FROM Usuario WHERE IdUsuario = @IdUsuario";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdUsuario", IdUsuario);
+                command.Parameters.AddWithValue("@IdUsuario", IdUser);
 
                 connection.Open();
                 command.ExecuteNonQuery();

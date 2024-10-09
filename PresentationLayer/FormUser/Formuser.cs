@@ -6,12 +6,12 @@ namespace PresentationLayer.FormCliente
 {
     public partial class Formuser : Form
     {
-        private UsuariosServices _UsuariosServices;
+        private UsersServices _UsuariosServices;
         
         public Formuser()
         {
             InitializeComponent();
-            _UsuariosServices = new UsuariosServices();
+            _UsuariosServices = new UsersServices();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -34,15 +34,15 @@ namespace PresentationLayer.FormCliente
 
             int phone = Convert.ToInt32(phoneText);
 
-            Usuarios usuario = new Usuarios()
+            Users usuario = new Users()
             {
-                oRol = new Rol { rol = "Cliente" },
-                Usuario = user,
-                Clave = password,
-                Nombre = name,
-                Apellido = lastName,
+                //oRol = new Rol { rol = "Cliente" },
+                User = user,
+                Password = password,
+                Name = name,
+                LastName = lastName,
                 Email = email,
-                Telefono = phone
+                Telephone = phone
             };
 
             ValidationClient validation = new ValidationClient();

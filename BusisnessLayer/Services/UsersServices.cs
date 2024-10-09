@@ -4,13 +4,13 @@ using System.Data;
 
 namespace BusisnessLayer.Services
 {
-    public class UsuariosServices
+    public class UsersServices
     {
-        private UsuariosRepositories _usuariosrepositories;
+        private UsersRepositories _usuariosrepositories;
 
-        public UsuariosServices()
+        public UsersServices()
         {
-            _usuariosrepositories = new UsuariosRepositories();
+            _usuariosrepositories = new UsersRepositories();
         }
 
         public DataTable GetUsuarios()
@@ -18,19 +18,19 @@ namespace BusisnessLayer.Services
             return _usuariosrepositories.GetAllUsuarios();
         }
 
-        public void AddUsuarios(Usuarios usuarios)
+        public void AddUsuarios(Users usuarios)
         {
             _usuariosrepositories.AddUsuarios(usuarios);
         }
 
-        public void UpdateUsuarios(Usuarios usuarios)
+        public void UpdateUsuarios(Users usuarios)
         {
             _usuariosrepositories.EditUsuarios(usuarios);
         }
 
-        public void DeleteUsuarios(int IdUsuario)
+        public void DeleteUsuarios(int IdUser)
         {
-            _usuariosrepositories.DeleteUsuario(IdUsuario);
+            _usuariosrepositories.DeleteUsuario(IdUser);
         }
 
     }

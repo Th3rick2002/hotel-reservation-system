@@ -84,7 +84,7 @@
             deleteRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
             deleteRoomButton.Location = new Point(426, 412);
             deleteRoomButton.Name = "deleteRoomButton";
-            deleteRoomButton.Size = new Size(159, 55);
+            deleteRoomButton.Size = new Size(159, 50);
             deleteRoomButton.TabIndex = 25;
             deleteRoomButton.Text = "Eliminar";
             deleteRoomButton.UseVisualStyleBackColor = false;
@@ -93,7 +93,7 @@
             // 
             priceRoomTextBox.Location = new Point(72, 289);
             priceRoomTextBox.Name = "priceRoomTextBox";
-            priceRoomTextBox.Size = new Size(444, 34);
+            priceRoomTextBox.Size = new Size(444, 30);
             priceRoomTextBox.TabIndex = 3;
             // 
             // editRoomButton
@@ -110,7 +110,7 @@
             editRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
             editRoomButton.Location = new Point(231, 412);
             editRoomButton.Name = "editRoomButton";
-            editRoomButton.Size = new Size(155, 55);
+            editRoomButton.Size = new Size(155, 50);
             editRoomButton.TabIndex = 24;
             editRoomButton.Text = "Editar";
             editRoomButton.UseVisualStyleBackColor = false;
@@ -120,7 +120,7 @@
             priceRoomLabel.AutoSize = true;
             priceRoomLabel.Location = new Point(72, 249);
             priceRoomLabel.Name = "priceRoomLabel";
-            priceRoomLabel.Size = new Size(214, 25);
+            priceRoomLabel.Size = new Size(184, 22);
             priceRoomLabel.TabIndex = 2;
             priceRoomLabel.Text = "Precion Por Noche:";
             // 
@@ -138,7 +138,7 @@
             saveRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
             saveRoomButton.Location = new Point(41, 412);
             saveRoomButton.Name = "saveRoomButton";
-            saveRoomButton.Size = new Size(158, 55);
+            saveRoomButton.Size = new Size(158, 50);
             saveRoomButton.TabIndex = 23;
             saveRoomButton.Text = "Agregar";
             saveRoomButton.UseVisualStyleBackColor = false;
@@ -147,7 +147,7 @@
             // 
             typeRoomTextBox.Location = new Point(71, 160);
             typeRoomTextBox.Name = "typeRoomTextBox";
-            typeRoomTextBox.Size = new Size(445, 34);
+            typeRoomTextBox.Size = new Size(445, 30);
             typeRoomTextBox.TabIndex = 1;
             // 
             // typeRoomLabel
@@ -155,7 +155,7 @@
             typeRoomLabel.AutoSize = true;
             typeRoomLabel.Location = new Point(72, 110);
             typeRoomLabel.Name = "typeRoomLabel";
-            typeRoomLabel.Size = new Size(62, 25);
+            typeRoomLabel.Size = new Size(51, 22);
             typeRoomLabel.TabIndex = 0;
             typeRoomLabel.Text = "Tipo:";
             // 
@@ -165,16 +165,16 @@
             backMenuButton.FlatStyle = FlatStyle.Popup;
             backMenuButton.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             backMenuButton.ForeColor = Color.White;
-            backMenuButton.Location = new Point(23, 619);
+            backMenuButton.Location = new Point(23, 642);
             backMenuButton.Name = "backMenuButton";
-            backMenuButton.Size = new Size(199, 74);
+            backMenuButton.Size = new Size(199, 51);
             backMenuButton.TabIndex = 17;
             backMenuButton.Text = "Regresar a Menú";
             backMenuButton.UseVisualStyleBackColor = false;
             // 
             // RoomHotel
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(1471, 729);

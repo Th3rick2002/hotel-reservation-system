@@ -15,7 +15,7 @@ namespace PresentationLayer.FormLogin
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            DataTable usuariosTable = new UsuariosServices().GetUsuarios();
+            DataTable usuariosTable = new UsersServices().GetUsuarios();
 
             DataRow ousuarioRow = usuariosTable.AsEnumerable().FirstOrDefault(u =>
                 u.Field<string>("Usuario") == userTextBox.Text &&

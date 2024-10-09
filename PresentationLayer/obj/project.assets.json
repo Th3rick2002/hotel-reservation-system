@@ -1810,19 +1810,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Erick MArtinez\\.nuget\\packages\\": {}
+    "C:\\Users\\fuent\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
+      "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1836,11 +1836,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
-              "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj"
+            "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
+              "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj"
             },
-            "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
-              "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
+            "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+              "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
             }
           }
         }

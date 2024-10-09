@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace BusisnessLayer.Services
 {
-    public class ReservasService
+    public class ReservationServices
     {
-        private ReservasRepositories _reservasrepositories;
+        private ReservationRepositories _reservasrepositories;
 
-        public ReservasService()
+        public ReservationServices()
         {
-            _reservasrepositories = new ReservasRepositories();
+            _reservasrepositories = new ReservationRepositories();
         }
 
         public DataTable GetReservas()
@@ -23,14 +23,14 @@ namespace BusisnessLayer.Services
             return _reservasrepositories.GetAllReservas();
         }
 
-        public void UpdateUsuarios(Reservas reservas)
+        public void UpdateUsuarios(Reservation reservas)
         {
             _reservasrepositories.EditReservas(reservas);
         }
 
-        public void DeleteReservas(int idReserva)
+        public void DeleteReservas(int IdReservation)
         {
-            _reservasrepositories.DeleteReservas(idReserva);
+            _reservasrepositories.DeleteReservas(IdReservation);
         }
     }
 }

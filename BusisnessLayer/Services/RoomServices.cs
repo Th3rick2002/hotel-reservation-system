@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace BusisnessLayer.Services
 {
-    public class HabitacionesServices
+    public class RoomServices
     {
-        private HabitacionesRepositories _habitacionesrepositories;
+        private RoomRepositories _habitacionesrepositories;
 
-        public HabitacionesServices()
+        public RoomServices()
         {
-            _habitacionesrepositories = new HabitacionesRepositories();
+            _habitacionesrepositories = new RoomRepositories();
         }
 
         public DataTable GetHabitacion()
@@ -23,12 +23,12 @@ namespace BusisnessLayer.Services
             return _habitacionesrepositories.GetAllHabitaciones();
         }
 
-        public void AddHabitaciones(Habitacion habitacion)
+        public void AddHabitaciones(Room habitacion)
         {
             _habitacionesrepositories.AddHabitaciones(habitacion);
         }
 
-        public void UpdateHabitaciones(Habitacion habitacion)
+        public void UpdateHabitaciones(Room habitacion)
         {
             _habitacionesrepositories.EditHabitaciones(habitacion);
         }
