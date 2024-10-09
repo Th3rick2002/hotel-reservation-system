@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {}
+    "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
+    "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
         "projectName": "BusisnessLayer",
-        "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
-        "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj",
+        "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
-                "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
+              "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+                "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
               },
-              "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj"
+              "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj": {
+                "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }
@@ -71,17 +71,17 @@
         }
       }
     },
-    "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+    "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj",
         "projectName": "CommonLayer",
-        "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj",
-        "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\obj\\",
+        "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj",
+        "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -131,17 +131,17 @@
         }
       }
     },
-    "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj": {
+    "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj",
+        "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj",
         "projectName": "DataAccessLayer",
-        "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\obj\\",
+        "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -155,8 +155,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
-                "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
+              "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+                "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
               }
             }
           }

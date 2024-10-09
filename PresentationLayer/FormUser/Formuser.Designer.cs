@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             titleLabel = new Label();
             formGroupBox = new GroupBox();
+            btnGuardar = new FontAwesome.Sharp.IconButton();
             passwordTextBox = new TextBox();
             userTextBox = new TextBox();
             passwordLabel = new Label();
@@ -46,7 +47,6 @@
             pcMinimizar = new PictureBox();
             pbSalir = new PictureBox();
             toolTip1 = new ToolTip(components);
-            btnGuardar = new FontAwesome.Sharp.IconButton();
             formGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbSalir).BeginInit();
@@ -59,7 +59,7 @@
             titleLabel.Location = new Point(303, 33);
             titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(373, 59);
+            titleLabel.Size = new Size(304, 46);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Registra tus datos";
             // 
@@ -87,12 +87,33 @@
             formGroupBox.TabStop = false;
             formGroupBox.Text = "Formulario";
             // 
+            // btnGuardar
+            // 
+            btnGuardar.BackColor = Color.ForestGreen;
+            btnGuardar.Cursor = Cursors.Hand;
+            btnGuardar.FlatAppearance.BorderColor = Color.Black;
+            btnGuardar.FlatStyle = FlatStyle.Flat;
+            btnGuardar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGuardar.ForeColor = Color.White;
+            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
+            btnGuardar.IconColor = Color.White;
+            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnGuardar.IconSize = 22;
+            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnGuardar.Location = new Point(255, 592);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(260, 35);
+            btnGuardar.TabIndex = 24;
+            btnGuardar.Text = "Crear cuenta";
+            btnGuardar.UseVisualStyleBackColor = false;
+            btnGuardar.Click += btnGuardar_Click;
+            // 
             // passwordTextBox
             // 
             passwordTextBox.Location = new Point(305, 178);
             passwordTextBox.Margin = new Padding(2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(435, 26);
+            passwordTextBox.Size = new Size(435, 21);
             passwordTextBox.TabIndex = 12;
             // 
             // userTextBox
@@ -100,29 +121,29 @@
             userTextBox.Location = new Point(305, 113);
             userTextBox.Margin = new Padding(2);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(435, 26);
+            userTextBox.Size = new Size(435, 21);
             userTextBox.TabIndex = 11;
             userTextBox.Text = "Ej. Aramndo093";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Font = new Font("Britannic Bold", 12F);
-            passwordLabel.Location = new Point(115, 173);
+            passwordLabel.Font = new Font("Microsoft Sans Serif", 12F);
+            passwordLabel.Location = new Point(130, 178);
             passwordLabel.Margin = new Padding(2, 0, 2, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(124, 22);
+            passwordLabel.Size = new Size(100, 20);
             passwordLabel.TabIndex = 10;
             passwordLabel.Text = "Contraseña: ";
             // 
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Font = new Font("Britannic Bold", 12F);
+            userLabel.Font = new Font("Microsoft Sans Serif", 12F);
             userLabel.Location = new Point(161, 108);
             userLabel.Margin = new Padding(2, 0, 2, 0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(86, 22);
+            userLabel.Size = new Size(68, 20);
             userLabel.TabIndex = 9;
             userLabel.Text = "Usuario:";
             // 
@@ -131,7 +152,7 @@
             numerPhoneTexBox.Location = new Point(305, 505);
             numerPhoneTexBox.Margin = new Padding(2);
             numerPhoneTexBox.Name = "numerPhoneTexBox";
-            numerPhoneTexBox.Size = new Size(435, 26);
+            numerPhoneTexBox.Size = new Size(435, 21);
             numerPhoneTexBox.TabIndex = 8;
             numerPhoneTexBox.Text = "Ej. 76764532";
             // 
@@ -140,7 +161,7 @@
             emailTextBox.Location = new Point(308, 410);
             emailTextBox.Margin = new Padding(2);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(435, 26);
+            emailTextBox.Size = new Size(435, 21);
             emailTextBox.TabIndex = 7;
             emailTextBox.Text = "Ej. juanAguirre@correo.com";
             // 
@@ -149,7 +170,7 @@
             lastNameTextBox.Location = new Point(305, 328);
             lastNameTextBox.Margin = new Padding(2);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(435, 26);
+            lastNameTextBox.Size = new Size(435, 21);
             lastNameTextBox.TabIndex = 6;
             lastNameTextBox.Text = "Ej. Aguirre Romero";
             // 
@@ -158,51 +179,51 @@
             nameTextBox.Location = new Point(305, 244);
             nameTextBox.Margin = new Padding(2);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(435, 26);
+            nameTextBox.Size = new Size(435, 21);
             nameTextBox.TabIndex = 5;
             nameTextBox.Text = "Ej. Juan Armando";
             // 
             // numberPhoneLabel
             // 
             numberPhoneLabel.AutoSize = true;
-            numberPhoneLabel.Font = new Font("Britannic Bold", 12F);
-            numberPhoneLabel.Location = new Point(50, 506);
+            numberPhoneLabel.Font = new Font("Microsoft Sans Serif", 12F);
+            numberPhoneLabel.Location = new Point(72, 506);
             numberPhoneLabel.Margin = new Padding(2, 0, 2, 0);
             numberPhoneLabel.Name = "numberPhoneLabel";
-            numberPhoneLabel.Size = new Size(192, 22);
+            numberPhoneLabel.Size = new Size(157, 20);
             numberPhoneLabel.TabIndex = 3;
             numberPhoneLabel.Text = "Numero de Telefono:";
             // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Britannic Bold", 12F);
-            emailLabel.Location = new Point(52, 411);
+            emailLabel.Font = new Font("Microsoft Sans Serif", 12F);
+            emailLabel.Location = new Point(81, 411);
             emailLabel.Margin = new Padding(2, 0, 2, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(190, 22);
+            emailLabel.Size = new Size(148, 20);
             emailLabel.TabIndex = 2;
             emailLabel.Text = "Correo Electronico: ";
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Font = new Font("Britannic Bold", 12F);
+            lastNameLabel.Font = new Font("Microsoft Sans Serif", 12F);
             lastNameLabel.Location = new Point(161, 323);
             lastNameLabel.Margin = new Padding(2, 0, 2, 0);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(86, 22);
+            lastNameLabel.Size = new Size(69, 20);
             lastNameLabel.TabIndex = 1;
             lastNameLabel.Text = "Apellido:";
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Britannic Bold", 12F);
+            nameLabel.Font = new Font("Microsoft Sans Serif", 12F);
             nameLabel.Location = new Point(163, 244);
             nameLabel.Margin = new Padding(2, 0, 2, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(91, 22);
+            nameLabel.Size = new Size(73, 20);
             nameLabel.TabIndex = 0;
             nameLabel.Text = "Nombre: ";
             // 
@@ -236,36 +257,16 @@
             pbSalir.Click += pbSalir_Click;
             pbSalir.MouseHover += pbSalir_MouseHover;
             // 
-            // btnGuardar
-            // 
-            btnGuardar.BackColor = Color.ForestGreen;
-            btnGuardar.Cursor = Cursors.Hand;
-            btnGuardar.FlatAppearance.BorderColor = Color.Black;
-            btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            btnGuardar.IconColor = Color.White;
-            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.IconSize = 22;
-            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(270, 618);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(260, 35);
-            btnGuardar.TabIndex = 24;
-            btnGuardar.Text = "Crear cuenta";
-            btnGuardar.UseVisualStyleBackColor = false;
-            // 
             // Formuser
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(997, 843);
+            ClientSize = new Size(997, 788);
             Controls.Add(pcMinimizar);
             Controls.Add(pbSalir);
             Controls.Add(formGroupBox);
             Controls.Add(titleLabel);
-            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
             Name = "Formuser";

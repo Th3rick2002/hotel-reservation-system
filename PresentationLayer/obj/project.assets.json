@@ -47,6 +47,19 @@
           }
         }
       },
+      "FluentValidation/11.10.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/FluentValidation.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "FontAwesome.Sharp/6.6.0": {
         "type": "package",
         "compile": {
@@ -675,6 +688,31 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "FluentValidation/11.10.0": {
+      "sha512": "qsJGSJDdZ8qiG+lVJ70PZfJHcEdq8UQZ/tZDXoj78/iHKG6lVKtMJsD11zyyv/IPc7rwqGqnFoFLTNzpo3IPYg==",
+      "type": "package",
+      "path": "fluentvalidation/11.10.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "fluent-validation-icon.png",
+        "fluentvalidation.11.10.0.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net5.0/FluentValidation.dll",
+        "lib/net5.0/FluentValidation.xml",
+        "lib/net6.0/FluentValidation.dll",
+        "lib/net6.0/FluentValidation.xml",
+        "lib/net7.0/FluentValidation.dll",
+        "lib/net7.0/FluentValidation.xml",
+        "lib/net8.0/FluentValidation.dll",
+        "lib/net8.0/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml",
+        "lib/netstandard2.1/FluentValidation.dll",
+        "lib/netstandard2.1/FluentValidation.xml"
       ]
     },
     "FontAwesome.Sharp/6.6.0": {
@@ -1767,23 +1805,24 @@
     "net8.0-windows7.0": [
       "BusisnessLayer >= 1.0.0",
       "CommonLayer >= 1.0.0",
+      "FluentValidation >= 11.10.0",
       "FontAwesome.Sharp >= 6.6.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\fuent\\.nuget\\packages\\": {}
+    "C:\\Users\\Erick MArtinez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\fuent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
+      "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\fuent\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1797,11 +1836,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
-              "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj"
+            "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
+              "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj"
             },
-            "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
-              "projectPath": "C:\\Users\\fuent\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
+            "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+              "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
             }
           }
         }
@@ -1821,6 +1860,10 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[11.10.0, )"
+          },
           "FontAwesome.Sharp": {
             "target": "Package",
             "version": "[6.6.0, )"
