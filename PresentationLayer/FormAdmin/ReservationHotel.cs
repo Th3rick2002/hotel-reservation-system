@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace PresentationLayer.FormAdmin
 {
-    public partial class roomHotel : Form
+    public partial class reservationHotel : Form
     {
         private HabitacionesServices _habitacionesServices;
         private ReservasService _reservasservice;
 
-        public roomHotel()
+        public reservationHotel()
         {
             InitializeComponent();
             _reservasservice = new ReservasService();

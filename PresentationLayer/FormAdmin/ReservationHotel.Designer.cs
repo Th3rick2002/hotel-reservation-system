@@ -1,6 +1,6 @@
 ﻿namespace PresentationLayer.FormAdmin
 {
-    partial class roomHotel
+    partial class reservationHotel
     {
         /// <summary>
         /// Required designer variable.
@@ -219,11 +219,11 @@
             // listReservationDataGridView
             // 
             listReservationDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            listReservationDataGridView.Location = new Point(793, 22);
+            listReservationDataGridView.Location = new Point(793, 35);
             listReservationDataGridView.Margin = new Padding(2);
             listReservationDataGridView.Name = "listReservationDataGridView";
             listReservationDataGridView.RowHeadersWidth = 62;
-            listReservationDataGridView.Size = new Size(949, 589);
+            listReservationDataGridView.Size = new Size(949, 576);
             listReservationDataGridView.TabIndex = 15;
             // 
             // backMenuButton
@@ -239,7 +239,7 @@
             backMenuButton.Text = "Regresar a Menú";
             backMenuButton.UseVisualStyleBackColor = false;
             // 
-            // roomHotel
+            // reservationHotel
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -249,9 +249,9 @@
             Controls.Add(formReservationGroupBox);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
-            Name = "roomHotel";
+            Name = "reservationHotel";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Lista de Habitaciones";
+            Text = "Lista de Reservaciones";
             formReservationGroupBox.ResumeLayout(false);
             formReservationGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)listReservationDataGridView).EndInit();
