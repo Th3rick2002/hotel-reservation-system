@@ -294,7 +294,7 @@ node_modules/
 # Visual Studio 6 auto-generated workspace file (contains which files were open etc.)
 *.vbw
 
-# Visual Studio 6 auto-generated project file (contains which files were open etc.)
+# Visual Studio 6 auto-generated project file (contains which files fueron open etc.)
 *.vbp
 
 # Visual Studio 6 workspace and project file (working project files containing files to include in project)
@@ -396,3 +396,19 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+# Archivos binarios (adiciones)
+*.dll
+*.exe
+*.pdb
+*.obj
+*.app
+*.apk
+*.ipa
+
+# Archivos temporales
+*.tmp
+*.log
+*.cache
+Thumbs.db
+.DS_Store

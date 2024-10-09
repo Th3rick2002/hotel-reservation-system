@@ -1810,24 +1810,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Melissa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Erick MArtinez\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "projectUniqueName": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
       "projectName": "PresentationLayer",
-      "projectPath": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
-      "packagesPath": "C:\\Users\\Melissa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
+      "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\PresentationLayer.csproj",
+      "packagesPath": "C:\\Users\\Erick MArtinez\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Melissa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Erick MArtinez\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1841,11 +1836,11 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
-              "projectPath": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj"
+            "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj": {
+              "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\BusisnessLayer.csproj"
             },
-            "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
-              "projectPath": "C:\\Users\\Melissa\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
+            "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj": {
+              "projectPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\CommonLayer\\CommonLayer.csproj"
             }
           }
         }
@@ -1893,7 +1888,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

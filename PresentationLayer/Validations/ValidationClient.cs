@@ -1,10 +1,5 @@
 ﻿using CommonLayer.Entities;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PresentationLayer.Validations
 {
@@ -37,8 +32,9 @@ namespace PresentationLayer.Validations
                 .NotEmpty().WithMessage("El campo email es requerido")
                 .EmailAddress().WithMessage("El campo email no es una dirección válida");
 
-            RuleFor(u => u.Telefono)
-            .NotEmpty().WithMessage("El número de celular es requerido.");
+            RuleFor(user => user.Telefono)
+                .NotEmpty().WithMessage("El número de celular es requerido.")
+                .GreaterThan(0).WithMessage("El número de celular debe ser positivo.");
 
         }
     }

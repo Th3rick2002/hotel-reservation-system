@@ -48,20 +48,20 @@ namespace PresentationLayer.FormLogin
             // userTextBox
             // 
             userTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            userTextBox.Location = new Point(701, 199);
-            userTextBox.Margin = new Padding(2);
+            userTextBox.Location = new Point(491, 119);
+            userTextBox.Margin = new Padding(1, 1, 1, 1);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(275, 31);
+            userTextBox.Size = new Size(194, 23);
             userTextBox.TabIndex = 3;
             // 
             // passwordTextBox
             // 
             passwordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            passwordTextBox.Location = new Point(701, 294);
-            passwordTextBox.Margin = new Padding(2);
+            passwordTextBox.Location = new Point(491, 176);
+            passwordTextBox.Margin = new Padding(1, 1, 1, 1);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.PasswordChar = '*';
-            passwordTextBox.Size = new Size(275, 31);
+            passwordTextBox.Size = new Size(194, 23);
             passwordTextBox.TabIndex = 4;
             // 
             // newCountTextBox
@@ -69,17 +69,17 @@ namespace PresentationLayer.FormLogin
             newCountTextBox.BackColor = Color.DimGray;
             newCountTextBox.Cursor = Cursors.Hand;
             newCountTextBox.FlatStyle = FlatStyle.Flat;
-            newCountTextBox.Font = new Font("Century Gothic", 9F);
+            newCountTextBox.Font = new Font("Microsoft Sans Serif", 9F);
             newCountTextBox.ForeColor = Color.White;
             newCountTextBox.IconChar = IconChar.PlusSquare;
             newCountTextBox.IconColor = Color.White;
             newCountTextBox.IconFont = IconFont.Auto;
             newCountTextBox.IconSize = 38;
             newCountTextBox.ImageAlign = ContentAlignment.MiddleLeft;
-            newCountTextBox.Location = new Point(603, 560);
-            newCountTextBox.Margin = new Padding(4);
+            newCountTextBox.Location = new Point(422, 336);
+            newCountTextBox.Margin = new Padding(3, 2, 3, 2);
             newCountTextBox.Name = "newCountTextBox";
-            newCountTextBox.Size = new Size(413, 58);
+            newCountTextBox.Size = new Size(289, 35);
             newCountTextBox.TabIndex = 8;
             newCountTextBox.Text = "Crear cuenta";
             newCountTextBox.UseVisualStyleBackColor = false;
@@ -90,17 +90,17 @@ namespace PresentationLayer.FormLogin
             loginButton.BackColor = Color.ForestGreen;
             loginButton.Cursor = Cursors.Hand;
             loginButton.FlatStyle = FlatStyle.Flat;
-            loginButton.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            loginButton.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             loginButton.ForeColor = Color.White;
             loginButton.IconChar = IconChar.LockOpen;
             loginButton.IconColor = Color.White;
             loginButton.IconFont = IconFont.Auto;
             loginButton.IconSize = 38;
             loginButton.ImageAlign = ContentAlignment.MiddleLeft;
-            loginButton.Location = new Point(603, 461);
-            loginButton.Margin = new Padding(4);
+            loginButton.Location = new Point(422, 277);
+            loginButton.Margin = new Padding(3, 2, 3, 2);
             loginButton.Name = "loginButton";
-            loginButton.Size = new Size(413, 58);
+            loginButton.Size = new Size(289, 35);
             loginButton.TabIndex = 7;
             loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = false;
@@ -109,47 +109,49 @@ namespace PresentationLayer.FormLogin
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Font = new Font("Century Gothic", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            titleLabel.Location = new Point(637, 52);
-            titleLabel.Margin = new Padding(4, 0, 4, 0);
+            titleLabel.Font = new Font("Microsoft Sans Serif", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            titleLabel.Location = new Point(446, 31);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(326, 55);
+            titleLabel.Size = new Size(224, 36);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "INICIO SESION";
             // 
             // hotelPictureBox
             // 
             hotelPictureBox.Image = Properties.Resources.hoteles_Grand_Velas_Resorts_e1596047698604;
-            hotelPictureBox.Location = new Point(1, -2);
+            hotelPictureBox.Location = new Point(1, -1);
+            hotelPictureBox.Margin = new Padding(2, 2, 2, 2);
             hotelPictureBox.Name = "hotelPictureBox";
-            hotelPictureBox.Size = new Size(524, 655);
+            hotelPictureBox.Size = new Size(367, 393);
             hotelPictureBox.TabIndex = 9;
             hotelPictureBox.TabStop = false;
             // 
             // userPictureBox
             // 
             userPictureBox.Image = Properties.Resources.usuario__1_;
-            userPictureBox.Location = new Point(613, 176);
+            userPictureBox.Location = new Point(429, 106);
+            userPictureBox.Margin = new Padding(2, 2, 2, 2);
             userPictureBox.Name = "userPictureBox";
-            userPictureBox.Size = new Size(67, 63);
+            userPictureBox.Size = new Size(47, 38);
             userPictureBox.TabIndex = 10;
             userPictureBox.TabStop = false;
             // 
             // passwordPictureBox
             // 
             passwordPictureBox.Image = Properties.Resources.candado;
-            passwordPictureBox.Location = new Point(613, 278);
+            passwordPictureBox.Location = new Point(429, 167);
+            passwordPictureBox.Margin = new Padding(2, 2, 2, 2);
             passwordPictureBox.Name = "passwordPictureBox";
-            passwordPictureBox.Size = new Size(77, 64);
+            passwordPictureBox.Size = new Size(54, 38);
             passwordPictureBox.TabIndex = 11;
             passwordPictureBox.TabStop = false;
             // 
             // Login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.GhostWhite;
-            ClientSize = new Size(1056, 654);
+            ClientSize = new Size(739, 392);
             Controls.Add(passwordPictureBox);
             Controls.Add(userPictureBox);
             Controls.Add(hotelPictureBox);
@@ -159,7 +161,7 @@ namespace PresentationLayer.FormLogin
             Controls.Add(passwordTextBox);
             Controls.Add(userTextBox);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(2);
+            Margin = new Padding(1, 1, 1, 1);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)hotelPictureBox).EndInit();

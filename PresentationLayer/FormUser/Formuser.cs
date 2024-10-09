@@ -1,16 +1,6 @@
 ﻿using BusisnessLayer.Services;
 using CommonLayer.Entities;
 using PresentationLayer.Validations;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PresentationLayer.FormCliente
 {
@@ -31,38 +21,67 @@ namespace PresentationLayer.FormCliente
             string name = nameTextBox.Text;
             string lastName = lastNameTextBox.Text;
             string email = emailTextBox.Text;
-            int phone = Convert.ToInt32(numerPhoneTexBox.Text);
+            string phoneText = numerPhoneTexBox.Text;
 
-            Rol rol = new Rol();
-            rol.rol = "Cliente";
+            var errorProvider = new ErrorProvider();
+            errorProvider.Clear();
+
+            if ((phoneText.Length != 8 && phoneText.Length != 11) || !phoneText.All(char.IsDigit))
+            {
+                errorProvider.SetError(numerPhoneTexBox, "El número de celular debe tener 8 o 11 números.");
+                return;
+            }
+
+            int phone = Convert.ToInt32(phoneText);
 
             Usuarios usuario = new Usuarios()
             {
-                oRol = rol,
+                oRol = new Rol { rol = "Cliente" },
                 Usuario = user,
                 Clave = password,
                 Nombre = name,
                 Apellido = lastName,
                 Email = email,
                 Telefono = phone
-
             };
 
             ValidationClient validation = new ValidationClient();
-
             FluentValidation.Results.ValidationResult results = validation.Validate(usuario);
 
-            if (!results.IsValid)
+            foreach (var error in results.Errors)
             {
-                foreach (var failure in results.Errors)
+                switch (error.PropertyName)
                 {
-                    MessageBox.Show($"Property {failure.PropertyName} failed validation. Error was: {failure.ErrorMessage}");
+                    case "Usuario":
+                        errorProvider.SetError(userTextBox, error.ErrorMessage);
+                        break;
+                    case "Clave":
+                        errorProvider.SetError(passwordTextBox, error.ErrorMessage);
+                        break;
+                    case "Nombre":
+                        errorProvider.SetError(nameTextBox, error.ErrorMessage);
+                        break;
+                    case "Apellido":
+                        errorProvider.SetError(lastNameTextBox, error.ErrorMessage);
+                        break;
+                    case "Email":
+                        errorProvider.SetError(emailTextBox, error.ErrorMessage);
+                        break;
                 }
             }
-            else
+
+           
+            if (results.IsValid)
             {
                 _UsuariosServices.AddUsuarios(usuario);
                 MessageBox.Show("Usuario registrado correctamente");
+                errorProvider.Clear();
+                userTextBox.Clear();
+                passwordTextBox.Clear();
+                nameTextBox.Clear();
+                lastNameTextBox.Clear();
+                emailTextBox.Clear();
+                numerPhoneTexBox.Clear();
             }
         }
     }

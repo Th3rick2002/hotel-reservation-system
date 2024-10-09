@@ -15,7 +15,7 @@ namespace PresentationLayer.FormAdmin
 {
     public partial class FormAdministration : Form
     {
-        public FormAdministration(Usuarios ousuario)
+        public FormAdministration()
         {
             InitializeComponent();
         }
