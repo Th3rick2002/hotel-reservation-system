@@ -17,6 +17,7 @@ namespace PresentationLayer.FormCliente
     public partial class Formuser : Form
     {
         private UsuariosServices _UsuariosServices;
+        
         public Formuser()
         {
             InitializeComponent();
@@ -52,8 +53,12 @@ namespace PresentationLayer.FormCliente
             string email = emailTextBox.Text;
             int phone = Convert.ToInt32(numerPhoneTexBox.Text);
 
+            Rol rol = new Rol();
+            rol.rol = "Cliente";
+
             Usuarios usuario = new Usuarios()
             {
+                oRol = rol,
                 Usuario = user,
                 Clave = password,
                 Nombre = name,
