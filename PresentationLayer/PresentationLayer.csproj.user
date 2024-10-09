@@ -20,7 +20,7 @@
     <Compile Update="FormReservation\Reservation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormUser\Formuser.cs">
+    <Compile Update="FormUser\FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

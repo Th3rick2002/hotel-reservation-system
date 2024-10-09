@@ -44,22 +44,20 @@
             emailLabel = new Label();
             lastNameLabel = new Label();
             nameLabel = new Label();
-            pcMinimizar = new PictureBox();
-            pbSalir = new PictureBox();
             toolTip1 = new ToolTip(components);
+            hotelPictureBox = new PictureBox();
             formGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbSalir).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hotelPictureBox).BeginInit();
             SuspendLayout();
             // 
             // titleLabel
             // 
             titleLabel.AutoSize = true;
-            titleLabel.Font = new Font("Impact", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            titleLabel.Location = new Point(303, 33);
+            titleLabel.Font = new Font("Century Gothic", 22F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            titleLabel.Location = new Point(770, 20);
             titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(304, 46);
+            titleLabel.Size = new Size(395, 55);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Registra tus datos";
             // 
@@ -78,7 +76,8 @@
             formGroupBox.Controls.Add(emailLabel);
             formGroupBox.Controls.Add(lastNameLabel);
             formGroupBox.Controls.Add(nameLabel);
-            formGroupBox.Location = new Point(92, 121);
+            formGroupBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            formGroupBox.Location = new Point(554, 86);
             formGroupBox.Margin = new Padding(2);
             formGroupBox.Name = "formGroupBox";
             formGroupBox.Padding = new Padding(2);
@@ -93,16 +92,16 @@
             btnGuardar.Cursor = Cursors.Hand;
             btnGuardar.FlatAppearance.BorderColor = Color.Black;
             btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnGuardar.Font = new Font("Century Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnGuardar.ForeColor = Color.White;
             btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
             btnGuardar.IconColor = Color.White;
             btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.IconSize = 22;
+            btnGuardar.IconSize = 45;
             btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
             btnGuardar.Location = new Point(255, 592);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(260, 35);
+            btnGuardar.Size = new Size(410, 67);
             btnGuardar.TabIndex = 24;
             btnGuardar.Text = "Crear cuenta";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -110,172 +109,154 @@
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(305, 178);
+            passwordTextBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordTextBox.Location = new Point(327, 174);
             passwordTextBox.Margin = new Padding(2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(435, 21);
+            passwordTextBox.Size = new Size(435, 34);
             passwordTextBox.TabIndex = 12;
             // 
             // userTextBox
             // 
-            userTextBox.Location = new Point(305, 113);
+            userTextBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userTextBox.Location = new Point(327, 104);
             userTextBox.Margin = new Padding(2);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(435, 21);
+            userTextBox.Size = new Size(435, 34);
             userTextBox.TabIndex = 11;
             userTextBox.Text = "Ej. Aramndo093";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Font = new Font("Microsoft Sans Serif", 12F);
-            passwordLabel.Location = new Point(130, 178);
+            passwordLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordLabel.Location = new Point(130, 173);
             passwordLabel.Margin = new Padding(2, 0, 2, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(100, 20);
+            passwordLabel.Size = new Size(166, 30);
             passwordLabel.TabIndex = 10;
             passwordLabel.Text = "Contraseña: ";
             // 
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Font = new Font("Microsoft Sans Serif", 12F);
-            userLabel.Location = new Point(161, 108);
+            userLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userLabel.Location = new Point(181, 103);
             userLabel.Margin = new Padding(2, 0, 2, 0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(68, 20);
+            userLabel.Size = new Size(106, 30);
             userLabel.TabIndex = 9;
             userLabel.Text = "Usuario:";
             // 
             // numerPhoneTexBox
             // 
-            numerPhoneTexBox.Location = new Point(305, 505);
+            numerPhoneTexBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            numerPhoneTexBox.Location = new Point(327, 502);
             numerPhoneTexBox.Margin = new Padding(2);
             numerPhoneTexBox.Name = "numerPhoneTexBox";
-            numerPhoneTexBox.Size = new Size(435, 21);
+            numerPhoneTexBox.Size = new Size(435, 34);
             numerPhoneTexBox.TabIndex = 8;
             numerPhoneTexBox.Text = "Ej. 76764532";
             // 
             // emailTextBox
             // 
-            emailTextBox.Location = new Point(308, 410);
+            emailTextBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailTextBox.Location = new Point(327, 412);
             emailTextBox.Margin = new Padding(2);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(435, 21);
+            emailTextBox.Size = new Size(435, 34);
             emailTextBox.TabIndex = 7;
             emailTextBox.Text = "Ej. juanAguirre@correo.com";
             // 
             // lastNameTextBox
             // 
-            lastNameTextBox.Location = new Point(305, 328);
+            lastNameTextBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lastNameTextBox.Location = new Point(327, 324);
             lastNameTextBox.Margin = new Padding(2);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(435, 21);
+            lastNameTextBox.Size = new Size(435, 34);
             lastNameTextBox.TabIndex = 6;
             lastNameTextBox.Text = "Ej. Aguirre Romero";
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(305, 244);
+            nameTextBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameTextBox.Location = new Point(327, 245);
             nameTextBox.Margin = new Padding(2);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(435, 21);
+            nameTextBox.Size = new Size(435, 34);
             nameTextBox.TabIndex = 5;
             nameTextBox.Text = "Ej. Juan Armando";
             // 
             // numberPhoneLabel
             // 
             numberPhoneLabel.AutoSize = true;
-            numberPhoneLabel.Font = new Font("Microsoft Sans Serif", 12F);
-            numberPhoneLabel.Location = new Point(72, 506);
+            numberPhoneLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            numberPhoneLabel.Location = new Point(30, 501);
             numberPhoneLabel.Margin = new Padding(2, 0, 2, 0);
             numberPhoneLabel.Name = "numberPhoneLabel";
-            numberPhoneLabel.Size = new Size(157, 20);
+            numberPhoneLabel.Size = new Size(266, 30);
             numberPhoneLabel.TabIndex = 3;
             numberPhoneLabel.Text = "Numero de Telefono:";
             // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Microsoft Sans Serif", 12F);
-            emailLabel.Location = new Point(81, 411);
+            emailLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailLabel.Location = new Point(45, 412);
             emailLabel.Margin = new Padding(2, 0, 2, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(148, 20);
+            emailLabel.Size = new Size(251, 30);
             emailLabel.TabIndex = 2;
             emailLabel.Text = "Correo Electronico: ";
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Font = new Font("Microsoft Sans Serif", 12F);
-            lastNameLabel.Location = new Point(161, 323);
+            lastNameLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lastNameLabel.Location = new Point(168, 328);
             lastNameLabel.Margin = new Padding(2, 0, 2, 0);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(69, 20);
+            lastNameLabel.Size = new Size(119, 30);
             lastNameLabel.TabIndex = 1;
             lastNameLabel.Text = "Apellido:";
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Microsoft Sans Serif", 12F);
+            nameLabel.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             nameLabel.Location = new Point(163, 244);
             nameLabel.Margin = new Padding(2, 0, 2, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(73, 20);
+            nameLabel.Size = new Size(124, 30);
             nameLabel.TabIndex = 0;
             nameLabel.Text = "Nombre: ";
             // 
-            // pcMinimizar
+            // hotelPictureBox
             // 
-            pcMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pcMinimizar.BackColor = Color.Transparent;
-            pcMinimizar.Cursor = Cursors.Hand;
-            pcMinimizar.Image = Properties.Resources.negative_sign_icon_icons_com_70439;
-            pcMinimizar.Location = new Point(884, 12);
-            pcMinimizar.Name = "pcMinimizar";
-            pcMinimizar.Size = new Size(36, 33);
-            pcMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
-            pcMinimizar.TabIndex = 21;
-            pcMinimizar.TabStop = false;
-            pcMinimizar.Click += pcMinimizar_Click;
-            pcMinimizar.MouseHover += pcMinimizar_MouseHover;
-            // 
-            // pbSalir
-            // 
-            pbSalir.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pbSalir.BackColor = Color.Transparent;
-            pbSalir.Cursor = Cursors.Hand;
-            pbSalir.Image = Properties.Resources.close_remove_delete_icon_148989;
-            pbSalir.Location = new Point(926, 12);
-            pbSalir.Name = "pbSalir";
-            pbSalir.Size = new Size(36, 33);
-            pbSalir.SizeMode = PictureBoxSizeMode.Zoom;
-            pbSalir.TabIndex = 20;
-            pbSalir.TabStop = false;
-            pbSalir.Click += pbSalir_Click;
-            pbSalir.MouseHover += pbSalir_MouseHover;
+            hotelPictureBox.Image = Properties.Resources.THEME_HOTEL_SIGN_FIVE_STARS_FACADE_BUILDING_GettyImages_1320779330_3__3_;
+            hotelPictureBox.Location = new Point(-103, 113);
+            hotelPictureBox.Name = "hotelPictureBox";
+            hotelPictureBox.Size = new Size(643, 588);
+            hotelPictureBox.TabIndex = 2;
+            hotelPictureBox.TabStop = false;
             // 
             // Formuser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(997, 788);
-            Controls.Add(pcMinimizar);
-            Controls.Add(pbSalir);
+            ClientSize = new Size(1384, 792);
+            Controls.Add(hotelPictureBox);
             Controls.Add(formGroupBox);
             Controls.Add(titleLabel);
             Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
             Name = "Formuser";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Huesped";
             formGroupBox.ResumeLayout(false);
             formGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pcMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbSalir).EndInit();
+            ((System.ComponentModel.ISupportInitialize)hotelPictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -296,9 +277,8 @@
         private TextBox userTextBox;
         private Label passwordLabel;
         private Label userLabel;
-        private PictureBox pcMinimizar;
-        private PictureBox pbSalir;
         private ToolTip toolTip1;
         private FontAwesome.Sharp.IconButton btnGuardar;
+        private PictureBox hotelPictureBox;
     }
 }
