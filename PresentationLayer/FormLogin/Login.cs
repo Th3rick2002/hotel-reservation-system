@@ -16,38 +16,18 @@ namespace PresentationLayer.FormLogin
 
         private void frm_closing(object sender, FormClosingEventArgs e)
         {
-            txtUsuario.Text = "";
-            txtClave.Text = "";
+            userTextBox.Text = "";
+            passwordTextBox.Text = "";
             this.Show();
         }
 
-        private void pbSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void pbSalir_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pbSalir, "Salir");
-        }
-
-        private void pcMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pcMinimizar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pcMinimizar, "Minimizar");
-        }
-
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
             DataTable usuariosTable = new UsuariosServices().GetUsuarios();
 
             DataRow ousuarioRow = usuariosTable.AsEnumerable().FirstOrDefault(u =>
-                u.Field<string>("Usuario") == txtUsuario.Text &&
-                u.Field<string>("Clave") == txtClave.Text);
+                u.Field<string>("Usuario") == userTextBox.Text &&
+                u.Field<string>("Clave") == passwordTextBox.Text);
 
             if (ousuarioRow != null)
             {
@@ -85,7 +65,7 @@ namespace PresentationLayer.FormLogin
             }
         }
 
-        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        private void newCountTextBox_Click(object sender, EventArgs e)
         {
             this.Hide();
             Formuser formuser = new Formuser();

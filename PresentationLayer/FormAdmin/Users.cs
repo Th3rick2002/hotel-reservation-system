@@ -19,42 +19,20 @@ namespace PresentationLayer.FormAdmin
             InitializeComponent();
             _usuariosServices = new UsuariosServices();
             LoadData();
-            dgvUsuarios.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            listUserDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
         }
 
         public void LoadData()
         {
-            dgvUsuarios.DataSource = _usuariosServices.GetUsuarios();
+            listUserDataGridView.DataSource = _usuariosServices.GetUsuarios();
 
-            dgvUsuarios.Columns["IdUsuario"].Visible = false;
-            dgvUsuarios.Columns["IdRol"].Visible = false;
+            listUserDataGridView.Columns["IdUsuario"].Visible = false;
+            listUserDataGridView.Columns["IdRol"].Visible = false;
 
-            dgvUsuarios.Columns["rol"].HeaderText = "Rol";
+            listUserDataGridView.Columns["rol"].HeaderText = "Rol";
 
-            dgvUsuarios.Columns["rol"].Visible = true;
-        }
-
-        private void pbSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void pcMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
-
-        private void pbSalir_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pbSalir, "Cerrar ventana");
-
-        }
-
-        private void pcMinimizar_MouseHover(object sender, EventArgs e)
-        {
-            toolTip1.SetToolTip(pcMinimizar, "Minimizar ventana");
-
+            listUserDataGridView.Columns["rol"].Visible = true;
         }
     }
 }

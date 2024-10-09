@@ -29,220 +29,183 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dgvHabitaciones = new DataGridView();
-            lbllistahabitaciones = new Label();
-            gbHabitacion = new GroupBox();
-            btnEliminar = new FontAwesome.Sharp.IconButton();
-            textBox2 = new TextBox();
-            btnEditar = new FontAwesome.Sharp.IconButton();
-            label2 = new Label();
-            btnGuardar = new FontAwesome.Sharp.IconButton();
-            textBox1 = new TextBox();
-            label1 = new Label();
-            pcMinimizar = new PictureBox();
-            pbSalir = new PictureBox();
+            listRoomDataGridView = new DataGridView();
+            roomGroupBox = new GroupBox();
+            deleteRoomButton = new FontAwesome.Sharp.IconButton();
+            priceRoomTextBox = new TextBox();
+            editRoomButton = new FontAwesome.Sharp.IconButton();
+            priceRoomLabel = new Label();
+            saveRoomButton = new FontAwesome.Sharp.IconButton();
+            typeRoomTextBox = new TextBox();
+            typeRoomLabel = new Label();
             toolTip1 = new ToolTip(components);
-            ((System.ComponentModel.ISupportInitialize)dgvHabitaciones).BeginInit();
-            gbHabitacion.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbSalir).BeginInit();
+            backMenuButton = new Button();
+            ((System.ComponentModel.ISupportInitialize)listRoomDataGridView).BeginInit();
+            roomGroupBox.SuspendLayout();
             SuspendLayout();
             // 
-            // dgvHabitaciones
+            // listRoomDataGridView
             // 
-            dgvHabitaciones.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvHabitaciones.Location = new Point(452, 111);
-            dgvHabitaciones.Name = "dgvHabitaciones";
-            dgvHabitaciones.RowHeadersWidth = 51;
-            dgvHabitaciones.Size = new Size(796, 461);
-            dgvHabitaciones.TabIndex = 0;
+            listRoomDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            listRoomDataGridView.Location = new Point(652, 65);
+            listRoomDataGridView.Name = "listRoomDataGridView";
+            listRoomDataGridView.RowHeadersWidth = 51;
+            listRoomDataGridView.Size = new Size(796, 517);
+            listRoomDataGridView.TabIndex = 0;
             // 
-            // lbllistahabitaciones
+            // roomGroupBox
             // 
-            lbllistahabitaciones.BackColor = SystemColors.ActiveBorder;
-            lbllistahabitaciones.Font = new Font("Century Gothic", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lbllistahabitaciones.ForeColor = Color.White;
-            lbllistahabitaciones.Location = new Point(0, 20);
-            lbllistahabitaciones.Name = "lbllistahabitaciones";
-            lbllistahabitaciones.Size = new Size(418, 46);
-            lbllistahabitaciones.TabIndex = 1;
-            lbllistahabitaciones.Text = "Lista De Habitaciones";
+            roomGroupBox.Controls.Add(deleteRoomButton);
+            roomGroupBox.Controls.Add(priceRoomTextBox);
+            roomGroupBox.Controls.Add(editRoomButton);
+            roomGroupBox.Controls.Add(priceRoomLabel);
+            roomGroupBox.Controls.Add(saveRoomButton);
+            roomGroupBox.Controls.Add(typeRoomTextBox);
+            roomGroupBox.Controls.Add(typeRoomLabel);
+            roomGroupBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roomGroupBox.Location = new Point(23, 65);
+            roomGroupBox.Name = "roomGroupBox";
+            roomGroupBox.Size = new Size(610, 517);
+            roomGroupBox.TabIndex = 2;
+            roomGroupBox.TabStop = false;
+            roomGroupBox.Text = "Añadir Habitacion:";
             // 
-            // gbHabitacion
+            // deleteRoomButton
             // 
-            gbHabitacion.Controls.Add(btnEliminar);
-            gbHabitacion.Controls.Add(textBox2);
-            gbHabitacion.Controls.Add(btnEditar);
-            gbHabitacion.Controls.Add(label2);
-            gbHabitacion.Controls.Add(btnGuardar);
-            gbHabitacion.Controls.Add(textBox1);
-            gbHabitacion.Controls.Add(label1);
-            gbHabitacion.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            gbHabitacion.Location = new Point(14, 99);
-            gbHabitacion.Name = "gbHabitacion";
-            gbHabitacion.Size = new Size(418, 473);
-            gbHabitacion.TabIndex = 2;
-            gbHabitacion.TabStop = false;
-            gbHabitacion.Text = "Añadir Habitacion:";
+            deleteRoomButton.BackColor = Color.Red;
+            deleteRoomButton.Cursor = Cursors.Hand;
+            deleteRoomButton.FlatAppearance.BorderColor = Color.Black;
+            deleteRoomButton.FlatStyle = FlatStyle.Popup;
+            deleteRoomButton.ForeColor = Color.White;
+            deleteRoomButton.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
+            deleteRoomButton.IconColor = Color.White;
+            deleteRoomButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            deleteRoomButton.IconSize = 30;
+            deleteRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
+            deleteRoomButton.Location = new Point(426, 412);
+            deleteRoomButton.Name = "deleteRoomButton";
+            deleteRoomButton.Size = new Size(159, 55);
+            deleteRoomButton.TabIndex = 25;
+            deleteRoomButton.Text = "Eliminar";
+            deleteRoomButton.UseVisualStyleBackColor = false;
             // 
-            // btnEliminar
+            // priceRoomTextBox
             // 
-            btnEliminar.BackColor = Color.Crimson;
-            btnEliminar.Cursor = Cursors.Hand;
-            btnEliminar.FlatAppearance.BorderColor = Color.Black;
-            btnEliminar.FlatStyle = FlatStyle.Flat;
-            btnEliminar.ForeColor = Color.White;
-            btnEliminar.IconChar = FontAwesome.Sharp.IconChar.DeleteLeft;
-            btnEliminar.IconColor = Color.White;
-            btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEliminar.IconSize = 22;
-            btnEliminar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEliminar.Location = new Point(34, 383);
-            btnEliminar.Name = "btnEliminar";
-            btnEliminar.Size = new Size(207, 29);
-            btnEliminar.TabIndex = 25;
-            btnEliminar.Text = "Eliminar";
-            btnEliminar.UseVisualStyleBackColor = false;
+            priceRoomTextBox.Location = new Point(72, 289);
+            priceRoomTextBox.Name = "priceRoomTextBox";
+            priceRoomTextBox.Size = new Size(444, 34);
+            priceRoomTextBox.TabIndex = 3;
             // 
-            // textBox2
+            // editRoomButton
             // 
-            textBox2.Location = new Point(34, 228);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(207, 32);
-            textBox2.TabIndex = 3;
+            editRoomButton.BackColor = Color.DodgerBlue;
+            editRoomButton.Cursor = Cursors.Hand;
+            editRoomButton.FlatAppearance.BorderColor = Color.Black;
+            editRoomButton.FlatStyle = FlatStyle.Popup;
+            editRoomButton.ForeColor = Color.White;
+            editRoomButton.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            editRoomButton.IconColor = Color.White;
+            editRoomButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            editRoomButton.IconSize = 30;
+            editRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
+            editRoomButton.Location = new Point(231, 412);
+            editRoomButton.Name = "editRoomButton";
+            editRoomButton.Size = new Size(155, 55);
+            editRoomButton.TabIndex = 24;
+            editRoomButton.Text = "Editar";
+            editRoomButton.UseVisualStyleBackColor = false;
             // 
-            // btnEditar
+            // priceRoomLabel
             // 
-            btnEditar.BackColor = Color.DodgerBlue;
-            btnEditar.Cursor = Cursors.Hand;
-            btnEditar.FlatAppearance.BorderColor = Color.Black;
-            btnEditar.FlatStyle = FlatStyle.Flat;
-            btnEditar.ForeColor = Color.White;
-            btnEditar.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            btnEditar.IconColor = Color.White;
-            btnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnEditar.IconSize = 22;
-            btnEditar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnEditar.Location = new Point(34, 348);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(207, 29);
-            btnEditar.TabIndex = 24;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = false;
+            priceRoomLabel.AutoSize = true;
+            priceRoomLabel.Location = new Point(72, 249);
+            priceRoomLabel.Name = "priceRoomLabel";
+            priceRoomLabel.Size = new Size(214, 25);
+            priceRoomLabel.TabIndex = 2;
+            priceRoomLabel.Text = "Precion Por Noche:";
             // 
-            // label2
+            // saveRoomButton
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(34, 191);
-            label2.Name = "label2";
-            label2.Size = new Size(196, 23);
-            label2.TabIndex = 2;
-            label2.Text = "Precion Por Noche:";
-            label2.Click += label2_Click;
+            saveRoomButton.BackColor = Color.FromArgb(0, 192, 0);
+            saveRoomButton.Cursor = Cursors.Hand;
+            saveRoomButton.FlatAppearance.BorderColor = Color.Black;
+            saveRoomButton.FlatStyle = FlatStyle.Popup;
+            saveRoomButton.ForeColor = Color.White;
+            saveRoomButton.IconChar = FontAwesome.Sharp.IconChar.Save;
+            saveRoomButton.IconColor = Color.White;
+            saveRoomButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            saveRoomButton.IconSize = 30;
+            saveRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
+            saveRoomButton.Location = new Point(41, 412);
+            saveRoomButton.Name = "saveRoomButton";
+            saveRoomButton.Size = new Size(158, 55);
+            saveRoomButton.TabIndex = 23;
+            saveRoomButton.Text = "Agregar";
+            saveRoomButton.UseVisualStyleBackColor = false;
             // 
-            // btnGuardar
+            // typeRoomTextBox
             // 
-            btnGuardar.BackColor = Color.ForestGreen;
-            btnGuardar.Cursor = Cursors.Hand;
-            btnGuardar.FlatAppearance.BorderColor = Color.Black;
-            btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            btnGuardar.IconColor = Color.White;
-            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.IconSize = 22;
-            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(34, 313);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(207, 29);
-            btnGuardar.TabIndex = 23;
-            btnGuardar.Text = "Añadir";
-            btnGuardar.UseVisualStyleBackColor = false;
+            typeRoomTextBox.Location = new Point(71, 160);
+            typeRoomTextBox.Name = "typeRoomTextBox";
+            typeRoomTextBox.Size = new Size(445, 34);
+            typeRoomTextBox.TabIndex = 1;
             // 
-            // textBox1
+            // typeRoomLabel
             // 
-            textBox1.Location = new Point(34, 110);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(207, 32);
-            textBox1.TabIndex = 1;
+            typeRoomLabel.AutoSize = true;
+            typeRoomLabel.Location = new Point(72, 110);
+            typeRoomLabel.Name = "typeRoomLabel";
+            typeRoomLabel.Size = new Size(62, 25);
+            typeRoomLabel.TabIndex = 0;
+            typeRoomLabel.Text = "Tipo:";
             // 
-            // label1
+            // backMenuButton
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(34, 74);
-            label1.Name = "label1";
-            label1.Size = new Size(53, 23);
-            label1.TabIndex = 0;
-            label1.Text = "Tipo:";
-            // 
-            // pcMinimizar
-            // 
-            pcMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pcMinimizar.BackColor = Color.Transparent;
-            pcMinimizar.Cursor = Cursors.Hand;
-            pcMinimizar.Image = Properties.Resources.negative_sign_icon_icons_com_70439;
-            pcMinimizar.Location = new Point(1170, 12);
-            pcMinimizar.Name = "pcMinimizar";
-            pcMinimizar.Size = new Size(36, 33);
-            pcMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
-            pcMinimizar.TabIndex = 19;
-            pcMinimizar.TabStop = false;
-            pcMinimizar.Click += pcMinimizar_Click;
-            pcMinimizar.MouseHover += pcMinimizar_MouseHover;
-            // 
-            // pbSalir
-            // 
-            pbSalir.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pbSalir.BackColor = Color.Transparent;
-            pbSalir.Cursor = Cursors.Hand;
-            pbSalir.Image = Properties.Resources.close_remove_delete_icon_148989;
-            pbSalir.Location = new Point(1212, 12);
-            pbSalir.Name = "pbSalir";
-            pbSalir.Size = new Size(36, 33);
-            pbSalir.SizeMode = PictureBoxSizeMode.Zoom;
-            pbSalir.TabIndex = 18;
-            pbSalir.TabStop = false;
-            pbSalir.Click += pbSalir_Click;
-            pbSalir.MouseHover += pbSalir_MouseHover;
+            backMenuButton.BackColor = Color.Orange;
+            backMenuButton.FlatStyle = FlatStyle.Popup;
+            backMenuButton.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backMenuButton.ForeColor = Color.White;
+            backMenuButton.Location = new Point(23, 619);
+            backMenuButton.Name = "backMenuButton";
+            backMenuButton.Size = new Size(199, 74);
+            backMenuButton.TabIndex = 17;
+            backMenuButton.Text = "Regresar a Menú";
+            backMenuButton.UseVisualStyleBackColor = false;
             // 
             // RoomHotel
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1287, 602);
-            Controls.Add(pcMinimizar);
-            Controls.Add(pbSalir);
-            Controls.Add(gbHabitacion);
-            Controls.Add(lbllistahabitaciones);
-            Controls.Add(dgvHabitaciones);
+            BackColor = SystemColors.InactiveBorder;
+            ClientSize = new Size(1471, 729);
+            Controls.Add(backMenuButton);
+            Controls.Add(roomGroupBox);
+            Controls.Add(listRoomDataGridView);
             Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            FormBorderStyle = FormBorderStyle.None;
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
             Name = "RoomHotel";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "RoomHotel";
-            ((System.ComponentModel.ISupportInitialize)dgvHabitaciones).EndInit();
-            gbHabitacion.ResumeLayout(false);
-            gbHabitacion.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pcMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbSalir).EndInit();
+            Text = "Lista de Habitaciones ";
+            ((System.ComponentModel.ISupportInitialize)listRoomDataGridView).EndInit();
+            roomGroupBox.ResumeLayout(false);
+            roomGroupBox.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dgvHabitaciones;
+        private DataGridView listRoomDataGridView;
         private Label lbllistahabitaciones;
-        private GroupBox gbHabitacion;
-        private TextBox textBox1;
-        private Label label1;
-        private TextBox textBox2;
-        private Label label2;
-        private FontAwesome.Sharp.IconButton btnEliminar;
-        private FontAwesome.Sharp.IconButton btnEditar;
-        private FontAwesome.Sharp.IconButton btnGuardar;
-        private PictureBox pcMinimizar;
-        private PictureBox pbSalir;
+        private GroupBox roomGroupBox;
+        private TextBox typeRoomTextBox;
+        private Label typeRoomLabel;
+        private TextBox priceRoomTextBox;
+        private Label priceRoomLabel;
+        private FontAwesome.Sharp.IconButton deleteRoomButton;
+        private FontAwesome.Sharp.IconButton editRoomButton;
+        private FontAwesome.Sharp.IconButton saveRoomButton;
         private ToolTip toolTip1;
+        private Button backMenuButton;
     }
 }
