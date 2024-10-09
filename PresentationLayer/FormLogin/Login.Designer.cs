@@ -83,7 +83,7 @@ namespace PresentationLayer.FormLogin
             newCountTextBox.TabIndex = 8;
             newCountTextBox.Text = "Crear cuenta";
             newCountTextBox.UseVisualStyleBackColor = false;
-            newCountTextBox.Click += btnCrearCuenta_Click;
+            newCountTextBox.Click += newCountTextBox_Click;
             // 
             // loginButton
             // 
@@ -104,7 +104,7 @@ namespace PresentationLayer.FormLogin
             loginButton.TabIndex = 7;
             loginButton.Text = "Login";
             loginButton.UseVisualStyleBackColor = false;
-            loginButton.Click += btnLogin_Click;
+            loginButton.Click += loginButton_Click;
             // 
             // titleLabel
             // 

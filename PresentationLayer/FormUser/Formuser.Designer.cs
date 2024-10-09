@@ -31,7 +31,7 @@
             components = new System.ComponentModel.Container();
             titleLabel = new Label();
             formGroupBox = new GroupBox();
-            btnGuardar = new FontAwesome.Sharp.IconButton();
+            saveButton = new FontAwesome.Sharp.IconButton();
             passwordTextBox = new TextBox();
             userTextBox = new TextBox();
             passwordLabel = new Label();
@@ -63,7 +63,7 @@
             // 
             // formGroupBox
             // 
-            formGroupBox.Controls.Add(btnGuardar);
+            formGroupBox.Controls.Add(saveButton);
             formGroupBox.Controls.Add(passwordTextBox);
             formGroupBox.Controls.Add(userTextBox);
             formGroupBox.Controls.Add(passwordLabel);
@@ -86,26 +86,26 @@
             formGroupBox.TabStop = false;
             formGroupBox.Text = "Formulario";
             // 
-            // btnGuardar
+            // saveButton
             // 
-            btnGuardar.BackColor = Color.ForestGreen;
-            btnGuardar.Cursor = Cursors.Hand;
-            btnGuardar.FlatAppearance.BorderColor = Color.Black;
-            btnGuardar.FlatStyle = FlatStyle.Flat;
-            btnGuardar.Font = new Font("Century Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnGuardar.ForeColor = Color.White;
-            btnGuardar.IconChar = FontAwesome.Sharp.IconChar.Save;
-            btnGuardar.IconColor = Color.White;
-            btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnGuardar.IconSize = 45;
-            btnGuardar.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGuardar.Location = new Point(255, 592);
-            btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(410, 67);
-            btnGuardar.TabIndex = 24;
-            btnGuardar.Text = "Crear cuenta";
-            btnGuardar.UseVisualStyleBackColor = false;
-            btnGuardar.Click += btnGuardar_Click;
+            saveButton.BackColor = Color.ForestGreen;
+            saveButton.Cursor = Cursors.Hand;
+            saveButton.FlatAppearance.BorderColor = Color.Black;
+            saveButton.FlatStyle = FlatStyle.Flat;
+            saveButton.Font = new Font("Century Gothic", 14F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            saveButton.ForeColor = Color.White;
+            saveButton.IconChar = FontAwesome.Sharp.IconChar.Save;
+            saveButton.IconColor = Color.White;
+            saveButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            saveButton.IconSize = 45;
+            saveButton.ImageAlign = ContentAlignment.MiddleLeft;
+            saveButton.Location = new Point(255, 592);
+            saveButton.Name = "saveButton";
+            saveButton.Size = new Size(410, 67);
+            saveButton.TabIndex = 24;
+            saveButton.Text = "Crear cuenta";
+            saveButton.UseVisualStyleBackColor = false;
+            saveButton.Click += saveButton_Click;
             // 
             // passwordTextBox
             // 
@@ -245,6 +245,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 22F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(1384, 792);
             Controls.Add(hotelPictureBox);
             Controls.Add(formGroupBox);
@@ -278,7 +279,7 @@
         private Label passwordLabel;
         private Label userLabel;
         private ToolTip toolTip1;
-        private FontAwesome.Sharp.IconButton btnGuardar;
+        private FontAwesome.Sharp.IconButton saveButton;
         private PictureBox hotelPictureBox;
     }
 }

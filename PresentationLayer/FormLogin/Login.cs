@@ -21,7 +21,7 @@ namespace PresentationLayer.FormLogin
             this.Show();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)
         {
             DataTable usuariosTable = new UsuariosServices().GetUsuarios();
 
@@ -65,7 +65,7 @@ namespace PresentationLayer.FormLogin
             }
         }
 
-        private void btnCrearCuenta_Click(object sender, EventArgs e)
+        private void newCountTextBox_Click(object sender, EventArgs e)
         {
             this.Hide();
             Formuser formuser = new Formuser();
@@ -73,8 +73,6 @@ namespace PresentationLayer.FormLogin
             formuser.FormClosed += (s, args) => this.Show();
             formuser.Show();
         }
-
-
     }
 
 }
