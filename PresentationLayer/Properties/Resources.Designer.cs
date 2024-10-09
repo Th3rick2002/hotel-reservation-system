@@ -73,6 +73,16 @@ namespace PresentationLayer.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cama_individual {
+            get {
+                object obj = ResourceManager.GetObject("cama-individual", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap candado {
             get {
                 object obj = ResourceManager.GetObject("candado", resourceCulture);
@@ -106,6 +116,16 @@ namespace PresentationLayer.Properties {
         internal static System.Drawing.Bitmap negative_sign_icon_icons_com_70439 {
             get {
                 object obj = ResourceManager.GetObject("negative-sign_icon-icons.com_70439", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reserva__1_ {
+            get {
+                object obj = ResourceManager.GetObject("reserva (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,16 @@ namespace PresentationLayer.Properties {
         internal static System.Drawing.Bitmap usuario__1_ {
             get {
                 object obj = ResourceManager.GetObject("usuario (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usuario__2_ {
+            get {
+                object obj = ResourceManager.GetObject("usuario (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

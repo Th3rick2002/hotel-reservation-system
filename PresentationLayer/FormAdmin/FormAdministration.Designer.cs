@@ -28,177 +28,141 @@
         /// </summary>
         private void InitializeComponent()
         {
-            btnCliente = new Button();
-            btnReservaciones = new Button();
-            btnHabitaciones = new Button();
-            btnLogout = new Button();
-            panel1 = new Panel();
-            pcMinimizar = new PictureBox();
-            Bienvenida = new Label();
-            pbSalir = new PictureBox();
-            lblUsuario = new Label();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pcMinimizar).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbSalir).BeginInit();
+            clientButton = new Button();
+            reservationButton = new Button();
+            roomButton = new Button();
+            logoutButton = new Button();
+            clientPictureBox = new PictureBox();
+            datePictureBox = new PictureBox();
+            roomPictureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)clientPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)datePictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)roomPictureBox).BeginInit();
             SuspendLayout();
             // 
-            // btnCliente
+            // clientButton
             // 
-            btnCliente.BackColor = Color.MediumTurquoise;
-            btnCliente.FlatAppearance.BorderSize = 0;
-            btnCliente.FlatStyle = FlatStyle.Flat;
-            btnCliente.Font = new Font("Century Gothic", 12F);
-            btnCliente.ForeColor = Color.White;
-            btnCliente.Location = new Point(340, 133);
-            btnCliente.Margin = new Padding(2);
-            btnCliente.Name = "btnCliente";
-            btnCliente.Size = new Size(315, 50);
-            btnCliente.TabIndex = 0;
-            btnCliente.Text = "Cliente";
-            btnCliente.UseVisualStyleBackColor = false;
-            btnCliente.Click += btnCliente_Click_1;
+            clientButton.BackColor = Color.DeepSkyBlue;
+            clientButton.FlatAppearance.BorderSize = 0;
+            clientButton.FlatStyle = FlatStyle.Flat;
+            clientButton.Font = new Font("Century Gothic", 12F);
+            clientButton.ForeColor = Color.White;
+            clientButton.Location = new Point(238, 101);
+            clientButton.Margin = new Padding(2);
+            clientButton.Name = "clientButton";
+            clientButton.Size = new Size(394, 62);
+            clientButton.TabIndex = 0;
+            clientButton.Text = "Cliente";
+            clientButton.UseVisualStyleBackColor = false;
+            clientButton.Click += clientButton_Click;
             // 
-            // btnReservaciones
+            // reservationButton
             // 
-            btnReservaciones.BackColor = Color.MediumTurquoise;
-            btnReservaciones.FlatAppearance.BorderSize = 0;
-            btnReservaciones.FlatStyle = FlatStyle.Flat;
-            btnReservaciones.Font = new Font("Century Gothic", 12F);
-            btnReservaciones.ForeColor = Color.White;
-            btnReservaciones.Location = new Point(340, 187);
-            btnReservaciones.Margin = new Padding(2);
-            btnReservaciones.Name = "btnReservaciones";
-            btnReservaciones.Size = new Size(315, 49);
-            btnReservaciones.TabIndex = 1;
-            btnReservaciones.Text = "Reservaciones";
-            btnReservaciones.UseVisualStyleBackColor = false;
-            btnReservaciones.Click += btnReservaciones_Click_1;
+            reservationButton.BackColor = Color.Crimson;
+            reservationButton.FlatAppearance.BorderSize = 0;
+            reservationButton.FlatStyle = FlatStyle.Flat;
+            reservationButton.Font = new Font("Century Gothic", 12F);
+            reservationButton.ForeColor = Color.White;
+            reservationButton.Location = new Point(238, 218);
+            reservationButton.Margin = new Padding(2);
+            reservationButton.Name = "reservationButton";
+            reservationButton.Size = new Size(394, 61);
+            reservationButton.TabIndex = 1;
+            reservationButton.Text = "Reservaciones";
+            reservationButton.UseVisualStyleBackColor = false;
+            reservationButton.Click += reservationButton_Click;
             // 
-            // btnHabitaciones
+            // roomButton
             // 
-            btnHabitaciones.BackColor = Color.MediumTurquoise;
-            btnHabitaciones.FlatAppearance.BorderSize = 0;
-            btnHabitaciones.FlatStyle = FlatStyle.Flat;
-            btnHabitaciones.Font = new Font("Century Gothic", 12F);
-            btnHabitaciones.ForeColor = Color.White;
-            btnHabitaciones.Location = new Point(340, 240);
-            btnHabitaciones.Margin = new Padding(2);
-            btnHabitaciones.Name = "btnHabitaciones";
-            btnHabitaciones.Size = new Size(315, 49);
-            btnHabitaciones.TabIndex = 2;
-            btnHabitaciones.Text = "Habitaciones";
-            btnHabitaciones.UseVisualStyleBackColor = false;
-            btnHabitaciones.Click += btnHabitaciones_Click;
+            roomButton.BackColor = Color.Sienna;
+            roomButton.FlatAppearance.BorderSize = 0;
+            roomButton.FlatStyle = FlatStyle.Flat;
+            roomButton.Font = new Font("Century Gothic", 12F);
+            roomButton.ForeColor = Color.White;
+            roomButton.Location = new Point(238, 343);
+            roomButton.Margin = new Padding(2);
+            roomButton.Name = "roomButton";
+            roomButton.Size = new Size(394, 61);
+            roomButton.TabIndex = 2;
+            roomButton.Text = "Habitaciones";
+            roomButton.UseVisualStyleBackColor = false;
+            roomButton.Click += roomButton_Click;
             // 
-            // btnLogout
+            // logoutButton
             // 
-            btnLogout.BackColor = Color.MediumTurquoise;
-            btnLogout.FlatAppearance.BorderSize = 0;
-            btnLogout.FlatStyle = FlatStyle.Flat;
-            btnLogout.Font = new Font("Century Gothic", 12F);
-            btnLogout.ForeColor = Color.White;
-            btnLogout.Location = new Point(340, 293);
-            btnLogout.Margin = new Padding(2);
-            btnLogout.Name = "btnLogout";
-            btnLogout.Size = new Size(315, 49);
-            btnLogout.TabIndex = 3;
-            btnLogout.Text = "Cerrar Sesion";
-            btnLogout.UseVisualStyleBackColor = false;
-            btnLogout.Click += btnLogout_Click;
+            logoutButton.BackColor = Color.MediumSeaGreen;
+            logoutButton.FlatAppearance.BorderSize = 0;
+            logoutButton.FlatStyle = FlatStyle.Flat;
+            logoutButton.Font = new Font("Century Gothic", 12F);
+            logoutButton.ForeColor = Color.White;
+            logoutButton.Location = new Point(110, 462);
+            logoutButton.Margin = new Padding(2);
+            logoutButton.Name = "logoutButton";
+            logoutButton.Size = new Size(544, 74);
+            logoutButton.TabIndex = 3;
+            logoutButton.Text = "Cerrar Sesion";
+            logoutButton.UseVisualStyleBackColor = false;
+            logoutButton.Click += logoutButton_Click;
             // 
-            // panel1
+            // clientPictureBox
             // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(pcMinimizar);
-            panel1.Controls.Add(Bienvenida);
-            panel1.Controls.Add(pbSalir);
-            panel1.Controls.Add(lblUsuario);
-            panel1.Dock = DockStyle.Top;
-            panel1.Font = new Font("Century Gothic", 9F);
-            panel1.ForeColor = Color.White;
-            panel1.Location = new Point(0, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(992, 44);
-            panel1.TabIndex = 4;
+            clientPictureBox.Image = Properties.Resources.usuario__2_;
+            clientPictureBox.Location = new Point(151, 88);
+            clientPictureBox.Name = "clientPictureBox";
+            clientPictureBox.Size = new Size(71, 75);
+            clientPictureBox.TabIndex = 4;
+            clientPictureBox.TabStop = false;
             // 
-            // pcMinimizar
+            // datePictureBox
             // 
-            pcMinimizar.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pcMinimizar.BackColor = Color.Transparent;
-            pcMinimizar.Cursor = Cursors.Hand;
-            pcMinimizar.Image = Properties.Resources.negative_sign_icon_icons_com_70439;
-            pcMinimizar.Location = new Point(902, 8);
-            pcMinimizar.Name = "pcMinimizar";
-            pcMinimizar.Size = new Size(36, 33);
-            pcMinimizar.SizeMode = PictureBoxSizeMode.Zoom;
-            pcMinimizar.TabIndex = 10;
-            pcMinimizar.TabStop = false;
-            pcMinimizar.Click += pcMinimizar_Click;
+            datePictureBox.Image = Properties.Resources.reserva__1_;
+            datePictureBox.Location = new Point(146, 218);
+            datePictureBox.Name = "datePictureBox";
+            datePictureBox.Size = new Size(76, 75);
+            datePictureBox.TabIndex = 5;
+            datePictureBox.TabStop = false;
             // 
-            // Bienvenida
+            // roomPictureBox
             // 
-            Bienvenida.AutoSize = true;
-            Bienvenida.Location = new Point(2, 9);
-            Bienvenida.Name = "Bienvenida";
-            Bienvenida.Size = new Size(92, 20);
-            Bienvenida.TabIndex = 1;
-            Bienvenida.Text = "Bienvenido";
-            // 
-            // pbSalir
-            // 
-            pbSalir.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            pbSalir.BackColor = Color.Transparent;
-            pbSalir.Cursor = Cursors.Hand;
-            pbSalir.Image = Properties.Resources.close_remove_delete_icon_148989;
-            pbSalir.Location = new Point(944, 8);
-            pbSalir.Name = "pbSalir";
-            pbSalir.Size = new Size(36, 33);
-            pbSalir.SizeMode = PictureBoxSizeMode.Zoom;
-            pbSalir.TabIndex = 9;
-            pbSalir.TabStop = false;
-            pbSalir.Click += pbSalir_Click;
-            // 
-            // lblUsuario
-            // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Location = new Point(91, 9);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new Size(79, 20);
-            lblUsuario.TabIndex = 0;
-            lblUsuario.Text = "lblUsuario";
+            roomPictureBox.Image = Properties.Resources.cama_individual;
+            roomPictureBox.Location = new Point(146, 329);
+            roomPictureBox.Name = "roomPictureBox";
+            roomPictureBox.Size = new Size(67, 75);
+            roomPictureBox.TabIndex = 6;
+            roomPictureBox.TabStop = false;
             // 
             // FormAdministration
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(992, 418);
-            Controls.Add(panel1);
-            Controls.Add(btnLogout);
-            Controls.Add(btnHabitaciones);
-            Controls.Add(btnReservaciones);
-            Controls.Add(btnCliente);
-            FormBorderStyle = FormBorderStyle.None;
+            BackColor = SystemColors.InactiveBorder;
+            ClientSize = new Size(773, 595);
+            Controls.Add(roomPictureBox);
+            Controls.Add(datePictureBox);
+            Controls.Add(clientPictureBox);
+            Controls.Add(logoutButton);
+            Controls.Add(roomButton);
+            Controls.Add(reservationButton);
+            Controls.Add(clientButton);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
             Name = "FormAdministration";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Ventana Administrador";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pcMinimizar).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbSalir).EndInit();
+            Text = "Bienvenido";
+            ((System.ComponentModel.ISupportInitialize)clientPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)datePictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)roomPictureBox).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnCliente;
-        private Button btnReservaciones;
-        private Button btnHabitaciones;
-        private Button btnLogout;
-        private Panel panel1;
-        private Label Bienvenida;
-        private Label lblUsuario;
-        private PictureBox pcMinimizar;
-        private PictureBox pbSalir;
+        private Button clientButton;
+        private Button reservationButton;
+        private Button roomButton;
+        private Button logoutButton;
+        private PictureBox clientPictureBox;
+        private PictureBox datePictureBox;
+        private PictureBox roomPictureBox;
     }
 }
