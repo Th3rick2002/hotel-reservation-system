@@ -139,11 +139,11 @@ namespace PresentationLayer.FormReservation
                 {
                     int diasReservados = (fechaFin - fechaInicio).Days;
                     decimal costoTotal = tarifaBase * diasReservados;
-                    priceLabel.Text = costoTotal.ToString("C");
+                    priceResultLabel.Text = costoTotal.ToString();
                 }
                 else
                 {
-                    priceResultLabel.Text = "Rango de fechas inválido";
+                    priceLabel.Text = "Rango de fechas inválido";
                 }
             }
             else
