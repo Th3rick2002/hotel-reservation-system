@@ -42,7 +42,6 @@ namespace PresentationLayer.FormAdmin
             roomNumbercomboBox.DisplayMember = "Tipo";
             roomNumbercomboBox.ValueMember = "IdHabitacion";
 
-
         }
 
         private void CalcularPrecioTotal()

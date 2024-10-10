@@ -47,7 +47,7 @@ namespace DataAccessLayer.Repositories
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO reserva(fnit, ffin, IdHabitacion, IdUsuario, Estado, Price)
+                string query = @"INSERT INTO reserva(fnit, ffin, IdHabitacion, IdUsuario, Estado, precio)
                                 VALUES(@fnit, @ffin, @IdRoom, @IdUser, @State, @Price)";
 
                 SqlCommand command = new SqlCommand(query, connection);

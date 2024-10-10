@@ -50,7 +50,6 @@ namespace PresentationLayer.FormReservation
 
         private void LoadReservations()
         {
-            ReservationServices reservationServices = new ReservationServices();
             DataTable reservationsTable = reservationServices.GetReservas();
             reservations = new List<Reservation>();
 
@@ -69,7 +68,6 @@ namespace PresentationLayer.FormReservation
             }
         }
 
-
         private bool IsRoomReserved(int idRoom)
         {
             if (reservations == null)
@@ -87,7 +85,6 @@ namespace PresentationLayer.FormReservation
             return false;
         }
 
-
         private void reservationButton_Click(object sender, EventArgs e)
         {
             string NameClient = nameClientTextBox.Text;
@@ -95,60 +92,79 @@ namespace PresentationLayer.FormReservation
             DateTime DateOut = endDateTimePicker.Value;
             int IdRoom = (int)roomNumbercomboBox.SelectedValue;
 
-            var reservation = new Reservation
+            if (DateOut > DateIn)
             {
-                StartDate = DateIn,
-                EndDate = DateOut,
-                IdRoom = IdRoom,
-                IdUser = idUser,
-                Price = CalculatePrice(DateIn, DateOut),
-                State = "Active"
-            };
+                var reservation = new Reservation
+                {
+                    StartDate = DateIn,
+                    EndDate = DateOut,
+                    IdRoom = IdRoom,
+                    IdUser = idUser,
+                    Price = CalculatePrice(DateIn, DateOut),
+                    State = "Active"
+                };
 
-            reservationServices.AddReserva(reservation);
-            MessageBox.Show("Reserva creada exitosamente.");
+                reservationServices.AddReserva(reservation);
+                MessageBox.Show("Reserva creada exitosamente.");
+            }
+            else
+            {
+                MessageBox.Show("La fecha de salida debe ser posterior a la fecha de entrada.");
+            }
         }
 
-        private decimal CalculatePrice(DateTime dateIn, DateTime dateOut)
+        private decimal CalculatePrice(DateTime startDate, DateTime endDate)
         {
-            if (dateOut > dateIn)
+            if (roomNumbercomboBox.SelectedItem is Room selectedRoom)
             {
-                int days = (dateOut - dateIn).Days;
-                Room selectedRoom = (Room)roomNumbercomboBox.SelectedItem;
-                return days * selectedRoom.PriceNight;
+                decimal tarifaBase = selectedRoom.PriceNight;
+                int diasReservados = (endDate - startDate).Days;
+                return tarifaBase * diasReservados;
             }
             return 0;
+        }
+
+
+        private void CalcularPrecioTotal()
+        {
+            if (roomNumbercomboBox.SelectedItem != null)
+            {
+                var hotelSeleccionadoRow = (DataRowView)roomNumbercomboBox.SelectedItem;
+
+                decimal tarifaBase = Convert.ToDecimal(hotelSeleccionadoRow["PrecioNoche"]);
+                DateTime fechaInicio = dateInitDateTimePicker.Value;
+                DateTime fechaFin = endDateTimePicker.Value;
+
+                if (fechaFin > fechaInicio)
+                {
+                    int diasReservados = (fechaFin - fechaInicio).Days;
+                    decimal costoTotal = tarifaBase * diasReservados;
+                    priceLabel.Text = costoTotal.ToString("C");
+                }
+                else
+                {
+                    priceResultLabel.Text = "Rango de fechas inválido";
+                }
+            }
+            else
+            {
+                priceLabel.Text = string.Empty;
+            }
+        }
+
+        private void dateInitDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            CalcularPrecioTotal();
+        }
+
+        private void endDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            CalcularPrecioTotal();
         }
 
         private void FormReservation_Load(object sender, EventArgs e)
         {
             LoadRooms();
-        }
-
-        private void dateInitDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            UpdatePrice();
-        }
-
-        private void endDateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            UpdatePrice();
-        }
-
-        private void UpdatePrice()
-        {
-            DateTime DateIn = dateInitDateTimePicker.Value;
-            DateTime DateOut = endDateTimePicker.Value;
-
-            if (DateOut > DateIn)
-            {
-                decimal totalPrice = CalculatePrice(DateIn, DateOut);
-                priceLabel.Text = $"Precio total: {totalPrice:C}";
-            }
-            else
-            {
-                priceLabel.Text = "Fecha de salida no válida.";
-            }
         }
     }
 }
