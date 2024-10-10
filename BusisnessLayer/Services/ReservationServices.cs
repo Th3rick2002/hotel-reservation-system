@@ -23,7 +23,12 @@ namespace BusisnessLayer.Services
             return _reservasrepositories.GetAllReservas();
         }
 
-        public void UpdateUsuarios(Reservation reservas)
+        public void AddReserva(Reservation reservation)
+        {
+            _reservasrepositories.AddReservas(reservation);
+        }
+
+        public void UpdateReservas(Reservation reservas)
         {
             _reservasrepositories.EditReservas(reservas);
         }
