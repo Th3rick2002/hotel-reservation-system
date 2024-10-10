@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repositories
 
             using(var connection = _dbConnection.GetConnection())
             {
-                string query = @"SELECT r.idReserva, h.IdHabitacion, u.IdUsuario, r.estado  FROM reserva r
+                string query = @"SELECT r.ffin, r.fnit, r.idReserva, h.IdHabitacion, u.IdUsuario, r.estado, r.Price  FROM reserva r
                                 INNER JOIN Habitacion h ON h.IdHabitacion = r.idHabitacion
                                 INNER JOIN Usuario u ON u.IdUsuario = r.IdUsuario";
 
@@ -47,13 +47,17 @@ namespace DataAccessLayer.Repositories
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO reserva(IdHabitacion, IdUsuario, Estado)
-                                VALUES(@IdRoom, @IdUser, @State)";
+                string query = @"INSERT INTO reserva(fnit, ffin, IdHabitacion, IdUsuario, Estado, Price)
+                                VALUES(@fnit, @ffin, @IdRoom, @IdUser, @State, @Price)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdRoom", reservas.IdRoom);
+                command.Parameters.AddWithValue("@fnit", reservas.StartDate);
+                command.Parameters.AddWithValue("@ffin", reservas.EndDate);
                 command.Parameters.AddWithValue("@IdUser", reservas.IdUser);
                 command.Parameters.AddWithValue("@State", reservas.State);
+                command.Parameters.AddWithValue("@Price", reservas.Price);
+
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -67,16 +71,22 @@ namespace DataAccessLayer.Repositories
             {
                 string query = @"UPDATE reserva SET " +
                                 "idReserva = @IdRoom" +
+                                "fnit = @fnit" +
+                                "ffin = @ffin" +
                                 "IdHabitacion = @IdUser" +
                                 "IdUsuario = @IdUsuario" +
-                                "Estado = @State " +
+                                "Estado = @State" +
+                                "Price = @Price " +
                                 "WHERE idReserva = @idReserva";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdRoom", reservas.IdRoom);
                 command.Parameters.AddWithValue("@IdUser", reservas.IdUser);
-                command.Parameters.AddWithValue("@IdUser", reservas.IdUser);
+                command.Parameters.AddWithValue("@fnit", reservas.StartDate);
+                command.Parameters.AddWithValue("@ffin", reservas.EndDate);
                 command.Parameters.AddWithValue("@State", reservas.State);
+                command.Parameters.AddWithValue("@Price", reservas.Price);
+
 
                 connection.Open();
                 command.ExecuteNonQuery();

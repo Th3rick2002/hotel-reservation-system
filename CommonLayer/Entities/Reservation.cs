@@ -13,6 +13,7 @@ namespace CommonLayer.Entities
         public DateTime EndDate { get; set; }
         public int IdRoom { get; set; }
         public int IdUser { get; set; }
-        public bool State { get; set; }
+        public Decimal Price { get; set; }
+        public string State { get; set; }
     }
 }

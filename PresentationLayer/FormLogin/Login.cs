@@ -36,7 +36,7 @@ namespace PresentationLayer.FormLogin
 
                 if (existUser != null)
                 {
-                    if (GetUserRoleById((int)existUser) == "Administrador")
+                    if (GetUserRoleById((int)existUser) == "ADMINISTRADOR")
                     {
                         userTextBox.Clear();
                         passwordTextBox.Clear();
@@ -47,7 +47,7 @@ namespace PresentationLayer.FormLogin
                         formAdministration.Show();
                     }
 
-                    else if (GetUserRoleById((int)existUser) == "Cliente")
+                    else if (GetUserRoleById((int)existUser) == "CLIENTE")
                     {
                         userTextBox.Clear();
                         passwordTextBox.Clear();
