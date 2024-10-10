@@ -1,12 +1,6 @@
 ﻿using DataAccessLayer.DbConnection;
 using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CommonLayer;
 using CommonLayer.Entities;
 
 namespace DataAccessLayer.Repositories
@@ -48,34 +42,18 @@ namespace DataAccessLayer.Repositories
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = @"INSERT INTO Usuario(IdRol, Usuario, Clave, Nombre, Apellido, Email, Telefono)
-<<<<<<< HEAD:DataAccessLayer/Repositories/UsuariosRepositories.cs
-                                VALUES(@IdRol, @Usuario, @Clave, @Nombre, @Apellido, @Email, @Telefono)";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdRol", usuarios.oRol.IdRol);
-                command.Parameters.AddWithValue("@Usuario", usuarios.Usuario);
-                command.Parameters.AddWithValue("@Clave", usuarios.Clave);
-                command.Parameters.AddWithValue("@Nombre", usuarios.Nombre);
-                command.Parameters.AddWithValue("@Apellido", usuarios.Apellido);
-=======
                                 VALUES(@IdRol, @User, @Password, @Name, @LastName, @Email, @Telephone)";
-
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdRol", usuarios.oRol.IdRol);
                 command.Parameters.AddWithValue("@User", usuarios.User);
                 command.Parameters.AddWithValue("@Password", usuarios.Password);
                 command.Parameters.AddWithValue("@Name", usuarios.Name);
                 command.Parameters.AddWithValue("@LastName", usuarios.LastName);
->>>>>>> 0ed96d551495507942b753dc7be7a44989178fd9:DataAccessLayer/Repositories/UsersRepositories.cs
                 command.Parameters.AddWithValue("@Email", usuarios.Email);
                 command.Parameters.AddWithValue("@Telephone", usuarios.Telephone);
 
                 connection.Open();
                 command.ExecuteNonQuery();
-
-                connection.Open();
-                command.ExecuteNonQuery();
-
             }
         }
 
@@ -141,24 +119,6 @@ namespace DataAccessLayer.Repositories
                 }
             }
             return null;
-        }
-
-        public DataTable GetUsuarioById(int IdUser)
-        {
-            DataTable usuariosTable = new DataTable();
-
-            using(var connection = _dbConnection.GetConnection())
-            {
-                string query = "SELECT Usuario, Clave, Nombre, Apellido, Email, Telefono FROM Usuario WHERE IdUsuario = @IdUsuario ";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdUsuario", IdUser);
-
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                usuariosTable.Load(reader);
-            }
-
-            return usuariosTable;
         }
     }
 }

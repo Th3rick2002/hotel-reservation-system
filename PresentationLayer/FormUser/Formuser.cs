@@ -36,19 +36,12 @@ namespace PresentationLayer.FormCliente
 
             Users usuario = new Users()
             {
-<<<<<<< HEAD
+
                 oRol = new Rol {IdRol= 2, rol = "Cliente" },
-                Usuario = user,
-                Clave = password,
-                Nombre = name,
-                Apellido = lastName,
-=======
-                //oRol = new Rol { rol = "Cliente" },
                 User = user,
                 Password = password,
                 Name = name,
                 LastName = lastName,
->>>>>>> 0ed96d551495507942b753dc7be7a44989178fd9
                 Email = email,
                 Telephone = phone
             };

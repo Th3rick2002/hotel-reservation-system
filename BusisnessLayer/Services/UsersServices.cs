@@ -37,10 +37,5 @@ namespace BusisnessLayer.Services
         {
             return _usuariosrepositories.GetUsuarioAndClave(usuario, clave);
         }
-
-        public DataTable GetUsuarioById(int IdUsuario)
-        {
-            return _usuariosrepositories.GetUsuarioById(IdUsuario);
-        }
     }
 }

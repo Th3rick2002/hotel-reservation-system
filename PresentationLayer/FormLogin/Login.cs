@@ -1,6 +1,7 @@
 ﻿using BusisnessLayer.Services;
 using PresentationLayer.FormAdmin;
 using PresentationLayer.FormCliente;
+using System.Data;
 
 namespace PresentationLayer.FormLogin
 {
@@ -13,12 +14,9 @@ namespace PresentationLayer.FormLogin
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             string user = userTextBox.Text;
             string password = passwordTextBox.Text;
-=======
-            DataTable usuariosTable = new UsersServices().GetUsuarios();
->>>>>>> 0ed96d551495507942b753dc7be7a44989178fd9
+            DataTable usuariosTable = new UsersServices().GetAllUsuarios();
 
             ErrorProvider errorProvider = new ErrorProvider();
             errorProvider.Clear();
@@ -29,7 +27,7 @@ namespace PresentationLayer.FormLogin
                 return;
             }else
             {
-                UsuariosServices usuariosServices = new UsuariosServices();
+                UsersServices usuariosServices = new UsersServices();
                 var existUser = usuariosServices.GetUsuarioAndClave(user, password);
 
                 if (existUser != null)

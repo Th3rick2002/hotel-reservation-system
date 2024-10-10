@@ -6,14 +6,14 @@ namespace PresentationLayer.FormAdmin
 {
     public partial class FormAdministration : Form
     {
-        private UsuariosServices _usuariosServices;
+        private UsersServices _usersServices;
         private readonly int idUser;
 
         public FormAdministration(int IdUser)
         {
             InitializeComponent();
             this.idUser = IdUser;
-            this._usuariosServices = new UsuariosServices();
+            this._usersServices = new UsersServices();
         }
         private void clientButton_Click(object sender, EventArgs e)
         {
@@ -61,7 +61,7 @@ namespace PresentationLayer.FormAdmin
 
         private string GetUserRoleById(int userId)
         {
-            DataTable usuariosTable = _usuariosServices.GetAllUsuarios();
+            DataTable usuariosTable = _usersServices.GetAllUsuarios();
             DataRow userRow = usuariosTable.AsEnumerable()
                     .FirstOrDefault(u => u.Field<int>("IdUsuario") == userId);
 
