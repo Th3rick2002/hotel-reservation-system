@@ -13,14 +13,14 @@ namespace PresentationLayer.FormAdmin
 {
     public partial class reservationHotel : Form
     {
-        private HabitacionesServices _habitacionesServices;
-        private ReservasService _reservasservice;
+        private RoomServices _habitacionesServices;
+        private ReservationServices _reservasservice;
 
         public reservationHotel()
         {
             InitializeComponent();
-            _reservasservice = new ReservasService();
-            _habitacionesServices = new HabitacionesServices();
+            _reservasservice = new ReservationServices();
+            _habitacionesServices = new RoomServices();
             LoadReservas();
         }
 

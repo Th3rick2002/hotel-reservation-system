@@ -67,7 +67,7 @@
             titleLabel.Location = new Point(770, 20);
             titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(255, 36);
+            titleLabel.Size = new Size(319, 42);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Registra tus datos";
             // 
@@ -91,7 +91,7 @@
             formGroupBox.Margin = new Padding(2);
             formGroupBox.Name = "formGroupBox";
             formGroupBox.Padding = new Padding(2);
-            formGroupBox.Size = new Size(790, 694);
+            formGroupBox.Size = new Size(790, 641);
             formGroupBox.TabIndex = 1;
             formGroupBox.TabStop = false;
             formGroupBox.Text = "Formulario";
@@ -109,9 +109,9 @@
             saveButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
             saveButton.IconSize = 45;
             saveButton.ImageAlign = ContentAlignment.MiddleLeft;
-            saveButton.Location = new Point(255, 592);
+            saveButton.Location = new Point(253, 554);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(410, 67);
+            saveButton.Size = new Size(410, 46);
             saveButton.TabIndex = 24;
             saveButton.Text = "Crear cuenta";
             saveButton.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             passwordTextBox.Location = new Point(327, 174);
             passwordTextBox.Margin = new Padding(2);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(435, 24);
+            passwordTextBox.Size = new Size(435, 28);
             passwordTextBox.TabIndex = 12;
             // 
             // userTextBox
@@ -132,7 +132,7 @@
             userTextBox.Location = new Point(327, 104);
             userTextBox.Margin = new Padding(2);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(435, 24);
+            userTextBox.Size = new Size(435, 28);
             userTextBox.TabIndex = 11;
             userTextBox.Text = "Ej. Aramndo093";
             // 
@@ -143,7 +143,7 @@
             passwordLabel.Location = new Point(130, 173);
             passwordLabel.Margin = new Padding(2, 0, 2, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(100, 20);
+            passwordLabel.Size = new Size(125, 25);
             passwordLabel.TabIndex = 10;
             passwordLabel.Text = "Contraseña: ";
             // 
@@ -154,7 +154,7 @@
             userLabel.Location = new Point(181, 103);
             userLabel.Margin = new Padding(2, 0, 2, 0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(68, 20);
+            userLabel.Size = new Size(85, 25);
             userLabel.TabIndex = 9;
             userLabel.Text = "Usuario:";
             // 
@@ -164,7 +164,7 @@
             numerPhoneTexBox.Location = new Point(327, 502);
             numerPhoneTexBox.Margin = new Padding(2);
             numerPhoneTexBox.Name = "numerPhoneTexBox";
-            numerPhoneTexBox.Size = new Size(435, 24);
+            numerPhoneTexBox.Size = new Size(435, 28);
             numerPhoneTexBox.TabIndex = 8;
             numerPhoneTexBox.Text = "Ej. 76764532";
             // 
@@ -174,7 +174,7 @@
             emailTextBox.Location = new Point(327, 412);
             emailTextBox.Margin = new Padding(2);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(435, 24);
+            emailTextBox.Size = new Size(435, 28);
             emailTextBox.TabIndex = 7;
             emailTextBox.Text = "Ej. juanAguirre@correo.com";
             // 
@@ -184,7 +184,7 @@
             lastNameTextBox.Location = new Point(327, 324);
             lastNameTextBox.Margin = new Padding(2);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(435, 24);
+            lastNameTextBox.Size = new Size(435, 28);
             lastNameTextBox.TabIndex = 6;
             lastNameTextBox.Text = "Ej. Aguirre Romero";
             // 
@@ -194,7 +194,7 @@
             nameTextBox.Location = new Point(327, 245);
             nameTextBox.Margin = new Padding(2);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(435, 24);
+            nameTextBox.Size = new Size(435, 28);
             nameTextBox.TabIndex = 5;
             nameTextBox.Text = "Ej. Juan Armando";
             // 
@@ -205,7 +205,7 @@
             numberPhoneLabel.Location = new Point(30, 501);
             numberPhoneLabel.Margin = new Padding(2, 0, 2, 0);
             numberPhoneLabel.Name = "numberPhoneLabel";
-            numberPhoneLabel.Size = new Size(157, 20);
+            numberPhoneLabel.Size = new Size(196, 25);
             numberPhoneLabel.TabIndex = 3;
             numberPhoneLabel.Text = "Numero de Telefono:";
             // 
@@ -216,7 +216,7 @@
             emailLabel.Location = new Point(45, 412);
             emailLabel.Margin = new Padding(2, 0, 2, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(148, 20);
+            emailLabel.Size = new Size(184, 25);
             emailLabel.TabIndex = 2;
             emailLabel.Text = "Correo Electronico: ";
             // 
@@ -227,7 +227,7 @@
             lastNameLabel.Location = new Point(168, 328);
             lastNameLabel.Margin = new Padding(2, 0, 2, 0);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(69, 20);
+            lastNameLabel.Size = new Size(88, 25);
             lastNameLabel.TabIndex = 1;
             lastNameLabel.Text = "Apellido:";
             // 
@@ -238,7 +238,7 @@
             nameLabel.Location = new Point(163, 244);
             nameLabel.Margin = new Padding(2, 0, 2, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(73, 20);
+            nameLabel.Size = new Size(92, 25);
             nameLabel.TabIndex = 0;
             nameLabel.Text = "Nombre: ";
             // 
@@ -273,7 +273,7 @@
             // 
             // Formuser
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(9F, 18F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(1384, 738);

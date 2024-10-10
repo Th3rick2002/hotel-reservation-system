@@ -44,7 +44,6 @@ C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\bin\Debug
 C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\bin\Debug\net8.0-windows\CommonLayer.pdb
 C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\bin\Debug\net8.0-windows\DataAccessLayer.pdb
 C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.csproj.AssemblyReference.cache
-C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.Form1.resources
 C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormAdmin.FormAdministration.resources
 C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormAdmin.ReservationHotel.resources
 C:\Users\fuent\Source\Repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormAdmin.RoomHotel.resources
@@ -270,3 +269,4 @@ C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\bin\Deb
 C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\Presenta.9C561136.Up2Date
 C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.genruntimeconfig.cache
 C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\ref\PresentationLayer.dll
+C:\Users\fuent\source\repos\hotel-reservation-system\PresentationLayer\bin\Debug\net8.0-windows\FluentValidation.dll

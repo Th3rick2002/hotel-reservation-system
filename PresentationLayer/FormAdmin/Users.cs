@@ -13,11 +13,11 @@ namespace PresentationLayer.FormAdmin
 {
     public partial class Users : Form
     {
-        private UsuariosServices _usuariosServices;
+        private UsersServices _usuariosServices;
         public Users()
         {
             InitializeComponent();
-            _usuariosServices = new UsuariosServices();
+            _usuariosServices = new UsersServices();
             LoadData();
             listUserDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 

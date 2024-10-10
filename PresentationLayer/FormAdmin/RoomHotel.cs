@@ -13,11 +13,11 @@ namespace PresentationLayer.FormAdmin
 {
     public partial class RoomHotel : Form
     {
-        private HabitacionesServices _habitacionesService;
+        private RoomServices _habitacionesService;
         public RoomHotel()
         {
             InitializeComponent();
-            _habitacionesService = new HabitacionesServices();
+            _habitacionesService = new RoomServices();
             LoadHabitaciones();
 
             listRoomDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;

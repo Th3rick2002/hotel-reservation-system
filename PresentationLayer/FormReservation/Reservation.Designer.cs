@@ -30,6 +30,8 @@
         {
             titleLabel = new Label();
             formReservationGroupBox = new GroupBox();
+            priceResultLabel = new Label();
+            priceLabel = new Label();
             roomNumberLabel = new Label();
             endDateLabel = new Label();
             dateInitLabel = new Label();
@@ -40,8 +42,6 @@
             endDateTimePicker = new DateTimePicker();
             dateInitDateTimePicker = new DateTimePicker();
             pictureBox1 = new PictureBox();
-            priceLabel = new Label();
-            priceResultLabel = new Label();
             formReservationGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -50,9 +50,10 @@
             // 
             titleLabel.AutoSize = true;
             titleLabel.Font = new Font("Century Gothic", 16F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            titleLabel.Location = new Point(827, 45);
+            titleLabel.Location = new Point(662, 36);
+            titleLabel.Margin = new Padding(2, 0, 2, 0);
             titleLabel.Name = "titleLabel";
-            titleLabel.Size = new Size(478, 39);
+            titleLabel.Size = new Size(401, 33);
             titleLabel.TabIndex = 0;
             titleLabel.Text = "Reservación de Habitaciones";
             // 
@@ -70,20 +71,45 @@
             formReservationGroupBox.Controls.Add(endDateTimePicker);
             formReservationGroupBox.Controls.Add(dateInitDateTimePicker);
             formReservationGroupBox.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            formReservationGroupBox.Location = new Point(702, 133);
+            formReservationGroupBox.Location = new Point(562, 106);
+            formReservationGroupBox.Margin = new Padding(2, 2, 2, 2);
             formReservationGroupBox.Name = "formReservationGroupBox";
-            formReservationGroupBox.Size = new Size(731, 603);
+            formReservationGroupBox.Padding = new Padding(2, 2, 2, 2);
+            formReservationGroupBox.Size = new Size(585, 482);
             formReservationGroupBox.TabIndex = 1;
             formReservationGroupBox.TabStop = false;
             formReservationGroupBox.Text = "Formulario";
+            // 
+            // priceResultLabel
+            // 
+            priceResultLabel.AutoSize = true;
+            priceResultLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            priceResultLabel.Location = new Point(259, 339);
+            priceResultLabel.Margin = new Padding(2, 0, 2, 0);
+            priceResultLabel.Name = "priceResultLabel";
+            priceResultLabel.Size = new Size(21, 22);
+            priceResultLabel.TabIndex = 13;
+            priceResultLabel.Text = "$";
+            // 
+            // priceLabel
+            // 
+            priceLabel.AutoSize = true;
+            priceLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            priceLabel.Location = new Point(34, 339);
+            priceLabel.Margin = new Padding(2, 0, 2, 0);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(207, 22);
+            priceLabel.TabIndex = 12;
+            priceLabel.Text = "Precio de Habitación:";
             // 
             // roomNumberLabel
             // 
             roomNumberLabel.AutoSize = true;
             roomNumberLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            roomNumberLabel.Location = new Point(31, 349);
+            roomNumberLabel.Location = new Point(25, 279);
+            roomNumberLabel.Margin = new Padding(2, 0, 2, 0);
             roomNumberLabel.Name = "roomNumberLabel";
-            roomNumberLabel.Size = new Size(262, 25);
+            roomNumberLabel.Size = new Size(224, 22);
             roomNumberLabel.TabIndex = 11;
             roomNumberLabel.Text = "Numero de Habitación:";
             // 
@@ -91,9 +117,10 @@
             // 
             endDateLabel.AutoSize = true;
             endDateLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            endDateLabel.Location = new Point(37, 254);
+            endDateLabel.Location = new Point(30, 203);
+            endDateLabel.Margin = new Padding(2, 0, 2, 0);
             endDateLabel.Name = "endDateLabel";
-            endDateLabel.Size = new Size(248, 25);
+            endDateLabel.Size = new Size(211, 22);
             endDateLabel.TabIndex = 10;
             endDateLabel.Text = "Fecha de Finalización:";
             // 
@@ -101,26 +128,29 @@
             // 
             dateInitLabel.AutoSize = true;
             dateInitLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateInitLabel.Location = new Point(100, 176);
+            dateInitLabel.Location = new Point(80, 141);
+            dateInitLabel.Margin = new Padding(2, 0, 2, 0);
             dateInitLabel.Name = "dateInitLabel";
-            dateInitLabel.Size = new Size(179, 25);
+            dateInitLabel.Size = new Size(153, 22);
             dateInitLabel.TabIndex = 9;
             dateInitLabel.Text = "Fecha de inicio:";
             // 
             // nameClientTextBox
             // 
-            nameClientTextBox.Location = new Point(324, 85);
+            nameClientTextBox.Location = new Point(259, 68);
+            nameClientTextBox.Margin = new Padding(2, 2, 2, 2);
             nameClientTextBox.Name = "nameClientTextBox";
-            nameClientTextBox.Size = new Size(300, 30);
+            nameClientTextBox.Size = new Size(241, 26);
             nameClientTextBox.TabIndex = 8;
             // 
             // nameClientLabel
             // 
             nameClientLabel.AutoSize = true;
             nameClientLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nameClientLabel.Location = new Point(55, 87);
+            nameClientLabel.Location = new Point(44, 70);
+            nameClientLabel.Margin = new Padding(2, 0, 2, 0);
             nameClientLabel.Name = "nameClientLabel";
-            nameClientLabel.Size = new Size(230, 25);
+            nameClientLabel.Size = new Size(193, 22);
             nameClientLabel.TabIndex = 7;
             nameClientLabel.Text = "Nombre de Cliente: ";
             // 
@@ -130,9 +160,10 @@
             reservationButton.FlatStyle = FlatStyle.Popup;
             reservationButton.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             reservationButton.ForeColor = Color.White;
-            reservationButton.Location = new Point(172, 500);
+            reservationButton.Location = new Point(138, 400);
+            reservationButton.Margin = new Padding(2, 2, 2, 2);
             reservationButton.Name = "reservationButton";
-            reservationButton.Size = new Size(399, 72);
+            reservationButton.Size = new Size(319, 49);
             reservationButton.TabIndex = 6;
             reservationButton.Text = "Reservar";
             reservationButton.UseVisualStyleBackColor = false;
@@ -140,64 +171,49 @@
             // roomNumbercomboBox
             // 
             roomNumbercomboBox.FormattingEnabled = true;
-            roomNumbercomboBox.Location = new Point(324, 347);
+            roomNumbercomboBox.Location = new Point(259, 278);
+            roomNumbercomboBox.Margin = new Padding(2, 2, 2, 2);
             roomNumbercomboBox.Name = "roomNumbercomboBox";
-            roomNumbercomboBox.Size = new Size(300, 29);
+            roomNumbercomboBox.Size = new Size(241, 28);
             roomNumbercomboBox.TabIndex = 5;
             // 
             // endDateTimePicker
             // 
-            endDateTimePicker.Location = new Point(324, 249);
+            endDateTimePicker.Location = new Point(259, 199);
+            endDateTimePicker.Margin = new Padding(2, 2, 2, 2);
             endDateTimePicker.Name = "endDateTimePicker";
-            endDateTimePicker.Size = new Size(300, 30);
+            endDateTimePicker.Size = new Size(241, 26);
             endDateTimePicker.TabIndex = 3;
             // 
             // dateInitDateTimePicker
             // 
-            dateInitDateTimePicker.Location = new Point(324, 171);
+            dateInitDateTimePicker.Location = new Point(259, 137);
+            dateInitDateTimePicker.Margin = new Padding(2, 2, 2, 2);
             dateInitDateTimePicker.Name = "dateInitDateTimePicker";
-            dateInitDateTimePicker.Size = new Size(300, 30);
+            dateInitDateTimePicker.Size = new Size(241, 26);
             dateInitDateTimePicker.TabIndex = 2;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1600w_GCXVaOYK_Vw__1_;
-            pictureBox1.Location = new Point(12, 88);
+            pictureBox1.Location = new Point(10, 70);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(601, 582);
+            pictureBox1.Size = new Size(481, 466);
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            priceLabel.Location = new Point(43, 424);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new Size(242, 25);
-            priceLabel.TabIndex = 12;
-            priceLabel.Text = "Precio de Habitación:";
-            // 
-            // priceResultLabel
-            // 
-            priceResultLabel.AutoSize = true;
-            priceResultLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            priceResultLabel.Location = new Point(324, 424);
-            priceResultLabel.Name = "priceResultLabel";
-            priceResultLabel.Size = new Size(24, 25);
-            priceResultLabel.TabIndex = 13;
-            priceResultLabel.Text = "$";
-            // 
             // Reservation
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveBorder;
-            ClientSize = new Size(1462, 775);
+            ClientSize = new Size(1170, 620);
             Controls.Add(pictureBox1);
             Controls.Add(formReservationGroupBox);
             Controls.Add(titleLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "Reservation";
             formReservationGroupBox.ResumeLayout(false);
             formReservationGroupBox.PerformLayout();
