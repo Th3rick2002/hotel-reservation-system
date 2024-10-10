@@ -1,11 +1,6 @@
 ﻿using CommonLayer.Entities;
 using DataAccessLayer.Repositories;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusisnessLayer.Services
 {
@@ -18,24 +13,24 @@ namespace BusisnessLayer.Services
             _habitacionesrepositories = new RoomRepositories();
         }
 
-        public DataTable GetHabitacion()
+        public DataTable GetRooms()
         {
-            return _habitacionesrepositories.GetAllHabitaciones();
+            return _habitacionesrepositories.GetAllRooms();
         }
 
-        public void AddHabitaciones(Room habitacion)
+        public void AddRoom(Room habitacion)
         {
-            _habitacionesrepositories.AddHabitaciones(habitacion);
+            _habitacionesrepositories.AddRoom(habitacion);
         }
 
-        public void UpdateHabitaciones(Room habitacion)
+        public void UpdateRoom(Room habitacion)
         {
-            _habitacionesrepositories.EditHabitaciones(habitacion);
+            _habitacionesrepositories.UpdateRoom(habitacion);
         }
 
-        public void DeleteHabitacion(int IdHabitacion)
+        public void DeleteRoomn(int IdHabitacion)
         {
-            _habitacionesrepositories.DeleteHabitaciones(IdHabitacion);
+            _habitacionesrepositories.DeleteRoom(IdHabitacion);
         }
     }
 }

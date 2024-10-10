@@ -185,7 +185,6 @@ C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\
 C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormAdmin.RoomHotel.resources
 C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormAdmin.Users.resources
 C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormLogin.Login.resources
-C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormReservation.Reservation.resources
 C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormCliente.Formuser.resources
 C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.Properties.Resources.resources
 C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.csproj.GenerateResource.cache
@@ -270,3 +269,4 @@ C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\obj\Deb
 C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.genruntimeconfig.cache
 C:\Users\Melissa\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\ref\PresentationLayer.dll
 C:\Users\fuent\source\repos\hotel-reservation-system\PresentationLayer\bin\Debug\net8.0-windows\FluentValidation.dll
+C:\Users\Erick MArtinez\source\repos\hotel-reservation-system\PresentationLayer\obj\Debug\net8.0-windows\PresentationLayer.FormReservation.FormReservation.resources

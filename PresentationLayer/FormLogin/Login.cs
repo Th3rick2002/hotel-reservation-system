@@ -1,15 +1,18 @@
 ﻿using BusisnessLayer.Services;
 using PresentationLayer.FormAdmin;
 using PresentationLayer.FormCliente;
+using PresentationLayer.FormReservation;
 using System.Data;
 
 namespace PresentationLayer.FormLogin
 {
     public partial class Login : Form
     {
+        private UsersServices _usersServices;
         public Login()
         {
             InitializeComponent();
+            this._usersServices = new UsersServices();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
@@ -25,20 +28,36 @@ namespace PresentationLayer.FormLogin
             {
                 errorProvider.SetError(userTextBox, "El campo usuario y contraseña es requerido.");
                 return;
-            }else
+            }
+            else
             {
                 UsersServices usuariosServices = new UsersServices();
                 var existUser = usuariosServices.GetUsuarioAndClave(user, password);
 
                 if (existUser != null)
                 {
-                    userTextBox.Clear();
-                    passwordTextBox.Clear();
-                    this.Hide();
-                    int IdUser = (int)existUser;
-                    FormAdministration formAdministration = new FormAdministration(IdUser);
-                    formAdministration.FormClosed += (s, args) => this.Show();
-                    formAdministration.Show();
+                    if (GetUserRoleById((int)existUser) == "Administrador")
+                    {
+                        userTextBox.Clear();
+                        passwordTextBox.Clear();
+                        this.Hide();
+                        int IdUser = (int)existUser;
+                        FormAdministration formAdministration = new FormAdministration(IdUser);
+                        formAdministration.FormClosed += (s, args) => this.Show();
+                        formAdministration.Show();
+                    }
+
+                    else if (GetUserRoleById((int)existUser) == "Cliente")
+                    {
+                        userTextBox.Clear();
+                        passwordTextBox.Clear();
+                        this.Hide();
+                        int IdUser = (int)existUser;
+                        FormReservation.FormReservation formReservation = new FormReservation.FormReservation(IdUser);
+                        formReservation.FormClosed += (s, args) => this.Show();
+                        formReservation.Show();
+                    }
+
                 }
                 else
                 {
@@ -54,6 +73,15 @@ namespace PresentationLayer.FormLogin
 
             formuser.FormClosed += (s, args) => this.Show();
             formuser.Show();
+        }
+
+        private string GetUserRoleById(int userId)
+        {
+            DataTable usuariosTable = _usersServices.GetAllUsuarios();
+            DataRow userRow = usuariosTable.AsEnumerable()
+                    .FirstOrDefault(u => u.Field<int>("IdUsuario") == userId);
+
+            return userRow != null ? userRow.Field<string>("rol") : string.Empty;
         }
     }
 }

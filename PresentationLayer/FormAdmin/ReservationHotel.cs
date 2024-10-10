@@ -1,12 +1,5 @@
 ﻿using BusisnessLayer.Services;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PresentationLayer.FormAdmin
@@ -22,6 +15,7 @@ namespace PresentationLayer.FormAdmin
             _reservasservice = new ReservationServices();
             _habitacionesServices = new RoomServices();
             LoadReservas();
+            listReservationDataGridView.CellClick += dataGridView1_CellClick;
         }
 
         private void LoadReservas()
@@ -30,7 +24,7 @@ namespace PresentationLayer.FormAdmin
 
             listReservationDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            roomNumbercomboBox.DataSource = _habitacionesServices.GetHabitacion();
+            roomNumbercomboBox.DataSource = _habitacionesServices.GetRooms();
 
             roomNumbercomboBox.DisplayMember = "Tipo";
             roomNumbercomboBox.ValueMember = "IdHabitacion";
@@ -78,5 +72,16 @@ namespace PresentationLayer.FormAdmin
             CalcularPrecioTotal();
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Verifica que se haga clic en una celda válida
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Obtén el valor de la celda en la columna deseada
+                var cellValue = listReservationDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
+
+                nameClientTextBox.Text = cellValue?.ToString();
+            }
+        }
     }
 }

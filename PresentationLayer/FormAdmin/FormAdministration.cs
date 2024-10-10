@@ -17,19 +17,10 @@ namespace PresentationLayer.FormAdmin
         }
         private void clientButton_Click(object sender, EventArgs e)
         {
-            if (GetUserRoleById(idUser) != "Administrador")
-            {
-                MessageBox.Show("No tienes permisos para acceder a esta sección.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                Users users = new Users();
-                this.Hide();
-                users.Show();
-                users.FormClosed += (s, args) => this.Show();
-            }
-            
+            Users users = new Users();
+            this.Hide();
+            users.Show();
+            users.FormClosed += (s, args) => this.Show();
         }
         private void logoutButton_Click(object sender, EventArgs e)
         {
@@ -38,18 +29,11 @@ namespace PresentationLayer.FormAdmin
 
         private void roomButton_Click(object sender, EventArgs e)
         {
-            if (GetUserRoleById(idUser) != "Administrador")
-            {
-                MessageBox.Show("No tienes permisos para acceder a esta sección.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            else
-            {
-                RoomHotel roomHotel = new RoomHotel();
-                this.Hide();
-                roomHotel.Show();
-                roomHotel.FormClosed += (s, args) => this.Show();
-            }        }
+            RoomHotel roomHotel = new RoomHotel();
+            this.Hide();
+            roomHotel.Show();
+            roomHotel.FormClosed += (s, args) => this.Show();
+        }
 
         private void reservationButton_Click(object sender, EventArgs e)
         {

@@ -19,9 +19,9 @@ namespace DataAccessLayer.Repositories
             _dbConnection = new SqlDataAccess();
         }
 
-        public DataTable GetAllHabitaciones()
+        public DataTable GetAllRooms()
         {
-            DataTable habitacionesTable = new DataTable();
+            DataTable roomsTable = new DataTable();
 
             using (var connection = _dbConnection.GetConnection())
             {
@@ -33,33 +33,32 @@ namespace DataAccessLayer.Repositories
 
                     using (SqlDataReader reader = sqlcommand.ExecuteReader())
                     {
-                        habitacionesTable.Load(reader);
+                        roomsTable.Load(reader);
                     }
                 }
             }
 
-            return habitacionesTable;
+            return roomsTable;
         }
 
-        public void AddHabitaciones(Room habitacion)
+        public void AddRoom(Room room)
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO Usuario(IdHabitacion,Tipo, PrecioNoche, Caracteristicas)
-                                VALUES(@IdRoom, @Type, @PriceNight, @Characteristic)";
+                string query = @"INSERT INTO Habitacion (Tipo, PrecioNoche, Caracteristicas)
+                                VALUES(@Type, @PriceNight, @Characteristic)";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdRoom", habitacion.IdRoom);
-                command.Parameters.AddWithValue("@Type", habitacion.Type);
-                command.Parameters.AddWithValue("@PriceNight", habitacion.PriceNight);
-                command.Parameters.AddWithValue("@Characteristic", habitacion.Characteristic);
+                command.Parameters.AddWithValue("@Type", room.Type);
+                command.Parameters.AddWithValue("@PriceNight", room.PriceNight);
+                command.Parameters.AddWithValue("@Characteristic", room.Characteristic);
 
                 connection.Open();
                 command.ExecuteNonQuery();
             }
         }
 
-        public void EditHabitaciones(Room habitacion)
+        public void UpdateRoom(Room habitacion)
         {
             using (var connection = _dbConnection.GetConnection())
             {
@@ -79,7 +78,7 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        public void DeleteHabitaciones(int IdHabitaciones)
+        public void DeleteRoom(int IdHabitaciones)
         {
             using (var connection = _dbConnection.GetConnection())
             {
