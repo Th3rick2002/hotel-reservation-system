@@ -16,6 +16,11 @@ namespace PresentationLayer.Validations
                 .NotEmpty().WithMessage("El campo precio es requerido")
                 .GreaterThan(0).WithMessage("El campo precio debe ser positivo");
 
+            RuleFor(room => room.Characteristic)
+                .NotEmpty().WithMessage("El campo característica es requerido")
+                .Length(3, 100).WithMessage("El campo característica debe tener entre 3 y 100 caracteres");
+                
+
         }
     }
 }

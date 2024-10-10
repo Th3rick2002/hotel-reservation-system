@@ -62,13 +62,10 @@ namespace DataAccessLayer.Repositories
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"UPDATE Habitacion SET " +
-                                "Tipo = @Type" +
-                                "PrecioNoche = @PriceNight" +
-                                "Caracteristicas = @Characteristic " +
-                                "WHERE IdHabitacion = @IdHabitacion";
+                string query = @"UPDATE Habitacion SET Tipo = @Type, PrecioNoche = @PriceNight, Caracteristicas = @Characteristic WHERE IdHabitacion = @IdHabitacion";
 
                 SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@IdHabitacion", habitacion.IdRoom);
                 command.Parameters.AddWithValue("@Type", habitacion.Type);
                 command.Parameters.AddWithValue("@PriceNight", habitacion.PriceNight);
                 command.Parameters.AddWithValue("@Characteristic", habitacion.Characteristic);

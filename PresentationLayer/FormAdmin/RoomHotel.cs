@@ -30,12 +30,12 @@ namespace PresentationLayer.FormAdmin
         {
             string type = typeRoomTextBox.Text;
             string priceText = priceRoomTextBox.Text;
-            string characteristic = "";
+            string characteristic = characteristicRoomTextBox.Text;
 
             var errorProvider = new ErrorProvider();
             errorProvider.Clear();
 
-            if(string.IsNullOrEmpty(priceText) || !priceText.All(char.IsDigit))
+            if (string.IsNullOrEmpty(priceText) || !priceText.All(char.IsDigit))
             {
                 errorProvider.SetError(priceRoomTextBox, "El precio de la habitación debe ser un número.");
                 return;
@@ -63,34 +63,82 @@ namespace PresentationLayer.FormAdmin
                     case "PriceNight":
                         errorProvider.SetError(priceRoomTextBox, error.ErrorMessage);
                         break;
-                    //case "Characteristic":
-                    //    errorProvider.SetError(characteristicRoomTextBox, error.ErrorMessage);
-                    //    break;
+                    case "Characteristic":
+                        errorProvider.SetError(characteristicRoomTextBox, error.ErrorMessage);
+                        break;
                 }
             }
 
-            if(results.IsValid)
+            if (results.IsValid)
             {
                 _roomsService.AddRoom(room);
                 LoadRooms();
             }
-            
         }
 
         private void listRoomDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica que se haga clic en una celda válida
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                // Obtén el valor de las celdas correspondientes
-                var typeValue = listRoomDataGridView.Rows[e.RowIndex].Cells["Tipo"].Value; // Cambia "Tipo" por el nombre real de la columna
-                var priceValue = listRoomDataGridView.Rows[e.RowIndex].Cells["PrecioNoche"].Value; // Cambia "PrecioNoche" por el nombre real de la columna
-                var characteristicValue = listRoomDataGridView.Rows[e.RowIndex].Cells["Caracteristicas"].Value; // Cambia "Caracteristicas" por el nombre real de la columna
+                var IdRoomValue = listRoomDataGridView.Rows[e.RowIndex].Cells["IdHabitacion"].Value;
+                var typeValue = listRoomDataGridView.Rows[e.RowIndex].Cells["Tipo"].Value;
+                var priceValue = listRoomDataGridView.Rows[e.RowIndex].Cells["PrecioNoche"].Value;
+                var characteristicValue = listRoomDataGridView.Rows[e.RowIndex].Cells["Caracteristicas"].Value;
 
-                // Asigna los valores a los TextBox correspondientes
+                MessageBox.Show(IdRoomValue.ToString());
                 typeRoomTextBox.Text = typeValue?.ToString();
                 priceRoomTextBox.Text = priceValue?.ToString();
-                //characteristicRoomTextBox.Text = characteristicValue?.ToString(); // Asegúrate de tener un TextBox para características
+                characteristicRoomTextBox.Text = characteristicValue?.ToString();
+            }
+        }
+
+        private void editRoomButton_Click(object sender, EventArgs e)
+        {
+            string type = typeRoomTextBox.Text;
+            string priceText = priceRoomTextBox.Text;
+            string characteristic = characteristicRoomTextBox.Text;
+
+            var errorProvider = new ErrorProvider();
+            errorProvider.Clear();
+
+            if (string.IsNullOrEmpty(priceText) || !priceText.All(char.IsDigit))
+            {
+                errorProvider.SetError(priceRoomTextBox, "El precio de la habitación debe ser un número.");
+                return;
+            }
+
+            int priceNight = Convert.ToInt32(priceText);
+
+            Room room = new Room()
+            {
+                Type = type,
+                PriceNight = priceNight,
+                Characteristic = characteristic
+            };
+
+            ValidationRoom validation = new ValidationRoom();
+            FluentValidation.Results.ValidationResult results = validation.Validate(room);
+
+            foreach (var error in results.Errors)
+            {
+                switch (error.PropertyName)
+                {
+                    case "Type":
+                        errorProvider.SetError(typeRoomTextBox, error.ErrorMessage);
+                        break;
+                    case "PriceNight":
+                        errorProvider.SetError(priceRoomTextBox, error.ErrorMessage);
+                        break;
+                    case "Characteristic":
+                        errorProvider.SetError(characteristicRoomTextBox, error.ErrorMessage);
+                        break;
+                }
+            }
+
+            if (results.IsValid)
+            {
+                _roomsService.UpdateRoom(room);
+                LoadRooms();
             }
         }
     }
