@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repositories
 
             using(var connection = _dbConnection.GetConnection())
             {
-                string query = @"SELECT r.ffin, r.fnit, r.idReserva, h.IdHabitacion, u.IdUsuario, r.estado, r.Price  FROM reserva r
+                string query = @"SELECT r.ffin, r.fnit, r.idReserva, h.IdHabitacion, u.IdUsuario, r.estado, r.precio  FROM reserva r
                                 INNER JOIN Habitacion h ON h.IdHabitacion = r.idHabitacion
                                 INNER JOIN Usuario u ON u.IdUsuario = r.IdUsuario";
 

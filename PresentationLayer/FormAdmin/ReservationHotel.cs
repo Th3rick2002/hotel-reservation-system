@@ -47,7 +47,7 @@ namespace PresentationLayer.FormAdmin
 
         private void CalcularPrecioTotal()
         {
-            if (roomNumbercomboBox.SelectedItem != null && dateInitDateTimePicker.Value < endDateTimePicker.Value)
+            if (roomNumbercomboBox.SelectedItem != null )
             {
                 var hotelSeleccionadoRow = (DataRowView)roomNumbercomboBox.SelectedItem;
 
@@ -87,12 +87,9 @@ namespace PresentationLayer.FormAdmin
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            // Verifica que se haga clic en una celda válida
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                // Obtén el valor de la celda en la columna deseada
                 var cellValue = listReservationDataGridView.Rows[e.RowIndex].Cells[e.ColumnIndex].Value;
-
                 nameClientTextBox.Text = cellValue?.ToString();
             }
         }

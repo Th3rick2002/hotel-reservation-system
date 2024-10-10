@@ -36,7 +36,7 @@ namespace PresentationLayer.FormLogin
 
                 if (existUser != null)
                 {
-                    if (GetUserRoleById((int)existUser) == "ADMINISTRADOR")
+                    if (GetUserRoleById((int)existUser) == "Administrador")
                     {
                         userTextBox.Clear();
                         passwordTextBox.Clear();
@@ -47,7 +47,7 @@ namespace PresentationLayer.FormLogin
                         formAdministration.Show();
                     }
 
-                    else if (GetUserRoleById((int)existUser) == "CLIENTE")
+                    else if (GetUserRoleById((int)existUser) == "Cliente")
                     {
                         userTextBox.Clear();
                         passwordTextBox.Clear();
@@ -56,6 +56,10 @@ namespace PresentationLayer.FormLogin
                         FormReservation.FormReservation formReservation = new FormReservation.FormReservation(IdUser);
                         formReservation.FormClosed += (s, args) => this.Show();
                         formReservation.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("no funciona");
                     }
 
                 }

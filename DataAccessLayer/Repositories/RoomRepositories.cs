@@ -79,10 +79,10 @@ namespace DataAccessLayer.Repositories
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = "DELETE FROM Usuario WHERE IdUsuario = @IdUsuario";
+                string query = "DELETE FROM Habitacion WHERE IdHabitacion = @IdHabitacion";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdUsuario", IdRoom);
+                command.Parameters.AddWithValue("@IdHabitacion", IdRoom);
 
                 connection.Open();
                 command.ExecuteNonQuery();
