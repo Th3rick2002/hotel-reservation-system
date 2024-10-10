@@ -8,7 +8,7 @@ namespace DataAccessLayer.DbConnection
 
         public SqlDataAccess()
         {
-            _connectionString = "Data Source=LAPTOP-PHCFNULN\\SQLEXPRESS;Initial Catalog=Reservamiento_HotTel;Integrated Security=True;Encrypt=False;Trust Server Certificate=True";
+            _connectionString = "Data Source=DESKTOP-JDM7JV2\\MSSQLSERVER01;Initial Catalog=Reservamiento_HotTel;Integrated Security=True;Trust Server Certificate=True";
         }
 
         public SqlConnection GetConnection()
