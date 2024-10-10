@@ -132,9 +132,8 @@
             userTextBox.Location = new Point(327, 104);
             userTextBox.Margin = new Padding(2);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(435, 28);
-            userTextBox.TabIndex = 11;
-            userTextBox.Text = "Ej. Aramndo093";
+            userTextBox.PlaceholderText = "Ej. Aramndo093";
+            userTextBox.Size = new Size(435, 34);
             // 
             // passwordLabel
             // 
@@ -164,9 +163,9 @@
             numerPhoneTexBox.Location = new Point(327, 502);
             numerPhoneTexBox.Margin = new Padding(2);
             numerPhoneTexBox.Name = "numerPhoneTexBox";
-            numerPhoneTexBox.Size = new Size(435, 28);
+            numerPhoneTexBox.PlaceholderText = "Ej. 76764532";
+            numerPhoneTexBox.Size = new Size(435, 34);
             numerPhoneTexBox.TabIndex = 8;
-            numerPhoneTexBox.Text = "Ej. 76764532";
             // 
             // emailTextBox
             // 
@@ -174,9 +173,9 @@
             emailTextBox.Location = new Point(327, 412);
             emailTextBox.Margin = new Padding(2);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(435, 28);
+            emailTextBox.PlaceholderText = "Ej. juanAguirre@correo.com";
+            emailTextBox.Size = new Size(435, 34);
             emailTextBox.TabIndex = 7;
-            emailTextBox.Text = "Ej. juanAguirre@correo.com";
             // 
             // lastNameTextBox
             // 
@@ -184,9 +183,9 @@
             lastNameTextBox.Location = new Point(327, 324);
             lastNameTextBox.Margin = new Padding(2);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(435, 28);
+            lastNameTextBox.PlaceholderText = "Ej. Aguirre Romero";
+            lastNameTextBox.Size = new Size(435, 34);
             lastNameTextBox.TabIndex = 6;
-            lastNameTextBox.Text = "Ej. Aguirre Romero";
             // 
             // nameTextBox
             // 
@@ -194,9 +193,9 @@
             nameTextBox.Location = new Point(327, 245);
             nameTextBox.Margin = new Padding(2);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(435, 28);
+            nameTextBox.PlaceholderText = "Ej. Juan Armando";
+            nameTextBox.Size = new Size(435, 34);
             nameTextBox.TabIndex = 5;
-            nameTextBox.Text = "Ej. Juan Armando";
             // 
             // numberPhoneLabel
             // 

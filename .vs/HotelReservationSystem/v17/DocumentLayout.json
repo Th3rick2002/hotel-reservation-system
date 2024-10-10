@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\presentationlayer\\formreservation\\formreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formreservation\\formreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{5B224A5A-8BDF-4750-88E1-E2AC9682CBCC}|DataAccessLayer\\DataAccessLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\dataaccesslayer\\dbconnection\\sqldataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B224A5A-8BDF-4750-88E1-E2AC9682CBCC}|DataAccessLayer\\DataAccessLayer.csproj|solutionrelative:dataaccesslayer\\dbconnection\\sqldataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34F6BFE-C133-4AE5-8121-4AF676DCF601}|BusisnessLayer\\BusisnessLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\busisnesslayer\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34F6BFE-C133-4AE5-8121-4AF676DCF601}|BusisnessLayer\\BusisnessLayer.csproj|solutionrelative:busisnesslayer\\services\\usersservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\presentationlayer\\formuser\\formuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formuser\\formuser.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\presentationlayer\\formadmin\\users.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formadmin\\users.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34F6BFE-C133-4AE5-8121-4AF676DCF601}|BusisnessLayer\\BusisnessLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\busisnesslayer\\services\\roomservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34F6BFE-C133-4AE5-8121-4AF676DCF601}|BusisnessLayer\\BusisnessLayer.csproj|solutionrelative:busisnesslayer\\services\\roomservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A34F6BFE-C133-4AE5-8121-4AF676DCF601}|BusisnessLayer\\BusisnessLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\busisnesslayer\\services\\reservationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A34F6BFE-C133-4AE5-8121-4AF676DCF601}|BusisnessLayer\\BusisnessLayer.csproj|solutionrelative:busisnesslayer\\services\\reservationservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\presentationlayer\\formreservation\\formreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formreservation\\formreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\presentationlayer\\formreservation\\formreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|solutionrelative:presentationlayer\\formreservation\\formreservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EFFC692A-0433-4BC8-BFF9-6D19EF48521B}|PresentationLayer\\PresentationLayer.csproj|c:\\users\\erick martinez\\source\\repos\\hotel-reservation-system\\presentationlayer\\formadmin\\reservationhotel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +78,85 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Formuser.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormUser\\Formuser.Designer.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\FormUser\\Formuser.Designer.cs",
+              "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormUser\\Formuser.Designer.cs",
+              "RelativeToolTip": "PresentationLayer\\FormUser\\Formuser.Designer.cs",
+              "ViewState": "AgIAAO4AAAAAAAAAAAAvwMIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T20:41:05.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Users.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\Users.Designer.cs",
+              "RelativeDocumentMoniker": "PresentationLayer\\FormAdmin\\Users.Designer.cs",
+              "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\Users.Designer.cs",
+              "RelativeToolTip": "PresentationLayer\\FormAdmin\\Users.Designer.cs",
+              "ViewState": "AgIAAM4AAAAAAAAAAAAvwLIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T20:39:32.543Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RoomServices.cs",
+              "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\Services\\RoomServices.cs",
+              "RelativeDocumentMoniker": "BusisnessLayer\\Services\\RoomServices.cs",
+              "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\Services\\RoomServices.cs",
+              "RelativeToolTip": "BusisnessLayer\\Services\\RoomServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T20:39:26.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ReservationServices.cs",
+              "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\Services\\ReservationServices.cs",
+              "RelativeDocumentMoniker": "BusisnessLayer\\Services\\ReservationServices.cs",
+              "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\Services\\ReservationServices.cs",
+              "RelativeToolTip": "BusisnessLayer\\Services\\ReservationServices.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAvwA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T20:39:18.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SqlDataAccess.cs",
+              "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DbConnection\\SqlDataAccess.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer\\DbConnection\\SqlDataAccess.cs",
+              "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\DbConnection\\SqlDataAccess.cs",
+              "RelativeToolTip": "DataAccessLayer\\DbConnection\\SqlDataAccess.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAvwAoAAACUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T20:38:43.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsersServices.cs",
+              "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\Services\\UsersServices.cs",
+              "RelativeDocumentMoniker": "BusisnessLayer\\Services\\UsersServices.cs",
+              "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\BusisnessLayer\\Services\\UsersServices.cs",
+              "RelativeToolTip": "BusisnessLayer\\Services\\UsersServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-10T20:42:23.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "RoomRepositories.cs",
               "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\DataAccessLayer\\Repositories\\RoomRepositories.cs",
               "RelativeDocumentMoniker": "DataAccessLayer\\Repositories\\RoomRepositories.cs",
@@ -66,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ReservationHotel.cs",
               "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\ReservationHotel.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\FormAdmin\\ReservationHotel.cs",
@@ -79,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "ReservationHotel.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormAdmin\\ReservationHotel.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\FormAdmin\\ReservationHotel.cs",
@@ -90,20 +192,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "FormReservation.cs",
               "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormReservation\\FormReservation.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\FormReservation\\FormReservation.cs",
               "ToolTip": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormReservation\\FormReservation.cs",
               "RelativeToolTip": "PresentationLayer\\FormReservation\\FormReservation.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAYwKEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-10T18:01:55.659Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "FormReservation.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Erick MArtinez\\source\\repos\\hotel-reservation-system\\PresentationLayer\\FormReservation\\FormReservation.cs",
               "RelativeDocumentMoniker": "PresentationLayer\\FormReservation\\FormReservation.cs",

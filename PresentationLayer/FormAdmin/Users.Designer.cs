@@ -118,7 +118,9 @@
             userTextBox.Location = new Point(184, 27);
             userTextBox.Margin = new Padding(1);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(313, 24);
+            userTextBox.PlaceholderText = "Ej. Aramndo093";
+            userTextBox.Size = new Size(445, 34);
+
             userTextBox.TabIndex = 11;
             // 
             // passwordLabel
@@ -148,7 +150,8 @@
             numberPhoneTexBox.Location = new Point(184, 265);
             numberPhoneTexBox.Margin = new Padding(1);
             numberPhoneTexBox.Name = "numberPhoneTexBox";
-            numberPhoneTexBox.Size = new Size(313, 24);
+            numberPhoneTexBox.PlaceholderText = "Ej. 76764532";
+            numberPhoneTexBox.Size = new Size(445, 34);
             numberPhoneTexBox.TabIndex = 8;
             // 
             // emailTextBox
@@ -156,7 +159,8 @@
             emailTextBox.Location = new Point(184, 214);
             emailTextBox.Margin = new Padding(1);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(313, 24);
+            emailTextBox.PlaceholderText = "Ej. juanAguirre@correo.com";
+            emailTextBox.Size = new Size(445, 34);
             emailTextBox.TabIndex = 7;
             // 
             // lastNameTextBox
@@ -164,7 +168,8 @@
             lastNameTextBox.Location = new Point(184, 164);
             lastNameTextBox.Margin = new Padding(1);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(313, 24);
+            lastNameTextBox.PlaceholderText = "Ej. Aguirre Romero";
+            lastNameTextBox.Size = new Size(445, 34);
             lastNameTextBox.TabIndex = 6;
             // 
             // nameTextBox
@@ -172,7 +177,8 @@
             nameTextBox.Location = new Point(184, 119);
             nameTextBox.Margin = new Padding(1);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(313, 24);
+            nameTextBox.PlaceholderText = "Ej. Juan Armando";
+            nameTextBox.Size = new Size(445, 34);
             nameTextBox.TabIndex = 5;
             // 
             // saveButton
