@@ -127,11 +127,9 @@ namespace PresentationLayer.FormReservation
 
         private void CalcularPrecioTotal()
         {
-            if (roomNumbercomboBox.SelectedItem != null)
+            if (roomNumbercomboBox.SelectedItem is Room selectedRoom)
             {
-                var hotelSeleccionadoRow = (DataRowView)roomNumbercomboBox.SelectedItem;
-
-                decimal tarifaBase = Convert.ToDecimal(hotelSeleccionadoRow["PrecioNoche"]);
+                decimal tarifaBase = selectedRoom.PriceNight;
                 DateTime fechaInicio = dateInitDateTimePicker.Value;
                 DateTime fechaFin = endDateTimePicker.Value;
 
@@ -139,18 +137,19 @@ namespace PresentationLayer.FormReservation
                 {
                     int diasReservados = (fechaFin - fechaInicio).Days;
                     decimal costoTotal = tarifaBase * diasReservados;
-                    priceResultLabel.Text = costoTotal.ToString();
+                    priceResultLabel.Text = costoTotal.ToString("C");
                 }
                 else
                 {
-                    priceLabel.Text = "Rango de fechas inválido";
+                    priceResultLabel.Text = "Rango de fechas inválido";
                 }
             }
             else
             {
-                priceLabel.Text = string.Empty;
+                priceResultLabel.Text = string.Empty;
             }
         }
+
 
         private void dateInitDateTimePicker_ValueChanged(object sender, EventArgs e)
         {
