@@ -25,7 +25,7 @@ namespace PresentationLayer.FormAdmin
 
         public void LoadData()
         {
-            listUserDataGridView.DataSource = _usuariosServices.GetUsuarios();
+            listUserDataGridView.DataSource = _usuariosServices.GetAllUsuarios();
 
             listUserDataGridView.Columns["IdUsuario"].Visible = false;
             listUserDataGridView.Columns["IdRol"].Visible = false;

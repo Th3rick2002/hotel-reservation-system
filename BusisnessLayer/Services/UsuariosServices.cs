@@ -13,7 +13,7 @@ namespace BusisnessLayer.Services
             _usuariosrepositories = new UsuariosRepositories();
         }
 
-        public DataTable GetUsuarios()
+        public DataTable GetAllUsuarios()
         {
             return _usuariosrepositories.GetAllUsuarios();
         }
@@ -33,5 +33,14 @@ namespace BusisnessLayer.Services
             _usuariosrepositories.DeleteUsuario(IdUsuario);
         }
 
+        public int? GetUsuarioAndClave(string usuario, string clave)
+        {
+            return _usuariosrepositories.GetUsuarioAndClave(usuario, clave);
+        }
+
+        public DataTable GetUsuarioById(int IdUsuario)
+        {
+            return _usuariosrepositories.GetUsuarioById(IdUsuario);
+        }
     }
 }

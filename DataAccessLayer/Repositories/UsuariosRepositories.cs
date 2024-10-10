@@ -47,16 +47,20 @@ namespace DataAccessLayer.Repositories
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO Usuario(IdRol, Usuario, Nombre, Apellido, Email, Telefono)
-                                VALUES(@IdRol, @Usuario, @Nombre, @Apellido, @Email, @Telefono)";
+                string query = @"INSERT INTO Usuario(IdRol, Usuario, Clave, Nombre, Apellido, Email, Telefono)
+                                VALUES(@IdRol, @Usuario, @Clave, @Nombre, @Apellido, @Email, @Telefono)";
 
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@IdRol", usuarios.oRol.IdRol);
                 command.Parameters.AddWithValue("@Usuario", usuarios.Usuario);
+                command.Parameters.AddWithValue("@Clave", usuarios.Clave);
                 command.Parameters.AddWithValue("@Nombre", usuarios.Nombre);
                 command.Parameters.AddWithValue("@Apellido", usuarios.Apellido);
                 command.Parameters.AddWithValue("@Email", usuarios.Email);
                 command.Parameters.AddWithValue("@Telefono", usuarios.Telefono);
+
+                connection.Open();
+                command.ExecuteNonQuery();
 
             }
         }
@@ -96,6 +100,46 @@ namespace DataAccessLayer.Repositories
                 command.ExecuteNonQuery();
             }
 
+        }
+
+        public int? GetUsuarioAndClave(string Usuario, string Clave)
+        {
+            using (var connection = _dbConnection.GetConnection())
+            {
+                string query = "SELECT IdUsuario FROM Usuario WHERE Usuario = @Usuario AND Clave = @Clave";
+
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@Usuario", Usuario);
+                command.Parameters.AddWithValue("@Clave", Clave);
+
+                connection.Open();
+                using (var reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return reader.GetInt32(0);
+                    }
+                }
+            }
+            return null;
+        }
+
+        public DataTable GetUsuarioById(int IdUser)
+        {
+            DataTable usuariosTable = new DataTable();
+
+            using(var connection = _dbConnection.GetConnection())
+            {
+                string query = "SELECT Usuario, Clave, Nombre, Apellido, Email, Telefono FROM Usuario WHERE IdUsuario = @IdUsuario ";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@IdUsuario", IdUser);
+
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                usuariosTable.Load(reader);
+            }
+
+            return usuariosTable;
         }
     }
 }

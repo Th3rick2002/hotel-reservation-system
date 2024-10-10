@@ -36,7 +36,7 @@ namespace PresentationLayer.FormCliente
 
             Usuarios usuario = new Usuarios()
             {
-                oRol = new Rol { rol = "Cliente" },
+                oRol = new Rol {IdRol= 2, rol = "Cliente" },
                 Usuario = user,
                 Clave = password,
                 Nombre = name,

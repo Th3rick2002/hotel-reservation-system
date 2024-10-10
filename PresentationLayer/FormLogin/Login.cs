@@ -1,8 +1,6 @@
 ﻿using BusisnessLayer.Services;
-using CommonLayer.Entities;
 using PresentationLayer.FormAdmin;
 using PresentationLayer.FormCliente;
-using System.Data;
 
 namespace PresentationLayer.FormLogin
 {
@@ -15,20 +13,35 @@ namespace PresentationLayer.FormLogin
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            DataTable usuariosTable = new UsuariosServices().GetUsuarios();
+            string user = userTextBox.Text;
+            string password = passwordTextBox.Text;
 
-            DataRow ousuarioRow = usuariosTable.AsEnumerable().FirstOrDefault(u =>
-                u.Field<string>("Usuario") == userTextBox.Text &&
-                u.Field<string>("Clave") == passwordTextBox.Text);
+            ErrorProvider errorProvider = new ErrorProvider();
+            errorProvider.Clear();
 
-            if (ousuarioRow != null)
+            if (string.IsNullOrEmpty(user) && (string.IsNullOrEmpty(password)))
             {
-                FormAdministration formAdministration = new FormAdministration();
-                formAdministration.Show();
-            }
-            else
+                errorProvider.SetError(userTextBox, "El campo usuario y contraseña es requerido.");
+                return;
+            }else
             {
-                MessageBox.Show("No se encontró el usuario.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                UsuariosServices usuariosServices = new UsuariosServices();
+                var existUser = usuariosServices.GetUsuarioAndClave(user, password);
+
+                if (existUser != null)
+                {
+                    userTextBox.Clear();
+                    passwordTextBox.Clear();
+                    this.Hide();
+                    int IdUser = (int)existUser;
+                    FormAdministration formAdministration = new FormAdministration(IdUser);
+                    formAdministration.FormClosed += (s, args) => this.Show();
+                    formAdministration.Show();
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el usuario.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
@@ -41,5 +54,4 @@ namespace PresentationLayer.FormLogin
             formuser.Show();
         }
     }
-
 }

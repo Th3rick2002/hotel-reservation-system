@@ -40,16 +40,20 @@ namespace PresentationLayer.FormLogin
             hotelPictureBox = new PictureBox();
             userPictureBox = new PictureBox();
             passwordPictureBox = new PictureBox();
+            errorProvider1 = new ErrorProvider(components);
+            errorProvider2 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)hotelPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)userPictureBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)passwordPictureBox).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
             SuspendLayout();
             // 
             // userTextBox
             // 
             userTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             userTextBox.Location = new Point(491, 119);
-            userTextBox.Margin = new Padding(1, 1, 1, 1);
+            userTextBox.Margin = new Padding(1);
             userTextBox.Name = "userTextBox";
             userTextBox.Size = new Size(194, 23);
             userTextBox.TabIndex = 3;
@@ -58,7 +62,7 @@ namespace PresentationLayer.FormLogin
             // 
             passwordTextBox.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             passwordTextBox.Location = new Point(491, 176);
-            passwordTextBox.Margin = new Padding(1, 1, 1, 1);
+            passwordTextBox.Margin = new Padding(1);
             passwordTextBox.Name = "passwordTextBox";
             passwordTextBox.PasswordChar = '*';
             passwordTextBox.Size = new Size(194, 23);
@@ -120,7 +124,7 @@ namespace PresentationLayer.FormLogin
             // 
             hotelPictureBox.Image = Properties.Resources.hoteles_Grand_Velas_Resorts_e1596047698604;
             hotelPictureBox.Location = new Point(1, -1);
-            hotelPictureBox.Margin = new Padding(2, 2, 2, 2);
+            hotelPictureBox.Margin = new Padding(2);
             hotelPictureBox.Name = "hotelPictureBox";
             hotelPictureBox.Size = new Size(367, 393);
             hotelPictureBox.TabIndex = 9;
@@ -130,7 +134,7 @@ namespace PresentationLayer.FormLogin
             // 
             userPictureBox.Image = Properties.Resources.usuario__1_;
             userPictureBox.Location = new Point(429, 106);
-            userPictureBox.Margin = new Padding(2, 2, 2, 2);
+            userPictureBox.Margin = new Padding(2);
             userPictureBox.Name = "userPictureBox";
             userPictureBox.Size = new Size(47, 38);
             userPictureBox.TabIndex = 10;
@@ -140,11 +144,19 @@ namespace PresentationLayer.FormLogin
             // 
             passwordPictureBox.Image = Properties.Resources.candado;
             passwordPictureBox.Location = new Point(429, 167);
-            passwordPictureBox.Margin = new Padding(2, 2, 2, 2);
+            passwordPictureBox.Margin = new Padding(2);
             passwordPictureBox.Name = "passwordPictureBox";
             passwordPictureBox.Size = new Size(54, 38);
             passwordPictureBox.TabIndex = 11;
             passwordPictureBox.TabStop = false;
+            // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            errorProvider2.ContainerControl = this;
             // 
             // Login
             // 
@@ -161,12 +173,14 @@ namespace PresentationLayer.FormLogin
             Controls.Add(passwordTextBox);
             Controls.Add(userTextBox);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(1, 1, 1, 1);
+            Margin = new Padding(1);
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)hotelPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)userPictureBox).EndInit();
             ((System.ComponentModel.ISupportInitialize)passwordPictureBox).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,5 +202,7 @@ namespace PresentationLayer.FormLogin
         private PictureBox hotelPictureBox;
         private PictureBox userPictureBox;
         private PictureBox passwordPictureBox;
+        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProvider2;
     }
 }

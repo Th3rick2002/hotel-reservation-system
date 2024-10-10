@@ -1,47 +1,55 @@
-﻿using CommonLayer.Entities;
-using Microsoft.VisualBasic.ApplicationServices;
+﻿using BusisnessLayer.Services;
 using PresentationLayer.FormLogin;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PresentationLayer.FormAdmin
 {
     public partial class FormAdministration : Form
     {
-        public FormAdministration()
+        private UsuariosServices _usuariosServices;
+        private readonly int idUser;
+
+        public FormAdministration(int IdUser)
         {
             InitializeComponent();
+            this.idUser = IdUser;
+            this._usuariosServices = new UsuariosServices();
         }
-
+        private void clientButton_Click(object sender, EventArgs e)
+        {
+            if (GetUserRoleById(idUser) != "Administrador")
+            {
+                MessageBox.Show("No tienes permisos para acceder a esta sección.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                Users users = new Users();
+                this.Hide();
+                users.Show();
+                users.FormClosed += (s, args) => this.Show();
+            }
+            
+        }
         private void logoutButton_Click(object sender, EventArgs e)
         {
             this.Close();
-            Login loginForm = new Login();
-            loginForm.Show();
         }
 
         private void roomButton_Click(object sender, EventArgs e)
         {
-            RoomHotel roomHotel = new RoomHotel();
-            this.Hide();
-            roomHotel.Show();
-            roomHotel.FormClosed += (s, args) => this.Show();
-        }
-
-        private void clientButton_Click(object sender, EventArgs e)
-        {
-            Users users = new Users();
-            this.Hide();
-            users.Show();
-            users.FormClosed += (s, args) => this.Show();
-        }
+            if (GetUserRoleById(idUser) != "Administrador")
+            {
+                MessageBox.Show("No tienes permisos para acceder a esta sección.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                RoomHotel roomHotel = new RoomHotel();
+                this.Hide();
+                roomHotel.Show();
+                roomHotel.FormClosed += (s, args) => this.Show();
+            }        }
 
         private void reservationButton_Click(object sender, EventArgs e)
         {
@@ -49,6 +57,15 @@ namespace PresentationLayer.FormAdmin
             this.Hide();
             reservationHotel.Show();
             reservationHotel.FormClosed += (s, args) => this.Show();
+        }
+
+        private string GetUserRoleById(int userId)
+        {
+            DataTable usuariosTable = _usuariosServices.GetAllUsuarios();
+            DataRow userRow = usuariosTable.AsEnumerable()
+                    .FirstOrDefault(u => u.Field<int>("IdUsuario") == userId);
+
+            return userRow != null ? userRow.Field<string>("rol") : null;
         }
     }
 }

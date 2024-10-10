@@ -69,12 +69,12 @@
             formGroupBox.Controls.Add(emailLabel);
             formGroupBox.Controls.Add(lastNameLabel);
             formGroupBox.Controls.Add(nameLabel);
-            formGroupBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            formGroupBox.Location = new Point(44, 36);
-            formGroupBox.Margin = new Padding(2);
+            formGroupBox.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            formGroupBox.Location = new Point(31, 22);
+            formGroupBox.Margin = new Padding(1);
             formGroupBox.Name = "formGroupBox";
-            formGroupBox.Padding = new Padding(2);
-            formGroupBox.Size = new Size(771, 696);
+            formGroupBox.Padding = new Padding(1);
+            formGroupBox.Size = new Size(540, 418);
             formGroupBox.TabIndex = 2;
             formGroupBox.TabStop = false;
             formGroupBox.Text = "Formulario";
@@ -84,10 +84,10 @@
             deleteButton.BackColor = Color.Red;
             deleteButton.FlatStyle = FlatStyle.Popup;
             deleteButton.ForeColor = Color.White;
-            deleteButton.Location = new Point(540, 566);
-            deleteButton.Margin = new Padding(2);
+            deleteButton.Location = new Point(378, 340);
+            deleteButton.Margin = new Padding(1);
             deleteButton.Name = "deleteButton";
-            deleteButton.Size = new Size(168, 64);
+            deleteButton.Size = new Size(118, 38);
             deleteButton.TabIndex = 14;
             deleteButton.Text = "Eliminar";
             deleteButton.UseVisualStyleBackColor = false;
@@ -97,98 +97,93 @@
             editButton.BackColor = Color.SteelBlue;
             editButton.FlatStyle = FlatStyle.Flat;
             editButton.ForeColor = Color.White;
-            editButton.Location = new Point(299, 566);
-            editButton.Margin = new Padding(2);
+            editButton.Location = new Point(209, 340);
+            editButton.Margin = new Padding(1);
             editButton.Name = "editButton";
-            editButton.Size = new Size(179, 64);
+            editButton.Size = new Size(125, 38);
             editButton.TabIndex = 13;
             editButton.Text = "Editar";
             editButton.UseVisualStyleBackColor = false;
             // 
             // passwordTextBox
             // 
-            passwordTextBox.Location = new Point(263, 124);
-            passwordTextBox.Margin = new Padding(2);
+            passwordTextBox.Location = new Point(184, 74);
+            passwordTextBox.Margin = new Padding(1);
             passwordTextBox.Name = "passwordTextBox";
-            passwordTextBox.Size = new Size(445, 34);
+            passwordTextBox.Size = new Size(313, 24);
             passwordTextBox.TabIndex = 12;
             // 
             // userTextBox
             // 
-            userTextBox.Location = new Point(263, 45);
-            userTextBox.Margin = new Padding(2);
+            userTextBox.Location = new Point(184, 27);
+            userTextBox.Margin = new Padding(1);
             userTextBox.Name = "userTextBox";
-            userTextBox.Size = new Size(445, 34);
+            userTextBox.Size = new Size(313, 24);
             userTextBox.TabIndex = 11;
-            userTextBox.Text = "Ej. Aramndo093";
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordLabel.Location = new Point(92, 133);
-            passwordLabel.Margin = new Padding(2, 0, 2, 0);
+            passwordLabel.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            passwordLabel.Location = new Point(64, 80);
+            passwordLabel.Margin = new Padding(1, 0, 1, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(150, 25);
+            passwordLabel.Size = new Size(93, 18);
             passwordLabel.TabIndex = 10;
             passwordLabel.Text = "Contraseña: ";
             // 
             // userLabel
             // 
             userLabel.AutoSize = true;
-            userLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            userLabel.Location = new Point(137, 48);
-            userLabel.Margin = new Padding(2, 0, 2, 0);
+            userLabel.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            userLabel.Location = new Point(96, 29);
+            userLabel.Margin = new Padding(1, 0, 1, 0);
             userLabel.Name = "userLabel";
-            userLabel.Size = new Size(95, 25);
+            userLabel.Size = new Size(64, 18);
             userLabel.TabIndex = 9;
             userLabel.Text = "Usuario:";
             // 
             // numberPhoneTexBox
             // 
-            numberPhoneTexBox.Location = new Point(263, 441);
-            numberPhoneTexBox.Margin = new Padding(2);
+            numberPhoneTexBox.Location = new Point(184, 265);
+            numberPhoneTexBox.Margin = new Padding(1);
             numberPhoneTexBox.Name = "numberPhoneTexBox";
-            numberPhoneTexBox.Size = new Size(445, 34);
+            numberPhoneTexBox.Size = new Size(313, 24);
             numberPhoneTexBox.TabIndex = 8;
-            numberPhoneTexBox.Text = "Ej. 76764532";
             // 
             // emailTextBox
             // 
-            emailTextBox.Location = new Point(263, 356);
-            emailTextBox.Margin = new Padding(2);
+            emailTextBox.Location = new Point(184, 214);
+            emailTextBox.Margin = new Padding(1);
             emailTextBox.Name = "emailTextBox";
-            emailTextBox.Size = new Size(445, 34);
+            emailTextBox.Size = new Size(313, 24);
             emailTextBox.TabIndex = 7;
-            emailTextBox.Text = "Ej. juanAguirre@correo.com";
             // 
             // lastNameTextBox
             // 
-            lastNameTextBox.Location = new Point(263, 273);
-            lastNameTextBox.Margin = new Padding(2);
+            lastNameTextBox.Location = new Point(184, 164);
+            lastNameTextBox.Margin = new Padding(1);
             lastNameTextBox.Name = "lastNameTextBox";
-            lastNameTextBox.Size = new Size(445, 34);
+            lastNameTextBox.Size = new Size(313, 24);
             lastNameTextBox.TabIndex = 6;
-            lastNameTextBox.Text = "Ej. Aguirre Romero";
             // 
             // nameTextBox
             // 
-            nameTextBox.Location = new Point(263, 199);
-            nameTextBox.Margin = new Padding(2);
+            nameTextBox.Location = new Point(184, 119);
+            nameTextBox.Margin = new Padding(1);
             nameTextBox.Name = "nameTextBox";
-            nameTextBox.Size = new Size(445, 34);
+            nameTextBox.Size = new Size(313, 24);
             nameTextBox.TabIndex = 5;
-            nameTextBox.Text = "Ej. Juan Armando";
             // 
             // saveButton
             // 
             saveButton.BackColor = Color.ForestGreen;
             saveButton.FlatStyle = FlatStyle.Popup;
             saveButton.ForeColor = SystemColors.ButtonHighlight;
-            saveButton.Location = new Point(68, 566);
-            saveButton.Margin = new Padding(2);
+            saveButton.Location = new Point(48, 340);
+            saveButton.Margin = new Padding(1);
             saveButton.Name = "saveButton";
-            saveButton.Size = new Size(183, 64);
+            saveButton.Size = new Size(128, 38);
             saveButton.TabIndex = 4;
             saveButton.Text = "Guardar";
             saveButton.UseVisualStyleBackColor = false;
@@ -196,80 +191,81 @@
             // numberPhoneLabel
             // 
             numberPhoneLabel.AutoSize = true;
-            numberPhoneLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            numberPhoneLabel.Location = new Point(4, 444);
-            numberPhoneLabel.Margin = new Padding(2, 0, 2, 0);
+            numberPhoneLabel.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            numberPhoneLabel.Location = new Point(3, 266);
+            numberPhoneLabel.Margin = new Padding(1, 0, 1, 0);
             numberPhoneLabel.Name = "numberPhoneLabel";
-            numberPhoneLabel.Size = new Size(238, 25);
+            numberPhoneLabel.Size = new Size(148, 18);
             numberPhoneLabel.TabIndex = 3;
             numberPhoneLabel.Text = "Numero de Telefono:";
             // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            emailLabel.Location = new Point(17, 365);
-            emailLabel.Margin = new Padding(2, 0, 2, 0);
+            emailLabel.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            emailLabel.Location = new Point(12, 219);
+            emailLabel.Margin = new Padding(1, 0, 1, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(218, 25);
+            emailLabel.Size = new Size(138, 18);
             emailLabel.TabIndex = 2;
             emailLabel.Text = "Correo Electronico:";
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
-            lastNameLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lastNameLabel.Location = new Point(123, 273);
-            lastNameLabel.Margin = new Padding(2, 0, 2, 0);
+            lastNameLabel.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lastNameLabel.Location = new Point(86, 164);
+            lastNameLabel.Margin = new Padding(1, 0, 1, 0);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(109, 25);
+            lastNameLabel.Size = new Size(63, 18);
             lastNameLabel.TabIndex = 1;
             lastNameLabel.Text = "Apellido:";
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            nameLabel.Location = new Point(123, 199);
-            nameLabel.Margin = new Padding(2, 0, 2, 0);
+            nameLabel.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            nameLabel.Location = new Point(86, 119);
+            nameLabel.Margin = new Padding(1, 0, 1, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(112, 25);
+            nameLabel.Size = new Size(70, 18);
             nameLabel.TabIndex = 0;
             nameLabel.Text = "Nombre: ";
             // 
             // listUserDataGridView
             // 
             listUserDataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            listUserDataGridView.Location = new Point(843, 36);
-            listUserDataGridView.Margin = new Padding(2);
+            listUserDataGridView.Location = new Point(590, 22);
+            listUserDataGridView.Margin = new Padding(1);
             listUserDataGridView.Name = "listUserDataGridView";
             listUserDataGridView.RowHeadersWidth = 62;
-            listUserDataGridView.Size = new Size(954, 684);
+            listUserDataGridView.Size = new Size(668, 410);
             listUserDataGridView.TabIndex = 3;
             // 
             // backMenuButton
             // 
             backMenuButton.BackColor = Color.Orange;
             backMenuButton.FlatStyle = FlatStyle.Popup;
-            backMenuButton.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backMenuButton.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             backMenuButton.ForeColor = Color.White;
-            backMenuButton.Location = new Point(23, 761);
+            backMenuButton.Location = new Point(16, 457);
+            backMenuButton.Margin = new Padding(2);
             backMenuButton.Name = "backMenuButton";
-            backMenuButton.Size = new Size(199, 74);
+            backMenuButton.Size = new Size(139, 44);
             backMenuButton.TabIndex = 4;
             backMenuButton.Text = "Regresar a Menú";
             backMenuButton.UseVisualStyleBackColor = false;
             // 
             // Users
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1821, 847);
+            ClientSize = new Size(1078, 443);
             Controls.Add(backMenuButton);
             Controls.Add(listUserDataGridView);
             Controls.Add(formGroupBox);
             FormBorderStyle = FormBorderStyle.FixedDialog;
-            Margin = new Padding(2);
+            Margin = new Padding(1);
             Name = "Users";
             Text = "Lista de Usuarios";
             formGroupBox.ResumeLayout(false);
