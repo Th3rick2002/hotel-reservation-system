@@ -1,67 +1,72 @@
 ﻿using BusisnessLayer.Services;
-using CommonLayer.Entities;
 using PresentationLayer.FormAdmin;
 using PresentationLayer.FormCliente;
+using PresentationLayer.FormReservation;
 using System.Data;
 
 namespace PresentationLayer.FormLogin
 {
     public partial class Login : Form
     {
+        private UsersServices _usersServices;
         public Login()
         {
             InitializeComponent();
-        }
-
-
-        private void frm_closing(object sender, FormClosingEventArgs e)
-        {
-            userTextBox.Text = "";
-            passwordTextBox.Text = "";
-            this.Show();
+            this._usersServices = new UsersServices();
         }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            DataTable usuariosTable = new UsuariosServices().GetUsuarios();
+            string user = userTextBox.Text;
+            string password = passwordTextBox.Text;
+            DataTable usuariosTable = new UsersServices().GetAllUsuarios();
 
-            DataRow ousuarioRow = usuariosTable.AsEnumerable().FirstOrDefault(u =>
-                u.Field<string>("Usuario") == userTextBox.Text &&
-                u.Field<string>("Clave") == passwordTextBox.Text);
+            ErrorProvider errorProvider = new ErrorProvider();
+            errorProvider.Clear();
 
-            if (ousuarioRow != null)
+            if (string.IsNullOrEmpty(user) && (string.IsNullOrEmpty(password)))
             {
-                Usuarios ousuario = new Usuarios()
-                {
-                    IdUsuario = ousuarioRow.Field<int>("IdUsuario"),
-                    Nombre = ousuarioRow.Field<string>("Usuario"),
-                    Clave = ousuarioRow.Field<string>("Clave"),
-                    oRol = new Rol
-                    {
-                        IdRol = ousuarioRow.Field<int>("IdRol"),
-                        rol = ousuarioRow.Field<string>("rol")
-                    }
-                };
-
-                if (ousuario.oRol.rol == "ADMINISTRADOR")
-                {
-                    this.Hide();
-                    FormAdministration formAdmin = new FormAdministration(ousuario);
-
-                    formAdmin.FormClosed += (s, args) => this.Hide();
-                    formAdmin.Show();
-                    formAdmin.FormClosing += frm_closing;
-
-                }
-
-                else
-                {
-                    MessageBox.Show("Rol no reconocido.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                }
+                errorProvider.SetError(userTextBox, "El campo usuario y contraseña es requerido.");
+                return;
             }
             else
             {
-                MessageBox.Show("No se encontró el usuario.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                UsersServices usuariosServices = new UsersServices();
+                var existUser = usuariosServices.GetUsuarioAndClave(user, password);
+
+                if (existUser != null)
+                {
+                    if (GetUserRoleById((int)existUser) == "Administrador")
+                    {
+                        userTextBox.Clear();
+                        passwordTextBox.Clear();
+                        this.Hide();
+                        int IdUser = (int)existUser;
+                        FormAdministration formAdministration = new FormAdministration(IdUser);
+                        formAdministration.FormClosed += (s, args) => this.Show();
+                        formAdministration.Show();
+                    }
+
+                    else if (GetUserRoleById((int)existUser) == "Cliente")
+                    {
+                        userTextBox.Clear();
+                        passwordTextBox.Clear();
+                        this.Hide();
+                        int IdUser = (int)existUser;
+                        FormReservation.FormReservation formReservation = new FormReservation.FormReservation(IdUser);
+                        formReservation.FormClosed += (s, args) => this.Show();
+                        formReservation.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("no funciona");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el usuario.", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
@@ -73,6 +78,14 @@ namespace PresentationLayer.FormLogin
             formuser.FormClosed += (s, args) => this.Show();
             formuser.Show();
         }
-    }
 
+        private string GetUserRoleById(int userId)
+        {
+            DataTable usuariosTable = _usersServices.GetAllUsuarios();
+            DataRow userRow = usuariosTable.AsEnumerable()
+                    .FirstOrDefault(u => u.Field<int>("IdUsuario") == userId);
+
+            return userRow != null ? userRow.Field<string>("rol") : string.Empty;
+        }
+    }
 }

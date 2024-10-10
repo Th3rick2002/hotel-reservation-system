@@ -13,11 +13,11 @@ namespace PresentationLayer.FormAdmin
 {
     public partial class Users : Form
     {
-        private UsuariosServices _usuariosServices;
+        private UsersServices _usersServices;
         public Users()
         {
             InitializeComponent();
-            _usuariosServices = new UsuariosServices();
+            _usersServices = new UsersServices();
             LoadData();
             listUserDataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -25,7 +25,7 @@ namespace PresentationLayer.FormAdmin
 
         public void LoadData()
         {
-            listUserDataGridView.DataSource = _usuariosServices.GetUsuarios();
+            listUserDataGridView.DataSource = _usersServices.GetAllUsuarios();
 
             listUserDataGridView.Columns["IdUsuario"].Visible = false;
             listUserDataGridView.Columns["IdRol"].Visible = false;

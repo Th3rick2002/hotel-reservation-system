@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace DataAccessLayer.Repositories
 {
-    public class ReservasRepositories
+    public class ReservationRepositories
     {
         private SqlDataAccess _dbConnection;
 
-        public ReservasRepositories()
+        public ReservationRepositories()
         {
             _dbConnection = new SqlDataAccess();
         }
@@ -25,7 +25,7 @@ namespace DataAccessLayer.Repositories
 
             using(var connection = _dbConnection.GetConnection())
             {
-                string query = @"SELECT r.idReserva, h.IdHabitacion, u.IdUsuario, r.estado  FROM reserva r
+                string query = @"SELECT r.ffin, r.fnit, r.idReserva, h.IdHabitacion, u.IdUsuario, r.estado, r.precio  FROM reserva r
                                 INNER JOIN Habitacion h ON h.IdHabitacion = r.idHabitacion
                                 INNER JOIN Usuario u ON u.IdUsuario = r.IdUsuario";
 
@@ -43,49 +43,65 @@ namespace DataAccessLayer.Repositories
             return reservasTable;
 
         }
-        public void AddReservas(Reservas reservas)
+        public void AddReservas(Reservation reservas)
         {
             using (var connection = _dbConnection.GetConnection())
             {
-                string query = @"INSERT INTO reserva(IdHabitacion, IdUsuario, Estado)
-                                VALUES(@IdHabitacion, @IdUsuario, @Estado)";
+                string query = @"INSERT INTO reserva(fnit, ffin, IdHabitacion, IdUsuario, Estado, precio)
+                                VALUES(@fnit, @ffin, @IdRoom, @IdUser, @State, @Price)";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdHabitacion", reservas.IdHabitacion);
-                command.Parameters.AddWithValue("@IdUsuario", reservas.IdUsuario);
-                command.Parameters.AddWithValue("@Estado", reservas.Estado);
+                command.Parameters.AddWithValue("@IdRoom", reservas.IdRoom);
+                command.Parameters.AddWithValue("@fnit", reservas.StartDate);
+                command.Parameters.AddWithValue("@ffin", reservas.EndDate);
+                command.Parameters.AddWithValue("@IdUser", reservas.IdUser);
+                command.Parameters.AddWithValue("@State", reservas.State);
+                command.Parameters.AddWithValue("@Price", reservas.Price);
+
+
+                connection.Open();
+                command.ExecuteNonQuery();
 
             }
         }
 
-        public void EditReservas(Reservas reservas)
+        public void EditReservas(Reservation reservas)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = @"UPDATE reserva SET " +
-                                "idReserva = @idReserva" +
-                                "IdHabitacion = @IdHabitacion" +
+                                "idReserva = @IdRoom" +
+                                "fnit = @fnit" +
+                                "ffin = @ffin" +
+                                "IdHabitacion = @IdUser" +
                                 "IdUsuario = @IdUsuario" +
-                                "Estado = @Estado " +
+                                "Estado = @State" +
+                                "Price = @Price " +
                                 "WHERE idReserva = @idReserva";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@idReserva", reservas.idReserva);
-                command.Parameters.AddWithValue("@IdHabitacion", reservas.IdHabitacion);
-                command.Parameters.AddWithValue("@IdUsuario", reservas.IdUsuario);
-                command.Parameters.AddWithValue("@Estado", reservas.Estado);
+                command.Parameters.AddWithValue("@IdRoom", reservas.IdRoom);
+                command.Parameters.AddWithValue("@IdUser", reservas.IdUser);
+                command.Parameters.AddWithValue("@fnit", reservas.StartDate);
+                command.Parameters.AddWithValue("@ffin", reservas.EndDate);
+                command.Parameters.AddWithValue("@State", reservas.State);
+                command.Parameters.AddWithValue("@Price", reservas.Price);
+
+
+                connection.Open();
+                command.ExecuteNonQuery();
 
             }
         }
 
-        public void DeleteReservas(int idReserva)
+        public void DeleteReservas(int IdReservation)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = "DELETE FROM reserva WHERE idReserva = @idReserva";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@idReserva", idReserva);
+                command.Parameters.AddWithValue("@idReserva", IdReservation);
 
                 connection.Open();
                 command.ExecuteNonQuery();

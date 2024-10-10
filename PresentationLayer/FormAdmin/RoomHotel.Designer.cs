@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             listRoomDataGridView = new DataGridView();
             roomGroupBox = new GroupBox();
+            characteristicRoomTextBox = new TextBox();
+            characteristicRoomLabel = new Label();
             deleteRoomButton = new FontAwesome.Sharp.IconButton();
             priceRoomTextBox = new TextBox();
             editRoomButton = new FontAwesome.Sharp.IconButton();
@@ -40,8 +42,14 @@
             typeRoomLabel = new Label();
             toolTip1 = new ToolTip(components);
             backMenuButton = new Button();
+            errorProvider1 = new ErrorProvider(components);
+            errorProvider2 = new ErrorProvider(components);
+            errorProvider3 = new ErrorProvider(components);
             ((System.ComponentModel.ISupportInitialize)listRoomDataGridView).BeginInit();
             roomGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider3).BeginInit();
             SuspendLayout();
             // 
             // listRoomDataGridView
@@ -55,6 +63,8 @@
             // 
             // roomGroupBox
             // 
+            roomGroupBox.Controls.Add(characteristicRoomTextBox);
+            roomGroupBox.Controls.Add(characteristicRoomLabel);
             roomGroupBox.Controls.Add(deleteRoomButton);
             roomGroupBox.Controls.Add(priceRoomTextBox);
             roomGroupBox.Controls.Add(editRoomButton);
@@ -62,13 +72,29 @@
             roomGroupBox.Controls.Add(saveRoomButton);
             roomGroupBox.Controls.Add(typeRoomTextBox);
             roomGroupBox.Controls.Add(typeRoomLabel);
-            roomGroupBox.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            roomGroupBox.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             roomGroupBox.Location = new Point(23, 65);
             roomGroupBox.Name = "roomGroupBox";
             roomGroupBox.Size = new Size(610, 517);
             roomGroupBox.TabIndex = 2;
             roomGroupBox.TabStop = false;
             roomGroupBox.Text = "Añadir Habitacion:";
+            // 
+            // characteristicRoomTextBox
+            // 
+            characteristicRoomTextBox.Location = new Point(72, 317);
+            characteristicRoomTextBox.Name = "characteristicRoomTextBox";
+            characteristicRoomTextBox.Size = new Size(444, 24);
+            characteristicRoomTextBox.TabIndex = 27;
+            // 
+            // characteristicRoomLabel
+            // 
+            characteristicRoomLabel.AutoSize = true;
+            characteristicRoomLabel.Location = new Point(72, 277);
+            characteristicRoomLabel.Name = "characteristicRoomLabel";
+            characteristicRoomLabel.Size = new Size(111, 18);
+            characteristicRoomLabel.TabIndex = 26;
+            characteristicRoomLabel.Text = "Caracteristicas:";
             // 
             // deleteRoomButton
             // 
@@ -84,16 +110,17 @@
             deleteRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
             deleteRoomButton.Location = new Point(426, 412);
             deleteRoomButton.Name = "deleteRoomButton";
-            deleteRoomButton.Size = new Size(159, 55);
+            deleteRoomButton.Size = new Size(159, 50);
             deleteRoomButton.TabIndex = 25;
             deleteRoomButton.Text = "Eliminar";
             deleteRoomButton.UseVisualStyleBackColor = false;
+            deleteRoomButton.Click += deleteRoomButton_Click;
             // 
             // priceRoomTextBox
             // 
-            priceRoomTextBox.Location = new Point(72, 289);
+            priceRoomTextBox.Location = new Point(72, 214);
             priceRoomTextBox.Name = "priceRoomTextBox";
-            priceRoomTextBox.Size = new Size(444, 34);
+            priceRoomTextBox.Size = new Size(444, 24);
             priceRoomTextBox.TabIndex = 3;
             // 
             // editRoomButton
@@ -110,17 +137,18 @@
             editRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
             editRoomButton.Location = new Point(231, 412);
             editRoomButton.Name = "editRoomButton";
-            editRoomButton.Size = new Size(155, 55);
+            editRoomButton.Size = new Size(155, 50);
             editRoomButton.TabIndex = 24;
             editRoomButton.Text = "Editar";
             editRoomButton.UseVisualStyleBackColor = false;
+            editRoomButton.Click += editRoomButton_Click;
             // 
             // priceRoomLabel
             // 
             priceRoomLabel.AutoSize = true;
-            priceRoomLabel.Location = new Point(72, 249);
+            priceRoomLabel.Location = new Point(72, 174);
             priceRoomLabel.Name = "priceRoomLabel";
-            priceRoomLabel.Size = new Size(214, 25);
+            priceRoomLabel.Size = new Size(139, 18);
             priceRoomLabel.TabIndex = 2;
             priceRoomLabel.Text = "Precion Por Noche:";
             // 
@@ -138,24 +166,25 @@
             saveRoomButton.ImageAlign = ContentAlignment.MiddleLeft;
             saveRoomButton.Location = new Point(41, 412);
             saveRoomButton.Name = "saveRoomButton";
-            saveRoomButton.Size = new Size(158, 55);
+            saveRoomButton.Size = new Size(158, 50);
             saveRoomButton.TabIndex = 23;
             saveRoomButton.Text = "Agregar";
             saveRoomButton.UseVisualStyleBackColor = false;
+            saveRoomButton.Click += saveRoomButton_Click;
             // 
             // typeRoomTextBox
             // 
-            typeRoomTextBox.Location = new Point(71, 160);
+            typeRoomTextBox.Location = new Point(71, 95);
             typeRoomTextBox.Name = "typeRoomTextBox";
-            typeRoomTextBox.Size = new Size(445, 34);
+            typeRoomTextBox.Size = new Size(445, 24);
             typeRoomTextBox.TabIndex = 1;
             // 
             // typeRoomLabel
             // 
             typeRoomLabel.AutoSize = true;
-            typeRoomLabel.Location = new Point(72, 110);
+            typeRoomLabel.Location = new Point(72, 45);
             typeRoomLabel.Name = "typeRoomLabel";
-            typeRoomLabel.Size = new Size(62, 25);
+            typeRoomLabel.Size = new Size(41, 18);
             typeRoomLabel.TabIndex = 0;
             typeRoomLabel.Text = "Tipo:";
             // 
@@ -163,33 +192,49 @@
             // 
             backMenuButton.BackColor = Color.Orange;
             backMenuButton.FlatStyle = FlatStyle.Popup;
-            backMenuButton.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            backMenuButton.Font = new Font("Microsoft Sans Serif", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
             backMenuButton.ForeColor = Color.White;
-            backMenuButton.Location = new Point(23, 619);
+            backMenuButton.Location = new Point(23, 642);
             backMenuButton.Name = "backMenuButton";
-            backMenuButton.Size = new Size(199, 74);
+            backMenuButton.Size = new Size(199, 51);
             backMenuButton.TabIndex = 17;
             backMenuButton.Text = "Regresar a Menú";
             backMenuButton.UseVisualStyleBackColor = false;
             // 
+            // errorProvider1
+            // 
+            errorProvider1.ContainerControl = this;
+            // 
+            // errorProvider2
+            // 
+            errorProvider2.ContainerControl = this;
+            // 
+            // errorProvider3
+            // 
+            errorProvider3.ContainerControl = this;
+            // 
             // RoomHotel
             // 
-            AutoScaleDimensions = new SizeF(11F, 21F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveBorder;
             ClientSize = new Size(1471, 729);
             Controls.Add(backMenuButton);
             Controls.Add(roomGroupBox);
             Controls.Add(listRoomDataGridView);
-            Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Margin = new Padding(2);
             Name = "RoomHotel";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Lista de Habitaciones ";
+            Load += RoomHotel_Load;
             ((System.ComponentModel.ISupportInitialize)listRoomDataGridView).EndInit();
             roomGroupBox.ResumeLayout(false);
             roomGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)errorProvider3).EndInit();
             ResumeLayout(false);
         }
 
@@ -207,5 +252,10 @@
         private FontAwesome.Sharp.IconButton saveRoomButton;
         private ToolTip toolTip1;
         private Button backMenuButton;
+        private TextBox characteristicRoomTextBox;
+        private Label characteristicRoomLabel;
+        private ErrorProvider errorProvider1;
+        private ErrorProvider errorProvider2;
+        private ErrorProvider errorProvider3;
     }
 }

@@ -1,26 +1,17 @@
 ﻿using BusisnessLayer.Services;
 using CommonLayer.Entities;
 using PresentationLayer.Validations;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace PresentationLayer.FormCliente
 {
     public partial class Formuser : Form
     {
-        private UsuariosServices _UsuariosServices;
+        private UsersServices _UsuariosServices;
+        
         public Formuser()
         {
             InitializeComponent();
-            _UsuariosServices = new UsuariosServices();
+            _UsuariosServices = new UsersServices();
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -30,34 +21,68 @@ namespace PresentationLayer.FormCliente
             string name = nameTextBox.Text;
             string lastName = lastNameTextBox.Text;
             string email = emailTextBox.Text;
-            int phone = Convert.ToInt32(numerPhoneTexBox.Text);
+            string phoneText = numerPhoneTexBox.Text;
 
-            Usuarios usuario = new Usuarios()
+            var errorProvider = new ErrorProvider();
+            errorProvider.Clear();
+
+            if ((phoneText.Length != 8 && phoneText.Length != 11) || !phoneText.All(char.IsDigit))
             {
-                Usuario = user,
-                Clave = password,
-                Nombre = name,
-                Apellido = lastName,
-                Email = email,
-                Telefono = phone
+                errorProvider.SetError(numerPhoneTexBox, "El número de celular debe tener 8 o 11 números.");
+                return;
+            }
 
+            int phone = Convert.ToInt32(phoneText);
+
+            Users usuario = new Users()
+            {
+
+                oRol = new Rol {IdRol= 2, rol = "Cliente" },
+                User = user,
+                Password = password,
+                Name = name,
+                LastName = lastName,
+                Email = email,
+                Telephone = phone
             };
 
             ValidationClient validation = new ValidationClient();
-
             FluentValidation.Results.ValidationResult results = validation.Validate(usuario);
 
-            if (!results.IsValid)
+            foreach (var error in results.Errors)
             {
-                foreach (var failure in results.Errors)
+                switch (error.PropertyName)
                 {
-                    MessageBox.Show($"Property {failure.PropertyName} failed validation. Error was: {failure.ErrorMessage}");
+                    case "Usuario":
+                        errorProvider.SetError(userTextBox, error.ErrorMessage);
+                        break;
+                    case "Clave":
+                        errorProvider.SetError(passwordTextBox, error.ErrorMessage);
+                        break;
+                    case "Nombre":
+                        errorProvider.SetError(nameTextBox, error.ErrorMessage);
+                        break;
+                    case "Apellido":
+                        errorProvider.SetError(lastNameTextBox, error.ErrorMessage);
+                        break;
+                    case "Email":
+                        errorProvider.SetError(emailTextBox, error.ErrorMessage);
+                        break;
                 }
             }
-            else
+
+           
+            if (results.IsValid)
             {
                 _UsuariosServices.AddUsuarios(usuario);
                 MessageBox.Show("Usuario registrado correctamente");
+                errorProvider.Clear();
+                userTextBox.Clear();
+                passwordTextBox.Clear();
+                nameTextBox.Clear();
+                lastNameTextBox.Clear();
+                emailTextBox.Clear();
+                numerPhoneTexBox.Clear();
             }
         }
     }
