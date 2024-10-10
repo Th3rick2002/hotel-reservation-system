@@ -28,7 +28,7 @@ namespace BusisnessLayer.Services
             _habitacionesrepositories.UpdateRoom(habitacion);
         }
 
-        public void DeleteRoomn(int IdHabitacion)
+        public void DeleteRoom(int IdHabitacion)
         {
             _habitacionesrepositories.DeleteRoom(IdHabitacion);
         }

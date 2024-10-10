@@ -8,6 +8,7 @@ namespace PresentationLayer.FormAdmin
     public partial class RoomHotel : Form
     {
         private RoomServices _roomsService;
+        private int selectedRoomId;
         public RoomHotel()
         {
             InitializeComponent();
@@ -80,12 +81,11 @@ namespace PresentationLayer.FormAdmin
         {
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
             {
-                var IdRoomValue = listRoomDataGridView.Rows[e.RowIndex].Cells["IdHabitacion"].Value;
+                selectedRoomId = Convert.ToInt32(listRoomDataGridView.Rows[e.RowIndex].Cells["IdHabitacion"].Value);
                 var typeValue = listRoomDataGridView.Rows[e.RowIndex].Cells["Tipo"].Value;
                 var priceValue = listRoomDataGridView.Rows[e.RowIndex].Cells["PrecioNoche"].Value;
                 var characteristicValue = listRoomDataGridView.Rows[e.RowIndex].Cells["Caracteristicas"].Value;
 
-                MessageBox.Show(IdRoomValue.ToString());
                 typeRoomTextBox.Text = typeValue?.ToString();
                 priceRoomTextBox.Text = priceValue?.ToString();
                 characteristicRoomTextBox.Text = characteristicValue?.ToString();
@@ -111,6 +111,7 @@ namespace PresentationLayer.FormAdmin
 
             Room room = new Room()
             {
+                IdRoom = selectedRoomId,
                 Type = type,
                 PriceNight = priceNight,
                 Characteristic = characteristic
@@ -141,5 +142,23 @@ namespace PresentationLayer.FormAdmin
                 LoadRooms();
             }
         }
+
+        private void deleteRoomButton_Click(object sender, EventArgs e)
+        {
+            if (selectedRoomId == 0)
+            {
+                MessageBox.Show("Por favor, selecciona una habitación para eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var confirmResult = MessageBox.Show("¿Estás seguro de que deseas eliminar esta habitación?", "Confirmar eliminación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (confirmResult == DialogResult.Yes)
+            {
+                _roomsService.DeleteRoom(selectedRoomId);
+                LoadRooms();
+                selectedRoomId = 0;
+            }
+        }
+
     }
 }

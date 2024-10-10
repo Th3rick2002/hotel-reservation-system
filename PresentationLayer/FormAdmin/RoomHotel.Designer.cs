@@ -114,6 +114,7 @@
             deleteRoomButton.TabIndex = 25;
             deleteRoomButton.Text = "Eliminar";
             deleteRoomButton.UseVisualStyleBackColor = false;
+            deleteRoomButton.Click += deleteRoomButton_Click;
             // 
             // priceRoomTextBox
             // 

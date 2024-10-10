@@ -75,14 +75,14 @@ namespace DataAccessLayer.Repositories
             }
         }
 
-        public void DeleteRoom(int IdHabitaciones)
+        public void DeleteRoom(int IdRoom)
         {
             using (var connection = _dbConnection.GetConnection())
             {
                 string query = "DELETE FROM Usuario WHERE IdUsuario = @IdUsuario";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@IdUsuario", IdHabitaciones);
+                command.Parameters.AddWithValue("@IdUsuario", IdRoom);
 
                 connection.Open();
                 command.ExecuteNonQuery();
